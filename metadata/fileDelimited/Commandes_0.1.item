@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_Yn2hIa14Eea1Co-IILr0fg" name="Commandes" dataPackage="_Yn2hIq14Eea1Co-IILr0fg" Server="Localhost 127.0.0.1" FilePath="D:/DOCUMENTS/ETUDES/UNIVERSITE/Cours/Master2/Business Intelligence - TP/Projet/OfficeShop_Data/OfficeShop_Data/Commande.txt" Format="WINDOWS" Encoding="ISO-8859-1" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_Yn2hIq14Eea1Co-IILr0fg" name="default" dataManager="_Yn2hIa14Eea1Co-IILr0fg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_Yn2hI614Eea1Co-IILr0fg" id="_In65sK14Eea1Co-IILr0fg" label="commande">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hJK14Eea1Co-IILr0fg" label="NoCommande" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hJa14Eea1Co-IILr0fg" label="PrioriteCommande" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hJq14Eea1Co-IILr0fg" label="NoClient" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hJ614Eea1Co-IILr0fg" label="Produit" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hKK14Eea1Co-IILr0fg" label="Prix_Unitaire" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hKa14Eea1Co-IILr0fg" label="Marge_Produit_Brut" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hKq14Eea1Co-IILr0fg" label="Discount" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hK614Eea1Co-IILr0fg" label="FraisExpedition" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hLK14Eea1Co-IILr0fg" label="ModeExpedition" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hLa14Eea1Co-IILr0fg" label="SegmentClient" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hLq14Eea1Co-IILr0fg" label="DateCommande" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hL614Eea1Co-IILr0fg" label="DateExpedition" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hMK14Eea1Co-IILr0fg" label="Marge" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hMa14Eea1Co-IILr0fg" label="QuantiteVentes" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_Yn2hMq14Eea1Co-IILr0fg" label="MontantVentes" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

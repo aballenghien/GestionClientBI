@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_952YAa14Eea1Co-IILr0fg" name="Territoires" dataPackage="_952YAq14Eea1Co-IILr0fg" Server="Localhost 127.0.0.1" FilePath="D:/DOCUMENTS/ETUDES/UNIVERSITE/Cours/Master2/Business Intelligence - TP/Projet/OfficeShop_Data/OfficeShop_Data/Territoire.txt" Format="WINDOWS" Encoding="ISO-8859-1" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_952YAq14Eea1Co-IILr0fg" name="default" dataManager="_952YAa14Eea1Co-IILr0fg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_952YA614Eea1Co-IILr0fg" id="_yvkQ4K14Eea1Co-IILr0fg" label="produit">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_952YBK14Eea1Co-IILr0fg" label="Region" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_952YBa14Eea1Co-IILr0fg" label="Manager" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_H_1mAa14Eea1Co-IILr0fg" name="Clients" dataPackage="_H_1mAq14Eea1Co-IILr0fg" Server="Localhost 127.0.0.1" FilePath="D:/DOCUMENTS/ETUDES/UNIVERSITE/Cours/Master2/Business Intelligence - TP/Projet/OfficeShop_Data/OfficeShop_Data/Client.txt" Format="WINDOWS" Encoding="ISO-8859-1" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_H_1mAq14Eea1Co-IILr0fg" name="default" dataManager="_H_1mAa14Eea1Co-IILr0fg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_H_1mA614Eea1Co-IILr0fg" id="_unjvIK13Eea1Co-IILr0fg" label="client">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_H_1mBK14Eea1Co-IILr0fg" label="NoClient" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_H_1mBa14Eea1Co-IILr0fg" label="NomComplet" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_H_1mBq14Eea1Co-IILr0fg" label="Region" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_H_1mB614Eea1Co-IILr0fg" label="Etat" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_H_1mCK14Eea1Co-IILr0fg" label="Ville" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_H_1mCa14Eea1Co-IILr0fg" label="CodePostal" length="255" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>
