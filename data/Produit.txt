@@ -1,0 +1,19 @@
+IdProduit;Produit;CategorieProduit;SousCategorieProduit;TypeEmballage
+P00001;*Staples* Surligneurs;Fournitures de bureau;Stylos et fournitures d'art;Sac enveloppe
+P00002;*Staples* Ouvre-lettres;Fournitures de bureau;Ciseaux, règles;Sac enveloppe
+P00003;Accessoire1;Technologie;Telephones et Communication;Boîte XS
+P00004;Accessoire2;Technologie;Telephones et Communication;Boîte S
+P00005;Epson C62 Color Inkjet Printer;Technologie;Machines de bureau;Boîte XL
+P00006;Epson C82 Color Inkjet Printer;Technologie;Machines de bureau;Boîte XL
+P00007;Lexmark 4227 Plus Dot Matrix Printer;Technologie;Machines de bureau;Boîte XL
+P00008;Lexmark Z25 Color Inkjet Printer;Technologie;Machines de bureau;Boîte XL
+P00009;Lexmark Z54se Color Inkjet Printer;Technologie;Machines de bureau;Boîte XL
+P00010;Lexmark Z55se Color Inkjet Printer;Technologie;Machines de bureau;Boîte XL
+P00011;Panasonic KP-150;Fournitures de bureau;Stylos et fournitures d'art;Boîte XS
+P00012;Panasonic KP-310;Fournitures de bureau;Stylos et fournitures d'art;Boîte XS
+P00013;Panasonic KP-350BK;Fournitures de bureau;Stylos et fournitures d'art;Boîte XS
+P00014;Panasonic KX-P1131;Technologie;Machines de bureau;Boîte XL
+P00015;Panasonic KX-P1150;Technologie;Machines de bureau;Boîte XL
+P00016;Panasonic KX-P2130;Technologie;Machines de bureau;Boîte XL
+P00017;Panasonic KX-P3200;Technologie;Machines de bureau;Boîte XL
+P00018;Panasonic KX-P3626;Technologie;Machines de bureau;Boîte XL
