@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\Workspace_Talend\PROJETOFFICESHOP\data\"/>
+    <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/data/"/>
     <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
-    <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="BI_ODS_OFFICESHOP"/>
-    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="root"/>
-    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value=""/>
+    <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
+    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="rhunault"/>
+    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value="82xhSEMyWGS1bjJcGopo/Q=="/>
     <contextParameter comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="3306"/>
     <contextParameter comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="localhost"/>
   </context>
@@ -326,7 +326,7 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="context.cnxODS_Server"/>
     <elementParameter field="TEXT" name="PORT" value="context.cnxODS_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.cnxODS_Database"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;bi_ods_officeshop&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.cnxODS_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuf2JlbGktagRP7ubOp8JV3i"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;fic_commandes&quot;"/>
@@ -435,7 +435,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="fic_commandes" name="tMysqlOutput_2">
+    <metadata comment="" connector="FLOW" label="fic_commandes" name="fic_commandes" type="TABLE">
       <column comment="" key="false" length="255" name="NoCommande" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>

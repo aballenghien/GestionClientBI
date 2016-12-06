@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_fMWa0a12Eea1Co-IILr0fg" label="ProjetOfficeShop" description="" language="java" technicalLabel="PROJETOFFICESHOP" local="true" author="_fMWa0q12Eea1Co-IILr0fg" productVersion="Talend Open Studio for Data Integration-6.3.0.20161026_1219" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_fMWa0a12Eea1Co-IILr0fg" label="OFFICE_SHOP" description="" language="java" technicalLabel="OFFICE_SHOP" local="true" author="_fMWa0q12Eea1Co-IILr0fg" productVersion="Talend Open Studio for Data Integration-6.3.0.20161026_1219" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_hSg2EK12Eea1Co-IILr0fg" label="development" code="DEV"/>
     <technicalStatus xmi:id="_hSg2Ea12Eea1Co-IILr0fg" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_hSg2Eq12Eea1Co-IILr0fg" label="production" code="PROD"/>
@@ -167,6 +167,21 @@
       <relatedItems xmi:id="_bMe2DrrqEeals7OC8NPy8A" id="_H_1mAK14Eea1Co-IILr0fg - client" version="Latest" type="schema"/>
       <relatedItems xmi:id="_tikN8LsVEeagG-0RyhE98g" id="_dHjcEK13Eea1Co-IILr0fg - fic_clients" version="Latest" type="schema"/>
       <relatedItems xmi:id="_1ZsLsLuYEeavOr74JwDotQ" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_ymLnoLurEeaa9bG2EzzHFg">
+      <baseItem xmi:id="_ymLnoburEeaa9bG2EzzHFg" id="_r_W6ELuqEeaa9bG2EzzHFg" version="0.1" type="job"/>
+      <relatedItems xmi:id="_ymLnorurEeaa9bG2EzzHFg" id="_sBWh4K13Eea1Co-IILr0fg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_ymLno7urEeaa9bG2EzzHFg" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ymLnpLurEeaa9bG2EzzHFg" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ymLnpburEeaa9bG2EzzHFg" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ymLnprurEeaa9bG2EzzHFg" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ymLnp7urEeaa9bG2EzzHFg" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ymLnqLurEeaa9bG2EzzHFg" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ymLnqburEeaa9bG2EzzHFg" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ymLnqrurEeaa9bG2EzzHFg" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ymLnq7urEeaa9bG2EzzHFg" id="_dHjcEK13Eea1Co-IILr0fg - fic_commandes" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_487GQLu2Eeaf8P73OXwWwQ" id="_dHjcEK13Eea1Co-IILr0fg - src_commandes" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_GQi4cLu3Eeaf8P73OXwWwQ" id="_dHjcEK13Eea1Co-IILr0fg - rej_commandes" version="Latest" type="schema"/>
     </ItemsRelations>
     <migrationTask xmi:id="_fjfIcK12Eea1Co-IILr0fg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_fjfIca12Eea1Co-IILr0fg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>

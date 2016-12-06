@@ -2,11 +2,11 @@
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="new1" prompt="new1?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\Workspace_Talend\PROJETOFFICESHOP\data\"/>
+    <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/data/"/>
     <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
-    <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="BI_ODS_OFFICESHOP"/>
-    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="root"/>
-    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value=""/>
+    <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
+    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="rhunault"/>
+    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value="82xhSEMyWGS1bjJcGopo/Q=="/>
     <contextParameter comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="3306"/>
     <contextParameter comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="localhost"/>
   </context>
@@ -122,7 +122,7 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="context.cnxODS_Server"/>
     <elementParameter field="TEXT" name="PORT" value="context.cnxODS_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.cnxODS_Database"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;bi_ods_officeshop&quot;"/>
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="USER" value="context.cnxODS_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuf2JlbGktagRP7ubOp8JV3i"/>
@@ -159,7 +159,7 @@
     </elementParameter>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="fic_clients" name="tMysqlInput_1">
+    <metadata comment="" connector="FLOW" label="fic_clients" name="fic_clients" type="TABLE">
       <column comment="" key="false" length="255" name="NoClient" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -336,7 +336,7 @@
       <column comment="" key="false" length="255" name="CodePostal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="NoClientInt" expression="Integer.parseInt(row2.NoClient)" type="id_Integer"/>
       </varTables>
@@ -348,7 +348,7 @@
         <mapperTableEntries name="Ville" expression="row2.Ville" type="id_String" nullable="true"/>
         <mapperTableEntries name="CodePostal" expression="row2.CodePostal" type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="rejects" expressionFilter="Var.NoClientInt &lt;= 0 &amp;&amp; Integer.toString(Var.NoClientInt).length() > 10 &amp;&amp;&#xD;&#xA;row2.NomComplet.length()== 0 &amp;&amp; row2.NomComplet.length() > 60  &amp;&amp;&#xD;&#xA;row2.Region.length() == 0 &amp;&amp; row2.Region.length() > 30 &amp;&amp;&#xD;&#xA;row2.Etat.length() == 0 &amp;&amp; row2.Etat.length() > 30 &amp;&amp;&#xD;&#xA;row2.Ville.length() == 0 &amp;&amp; row2.Ville.length() > 40 &amp;&amp;&#xD;&#xA;row2.CodePostal.length() == 0 &amp;&amp; row2.CodePostal.length() > 5" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="rejects" expressionFilter="Var.NoClientInt &lt;= 0 || Integer.toString(Var.NoClientInt).length() > 10 ||&#xD;&#xA;row2.NomComplet.length()== 0 || row2.NomComplet.length() > 60  ||&#xD;&#xA;row2.Region.length() == 0 || row2.Region.length() > 30 ||&#xD;&#xA;row2.Etat.length() == 0 || row2.Etat.length() > 30 ||&#xD;&#xA;row2.Ville.length() == 0 || row2.Ville.length() > 40 ||&#xD;&#xA;row2.CodePostal.length() == 0 || row2.CodePostal.length() > 5" activateExpressionFilter="true">
         <mapperTableEntries name="NoClient" expression="row2.NoClient " type="id_String" nullable="true"/>
         <mapperTableEntries name="NomComplet" expression="row2.NomComplet " type="id_String" nullable="true"/>
         <mapperTableEntries name="Region" expression="row2.Region " type="id_String" nullable="true"/>
@@ -384,7 +384,7 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="context.cnxODS_Server"/>
     <elementParameter field="TEXT" name="PORT" value="context.cnxODS_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.cnxODS_Database"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;bi_ods_officeshop&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.cnxODS_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuf2JlbGktagRP7ubOp8JV3i"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;src_clients&quot;"/>
@@ -505,7 +505,7 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="context.cnxODS_Server"/>
     <elementParameter field="TEXT" name="PORT" value="context.cnxODS_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.cnxODS_Database"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;bi_ods_officeshop&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.cnxODS_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuf2JlbGktagRP7ubOp8JV3i"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;rej_clients&quot;"/>
@@ -626,7 +626,7 @@
     <elementParameter field="TEXT" name="TYPE" value="MYSQL" show="false"/>
     <elementParameter field="TEXT" name="HOST" value="context.cnxODS_Server"/>
     <elementParameter field="TEXT" name="PORT" value="context.cnxODS_Port"/>
-    <elementParameter field="TEXT" name="DBNAME" value="context.cnxODS_Database"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;bi_ods_officeshop&quot;"/>
     <elementParameter field="TEXT" name="USER" value="context.cnxODS_Login"/>
     <elementParameter field="PASSWORD" name="PASS" value="8pW6Nmy2kuf2JlbGktagRP7ubOp8JV3i"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;rej_clients&quot;"/>
@@ -690,7 +690,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="rej_clients" name="tMysqlOutput_3">
+    <metadata comment="" connector="FLOW" label="rej_clients" name="rej_clients" type="TABLE">
       <column comment="" key="false" length="255" name="NoClient" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>

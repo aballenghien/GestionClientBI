@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_1=>" expression="">
+  <variables name="row2.NoCommande" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.PrioriteCommande" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.NoClient" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.Produit" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.Prix_Unitaire" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.Marge_Produit_Brut" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.Discount" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.FraisExpedition" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.ModeExpedition" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.SegmentClient" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.DateCommande" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.DateExpedition" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.Marge" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.QuantiteVentes" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.MontantVentes" value="null" talendType="id_String" nullable="true"/>
+</expression:EMFExpression>
