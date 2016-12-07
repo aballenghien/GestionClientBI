@@ -535,16 +535,16 @@
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="NoCommandeInt" expression=" Integer.parseInt(row2.NoCommande)" type="id_Integer"/>
         <mapperTableEntries name="NoClientInt" expression=" Integer.parseInt(row2.NoClient )" type="id_Integer"/>
-        <mapperTableEntries name="Prix_UnitaireFloat" expression="Float.parseFloat(row2.Prix_Unitaire) " type="id_Float"/>
-        <mapperTableEntries name="Marge_Produit_BrutFloat" expression="Float.parseFloat(row2.Marge_Produit_Brut) " type="id_Float"/>
-        <mapperTableEntries name="DiscountFloat" expression="Float.parseFloat(row2.Discount) " type="id_Float"/>
-        <mapperTableEntries name="FraisExpeditionFloat" expression="Float.parseFloat(row2.FraisExpedition) " type="id_Float"/>
-        <mapperTableEntries name="DateCommandeDate" expression="row2.DateCommande " type="id_Date"/>
-        <mapperTableEntries name="DateExpeditionDate" expression="row2.DateExpedition " type="id_Date"/>
-        <mapperTableEntries name="QuantiteVentesInt" expression=" Integer.parseInt(row2.QuantiteVentes)" type="id_Float"/>
-        <mapperTableEntries name="MontantVentesFloat" expression="Float.parseFloat(row2.MontantVentes) " type="id_Float"/>
+        <mapperTableEntries name="Prix_UnitaireFloat" expression="Float.parseFloat(row2.Prix_Unitaire.replace(',', '.'))" type="id_Float"/>
+        <mapperTableEntries name="Marge_Produit_BrutFloat" expression="Float.parseFloat(row2.Marge_Produit_Brut.replace(',', '.')) " type="id_Float"/>
+        <mapperTableEntries name="DiscountFloat" expression="Float.parseFloat(row2.Discount.replace(',', '.')) " type="id_Float"/>
+        <mapperTableEntries name="FraisExpeditionFloat" expression="Float.parseFloat(row2.FraisExpedition.replace(',', '.')) " type="id_Float"/>
+        <mapperTableEntries name="DateCommandeDate" expression="TalendDate.parseDate(&quot;dd/MM/yyyy&quot;, row2.DateCommande)" type="id_Date"/>
+        <mapperTableEntries name="DateExpeditionDate" expression="TalendDate.parseDate(&quot;dd/MM/yyyy&quot;, row2.DateExpedition)" type="id_Date"/>
+        <mapperTableEntries name="QuantiteVentesInt" expression=" Integer.parseInt(row2.QuantiteVentes)" type="id_Integer"/>
+        <mapperTableEntries name="MontantVentesFloat" expression="Float.parseFloat(row2.MontantVentes.replace(',', '.')) " type="id_Float"/>
       </varTables>
-      <outputTables sizeState="INTERMEDIATE" name="out">
+      <outputTables sizeState="INTERMEDIATE" name="out" expressionFilter="Var.NoCommandeInt > 0 &amp;&amp; row2.NoCommande.length() &lt;= 11 &amp;&amp;&#xA;row2.PrioriteCommande.length()> 0 &amp;&amp; row2.PrioriteCommande.length() &lt;= 25 &amp;&amp;&#xA;Var.NoClientInt > 0 &amp;&amp; row2.NoClient.length() &lt;= 10 &amp;&amp;&#xA;row2.Produit.length() > 0 &amp;&amp; row2.Produit.length() &lt;= 20 &amp;&amp;&#xA;Var.Prix_UnitaireFloat > 0 &amp;&amp; row2.Prix_Unitaire.length() &lt;= 11 &amp;&amp;&#xA;Var.Marge_Produit_BrutFloat > 0 &amp;&amp; row2.Marge_Produit_Brut.length() &lt;= 4 &amp;&amp;&#xA;Var.DiscountFloat > 0 &amp;&amp; Float.toString(Var.DiscountFloat).length() &lt;= 4 &amp;&amp;&#xA;Var.FraisExpeditionFloat > 0 &amp;&amp; row2.FraisExpedition.length() &lt;= 6 &amp;&amp;&#xA;row2.ModeExpedition.length() > 0 &amp;&amp; row2.ModeExpedition.length() &lt;= 50 &amp;&amp;&#xA;row2.SegmentClient.length() > 0 &amp;&amp; row2.SegmentClient.length() &lt;= 50 &amp;&amp;&#xA;Var.QuantiteVentesInt > 0 &amp;&amp; row2.QuantiteVentes.length() &lt;= 5 &amp;&amp;&#xA;Var.MontantVentesFloat > 0 &amp;&amp; row2.MontantVentes.length() &lt;= 8" activateExpressionFilter="true">
         <mapperTableEntries name="NoCommande" expression="Var.NoCommandeInt" type="id_Integer"/>
         <mapperTableEntries name="PrioriteCommande" expression="row2.PrioriteCommande" type="id_String" nullable="true"/>
         <mapperTableEntries name="NoClient" expression="Var.NoClientInt" type="id_Integer"/>
@@ -561,7 +561,7 @@
         <mapperTableEntries name="QuantiteVentes" expression="Var.QuantiteVentesInt" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="MontantVentes" expression="Var.MontantVentesFloat" type="id_Float" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="rej">
+      <outputTables sizeState="INTERMEDIATE" name="rej" expressionFilter="Var.NoCommandeInt &lt;= 0 || row2.NoCommande.length() > 11 ||&#xA;row2.PrioriteCommande.length() == 0 || row2.PrioriteCommande.length() > 25 ||&#xA;Var.NoClientInt &lt;= 0 || row2.NoClient.length() > 10 ||&#xA;row2.Produit.length() == 0 || row2.Produit.length() > 20 ||&#xA;Var.Prix_UnitaireFloat &lt; 0 || row2.Prix_Unitaire.length() > 11 ||&#xA;Var.Marge_Produit_BrutFloat &lt; 0 || row2.Marge_Produit_Brut.length() > 4 ||&#xA;Var.DiscountFloat &lt; 0 || Float.toString(Var.DiscountFloat).length() > 4 ||&#xA;Var.FraisExpeditionFloat &lt; 0 || row2.FraisExpedition.length() > 6 ||&#xA;row2.ModeExpedition.length() == 0 || row2.ModeExpedition.length() > 50 ||&#xA;row2.SegmentClient.length() == 0 || row2.SegmentClient.length() > 50 ||&#xA;Var.QuantiteVentesInt &lt; 0 || row2.QuantiteVentes.length() > 5 ||&#xA;Var.MontantVentesFloat &lt; 0 || row2.MontantVentes.length() > 8" activateExpressionFilter="true">
         <mapperTableEntries name="NoCommande" expression="row2.NoCommande" type="id_String" nullable="true"/>
         <mapperTableEntries name="PrioriteCommande" expression="row2.PrioriteCommande" type="id_String" nullable="true"/>
         <mapperTableEntries name="NoClient" expression="row2.NoClient" type="id_String" nullable="true"/>
@@ -597,7 +597,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="448">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="448">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_3" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_5"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -611,8 +611,6 @@
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;rej_commandes&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="TRUNCATE"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_FLOW:REPOSITORY_SCHEMA_TYPE" value="_dHjcEK13Eea1Co-IILr0fg - rej_commandes" show="false"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
@@ -714,7 +712,7 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false" show="false"/>
     <elementParameter field="TEXT" name="LABEL" value="rej_commandes"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="rej_commandes" name="tMysqlOutput_3">
+    <metadata connector="FLOW" label="fic_commandes" name="tMysqlOutput_3">
       <column comment="" key="false" length="255" name="NoCommande" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>

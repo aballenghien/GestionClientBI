@@ -336,7 +336,7 @@
       <column comment="" key="false" length="255" name="CodePostal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="NoClientInt" expression="Integer.parseInt(row2.NoClient)" type="id_Integer"/>
       </varTables>
