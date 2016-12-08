@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_sCZDsK13Eea1Co-IILr0fg" confirmationNeeded="false" name="Default">
-  <contextParameter xmi:id="_sCZDsa13Eea1Co-IILr0fg" comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" type="id_Password" value="82xhSEMyWGS1bjJcGopo/Q=="/>
-  <contextParameter xmi:id="_sCZDsq13Eea1Co-IILr0fg" comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
-  <contextParameter xmi:id="_sCZDs613Eea1Co-IILr0fg" comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" type="id_String" value="rhunault"/>
-  <contextParameter xmi:id="_sCZDtK13Eea1Co-IILr0fg" comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" type="id_String" value="localhost"/>
-  <contextParameter xmi:id="_sCZDta13Eea1Co-IILr0fg" comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" type="id_String" value="bi_ods_officeshop"/>
-  <contextParameter xmi:id="_sCZDtq13Eea1Co-IILr0fg" comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" type="id_String" value="3306"/>
-</talendfile:ContextType>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_sCZDsK13Eea1Co-IILr0fg" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_sCZDsa13Eea1Co-IILr0fg" comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" type="id_Password" value="82xhSEMyWGS1bjJcGopo/Q=="/>
+    <contextParameter xmi:id="_sCZDsq13Eea1Co-IILr0fg" comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter xmi:id="_sCZDs613Eea1Co-IILr0fg" comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" type="id_String" value="rhunault"/>
+    <contextParameter xmi:id="_sCZDtK13Eea1Co-IILr0fg" comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter xmi:id="_sCZDta13Eea1Co-IILr0fg" comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" type="id_String" value="bi_ods_officeshop"/>
+    <contextParameter xmi:id="_sCZDtq13Eea1Co-IILr0fg" comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" type="id_String" value="3306"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_IeQk4L1yEeawws064L34vQ" confirmationNeeded="false" name="env_audrey">
+    <contextParameter xmi:id="_IeQk4b1yEeawws064L34vQ" comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" type="id_Password" value=""/>
+    <contextParameter xmi:id="_IeQk4r1yEeawws064L34vQ" comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter xmi:id="_IeQk471yEeawws064L34vQ" comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" type="id_String" value="root"/>
+    <contextParameter xmi:id="_IeQk5L1yEeawws064L34vQ" comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter xmi:id="_IeQk5b1yEeawws064L34vQ" comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" type="id_String" value="bi_ods_officeshop"/>
+    <contextParameter xmi:id="_IeQk5r1yEeawws064L34vQ" comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" type="id_String" value="3306"/>
+  </talendfile:ContextType>
+</xmi:XMI>
