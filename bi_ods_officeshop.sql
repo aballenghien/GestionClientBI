@@ -208,9 +208,9 @@ CREATE TABLE `ods_geo` (
   `etat` varchar(30) NOT NULL DEFAULT '',
   `ville` varchar(40) NOT NULL DEFAULT '',
   `codePostal` varchar(5) NOT NULL DEFAULT '',
-  `idAdresse` int(11) NOT NULL,
+  `idAdresse` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`idAdresse`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -232,9 +232,9 @@ DROP TABLE IF EXISTS `ods_manager`;
 CREATE TABLE `ods_manager` (
   `manager` varchar(50) NOT NULL DEFAULT '',
   `region` varchar(50) NOT NULL DEFAULT '',
-  `idManager` int(11) NOT NULL,
+  `idManager` int(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`idManager`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -527,4 +527,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-12-09  0:18:56
+-- Dump completed on 2016-12-09  1:05:38
