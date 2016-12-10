@@ -1,28 +1,112 @@
--- MySQL dump 10.15  Distrib 10.0.27-MariaDB, for debian-linux-gnu (x86_64)
+-- phpMyAdmin SQL Dump
+-- version 4.2.11
+-- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1    Database: bi_ods_officeshop
--- ------------------------------------------------------
--- Server version	10.0.27-MariaDB-0ubuntu0.16.04.1
+-- Client :  127.0.0.1
+-- Généré le :  Sam 10 Décembre 2016 à 19:36
+-- Version du serveur :  5.6.21
+-- Version de PHP :  5.6.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Table structure for table `fic_clients`
+-- Base de données :  `bi_ods_officeshop`
 --
 
-DROP TABLE IF EXISTS `fic_clients`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fic_clients` (
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `dim_clients`
+--
+
+CREATE TABLE IF NOT EXISTS `dim_clients` (
+  `PK_noClient` int(11) NOT NULL,
+  `PK_dtCreate` date NOT NULL DEFAULT '0000-00-00',
+  `nom` varchar(30) DEFAULT NULL,
+  `prenom` varchar(30) DEFAULT NULL,
+  `etat` varchar(30) NOT NULL DEFAULT '',
+  `ville` varchar(40) NOT NULL DEFAULT '',
+  `codePostal` varchar(5) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `dim_manager`
+--
+
+CREATE TABLE IF NOT EXISTS `dim_manager` (
+  `manager` varchar(50) NOT NULL DEFAULT '',
+  `PK_region` varchar(30) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `dim_produits`
+--
+
+CREATE TABLE IF NOT EXISTS `dim_produits` (
+  `PK_idProduit` varchar(20) NOT NULL,
+  `LIB_nom` varchar(20) DEFAULT NULL,
+  `LIB_categorieProduit` varchar(60) DEFAULT NULL,
+  `LIB_sousCategorieProduit` varchar(60) DEFAULT NULL,
+  `LIB_typeEmballage` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `dim_temps`
+--
+
+CREATE TABLE IF NOT EXISTS `dim_temps` (
+  `annee` int(11) NOT NULL DEFAULT '0',
+  `mois` int(11) NOT NULL DEFAULT '0',
+  `jour` int(11) NOT NULL DEFAULT '0',
+  `heure` int(11) NOT NULL DEFAULT '0',
+  `PK_idDate` date NOT NULL DEFAULT '0000-00-00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fait_commandes`
+--
+
+CREATE TABLE IF NOT EXISTS `fait_commandes` (
+  `PK_noCommande` int(11) NOT NULL,
+  `FK_noClient` int(11) NOT NULL DEFAULT '0',
+  `FK_idProduit` varchar(20) NOT NULL DEFAULT '0',
+  `FK_region` varchar(30) NOT NULL,
+  `FK_dateCommande` date NOT NULL DEFAULT '0000-00-00',
+  `FK_dateExpedition` date NOT NULL DEFAULT '0000-00-00',
+  `prioriteCommande` varchar(25) DEFAULT NULL,
+  `MT_prixUnitaire` decimal(10,2) DEFAULT NULL,
+  `MT_margeProduitBrute` decimal(3,2) DEFAULT NULL,
+  `discount` decimal(3,2) DEFAULT NULL,
+  `MT_fraisExpedition` decimal(5,2) DEFAULT NULL,
+  `LIB_modeExpedition` varchar(50) DEFAULT NULL,
+  `LIB_segmentClient` varchar(50) DEFAULT NULL,
+  `marge` varchar(255) DEFAULT NULL,
+  `QT_quantiteVentes` int(4) DEFAULT NULL,
+  `MT_montantVentes` decimal(7,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fic_clients`
+--
+
+CREATE TABLE IF NOT EXISTS `fic_clients` (
   `NoClient` varchar(255) DEFAULT NULL,
   `NomComplet` varchar(255) DEFAULT NULL,
   `Region` varchar(255) DEFAULT NULL,
@@ -30,25 +114,14 @@ CREATE TABLE `fic_clients` (
   `Ville` varchar(255) DEFAULT NULL,
   `CodePostal` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `fic_clients`
+-- Structure de la table `fic_commandes`
 --
 
-LOCK TABLES `fic_clients` WRITE;
-/*!40000 ALTER TABLE `fic_clients` DISABLE KEYS */;
-/*!40000 ALTER TABLE `fic_clients` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `fic_commandes`
---
-
-DROP TABLE IF EXISTS `fic_commandes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fic_commandes` (
+CREATE TABLE IF NOT EXISTS `fic_commandes` (
   `NoCommande` varchar(255) DEFAULT NULL,
   `PrioriteCommande` varchar(255) DEFAULT NULL,
   `NoClient` varchar(255) DEFAULT NULL,
@@ -65,95 +138,54 @@ CREATE TABLE `fic_commandes` (
   `QuantiteVentes` varchar(255) DEFAULT NULL,
   `MontantVentes` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `fic_commandes`
+-- Structure de la table `fic_produits`
 --
 
-LOCK TABLES `fic_commandes` WRITE;
-/*!40000 ALTER TABLE `fic_commandes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `fic_commandes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `fic_produits`
---
-
-DROP TABLE IF EXISTS `fic_produits`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fic_produits` (
+CREATE TABLE IF NOT EXISTS `fic_produits` (
   `IdProduit` varchar(255) DEFAULT NULL,
   `Produit` varchar(255) DEFAULT NULL,
   `CategorieProduit` varchar(255) DEFAULT NULL,
   `SousCategorieProduit` varchar(255) DEFAULT NULL,
   `TypeEmballage` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `fic_produits`
+-- Structure de la table `fic_territoires`
 --
 
-LOCK TABLES `fic_produits` WRITE;
-/*!40000 ALTER TABLE `fic_produits` DISABLE KEYS */;
-/*!40000 ALTER TABLE `fic_produits` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `fic_territoires`
---
-
-DROP TABLE IF EXISTS `fic_territoires`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `fic_territoires` (
+CREATE TABLE IF NOT EXISTS `fic_territoires` (
   `Region` varchar(255) DEFAULT NULL,
   `Manager` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `fic_territoires`
+-- Structure de la table `ods_clients`
 --
 
-LOCK TABLES `fic_territoires` WRITE;
-/*!40000 ALTER TABLE `fic_territoires` DISABLE KEYS */;
-/*!40000 ALTER TABLE `fic_territoires` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ods_clients`
---
-
-DROP TABLE IF EXISTS `ods_clients`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ods_clients` (
+CREATE TABLE IF NOT EXISTS `ods_clients` (
   `noClient` int(11) NOT NULL,
-  `nomComplet` varchar(60) DEFAULT NULL,
-  PRIMARY KEY (`noClient`)
+  `nom` varchar(30) NOT NULL,
+  `prenom` varchar(30) NOT NULL,
+  `etat` varchar(30) NOT NULL DEFAULT '',
+  `ville` varchar(40) NOT NULL DEFAULT '',
+  `codePostal` varchar(5) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ods_clients`
+-- Structure de la table `ods_commandes`
 --
 
-LOCK TABLES `ods_clients` WRITE;
-/*!40000 ALTER TABLE `ods_clients` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ods_clients` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ods_commandes`
---
-
-DROP TABLE IF EXISTS `ods_commandes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ods_commandes` (
+CREATE TABLE IF NOT EXISTS `ods_commandes` (
   `noCommande` int(11) NOT NULL,
   `prioriteCommande` varchar(25) DEFAULT NULL,
   `prixUnitaire` decimal(10,2) DEFAULT NULL,
@@ -166,146 +198,58 @@ CREATE TABLE `ods_commandes` (
   `quantiteVentes` int(4) DEFAULT NULL,
   `montantVentes` decimal(7,2) DEFAULT NULL,
   `noClient` int(11) NOT NULL DEFAULT '0',
-  `idAdresse` int(11) NOT NULL DEFAULT '0',
-  `idManager` int(11) NOT NULL DEFAULT '0',
+  `region` varchar(30) NOT NULL,
   `idProduit` varchar(20) NOT NULL DEFAULT '0',
   `dateCommande` date DEFAULT NULL,
-  `dateExpedition` date DEFAULT NULL,
-  PRIMARY KEY (`noCommande`,`noClient`,`idAdresse`,`idManager`,`idProduit`),
-  KEY `ods_commandes_ods_clients_noClient_fk` (`noClient`),
-  KEY `ods_commandes_ods_geo_idAdresse_fk` (`idAdresse`),
-  KEY `ods_commandes_ods_manager_idManager_fk` (`idManager`),
-  KEY `ods_commandes_ods_produits_idProduit_fk` (`idProduit`),
-  KEY `ods_commandes_ods_temps_idDate_fk` (`dateCommande`),
-  KEY `ods_commandes_ods_temps_idDate2_fk` (`dateExpedition`),
-  CONSTRAINT `ods_commandes_ods_clients_noClient_fk` FOREIGN KEY (`noClient`) REFERENCES `ods_clients` (`noClient`),
-  CONSTRAINT `ods_commandes_ods_geo_idAdresse_fk` FOREIGN KEY (`idAdresse`) REFERENCES `ods_geo` (`idAdresse`),
-  CONSTRAINT `ods_commandes_ods_manager_idManager_fk` FOREIGN KEY (`idManager`) REFERENCES `ods_manager` (`idManager`),
-  CONSTRAINT `ods_commandes_ods_produits_idProduit_fk` FOREIGN KEY (`idProduit`) REFERENCES `ods_produits` (`idProduit`),
-  CONSTRAINT `ods_commandes_ods_temps_idDate2_fk` FOREIGN KEY (`dateExpedition`) REFERENCES `ods_temps` (`idDate`),
-  CONSTRAINT `ods_commandes_ods_temps_idDate_fk` FOREIGN KEY (`dateCommande`) REFERENCES `ods_temps` (`idDate`)
+  `dateExpedition` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ods_commandes`
+-- Structure de la table `ods_manager`
 --
 
-LOCK TABLES `ods_commandes` WRITE;
-/*!40000 ALTER TABLE `ods_commandes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ods_commandes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ods_geo`
---
-
-DROP TABLE IF EXISTS `ods_geo`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ods_geo` (
-  `region` varchar(30) NOT NULL DEFAULT '',
-  `etat` varchar(30) NOT NULL DEFAULT '',
-  `ville` varchar(40) NOT NULL DEFAULT '',
-  `codePostal` varchar(5) NOT NULL DEFAULT '',
-  `idAdresse` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`idAdresse`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `ods_geo`
---
-
-LOCK TABLES `ods_geo` WRITE;
-/*!40000 ALTER TABLE `ods_geo` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ods_geo` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ods_manager`
---
-
-DROP TABLE IF EXISTS `ods_manager`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ods_manager` (
+CREATE TABLE IF NOT EXISTS `ods_manager` (
   `manager` varchar(50) NOT NULL DEFAULT '',
-  `region` varchar(50) NOT NULL DEFAULT '',
-  `idManager` int(11) NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`idManager`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+  `region` varchar(30) NOT NULL DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ods_manager`
+-- Structure de la table `ods_produits`
 --
 
-LOCK TABLES `ods_manager` WRITE;
-/*!40000 ALTER TABLE `ods_manager` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ods_manager` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ods_produits`
---
-
-DROP TABLE IF EXISTS `ods_produits`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ods_produits` (
+CREATE TABLE IF NOT EXISTS `ods_produits` (
   `idProduit` varchar(20) NOT NULL,
   `nom` varchar(20) DEFAULT NULL,
   `categorieProduit` varchar(60) DEFAULT NULL,
   `sousCategorieProduit` varchar(60) DEFAULT NULL,
-  `typeEmballage` varchar(40) DEFAULT NULL,
-  PRIMARY KEY (`idProduit`)
+  `typeEmballage` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ods_produits`
+-- Structure de la table `ods_temps`
 --
 
-LOCK TABLES `ods_produits` WRITE;
-/*!40000 ALTER TABLE `ods_produits` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ods_produits` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `ods_temps`
---
-
-DROP TABLE IF EXISTS `ods_temps`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `ods_temps` (
+CREATE TABLE IF NOT EXISTS `ods_temps` (
   `annee` int(11) NOT NULL DEFAULT '0',
   `mois` int(11) NOT NULL DEFAULT '0',
   `jour` int(11) NOT NULL DEFAULT '0',
   `heure` int(11) NOT NULL DEFAULT '0',
-  `idDate` date NOT NULL DEFAULT '0000-00-00',
-  PRIMARY KEY (`idDate`)
+  `idDate` date NOT NULL DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `ods_temps`
+-- Structure de la table `rej_clients`
 --
 
-LOCK TABLES `ods_temps` WRITE;
-/*!40000 ALTER TABLE `ods_temps` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ods_temps` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `rej_clients`
---
-
-DROP TABLE IF EXISTS `rej_clients`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `rej_clients` (
+CREATE TABLE IF NOT EXISTS `rej_clients` (
   `NoClient` varchar(255) DEFAULT NULL,
   `NomComplet` varchar(255) DEFAULT NULL,
   `Region` varchar(255) DEFAULT NULL,
@@ -313,25 +257,14 @@ CREATE TABLE `rej_clients` (
   `Ville` varchar(255) DEFAULT NULL,
   `CodePostal` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `rej_clients`
+-- Structure de la table `rej_commandes`
 --
 
-LOCK TABLES `rej_clients` WRITE;
-/*!40000 ALTER TABLE `rej_clients` DISABLE KEYS */;
-/*!40000 ALTER TABLE `rej_clients` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `rej_commandes`
---
-
-DROP TABLE IF EXISTS `rej_commandes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `rej_commandes` (
+CREATE TABLE IF NOT EXISTS `rej_commandes` (
   `NoCommande` varchar(255) DEFAULT NULL,
   `PrioriteCommande` varchar(255) DEFAULT NULL,
   `NoClient` varchar(255) DEFAULT NULL,
@@ -348,99 +281,54 @@ CREATE TABLE `rej_commandes` (
   `QuantiteVentes` varchar(255) DEFAULT NULL,
   `MontantVentes` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `rej_commandes`
+-- Structure de la table `rej_produits`
 --
 
-LOCK TABLES `rej_commandes` WRITE;
-/*!40000 ALTER TABLE `rej_commandes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `rej_commandes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `rej_produits`
---
-
-DROP TABLE IF EXISTS `rej_produits`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `rej_produits` (
+CREATE TABLE IF NOT EXISTS `rej_produits` (
   `IdProduit` varchar(255) DEFAULT NULL,
   `Produit` varchar(255) DEFAULT NULL,
   `CategorieProduit` varchar(255) DEFAULT NULL,
   `SousCategorieProduit` varchar(255) DEFAULT NULL,
   `TypeEmballage` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `rej_produits`
+-- Structure de la table `rej_territoires`
 --
 
-LOCK TABLES `rej_produits` WRITE;
-/*!40000 ALTER TABLE `rej_produits` DISABLE KEYS */;
-/*!40000 ALTER TABLE `rej_produits` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `rej_territoires`
---
-
-DROP TABLE IF EXISTS `rej_territoires`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `rej_territoires` (
+CREATE TABLE IF NOT EXISTS `rej_territoires` (
   `Region` varchar(255) DEFAULT NULL,
   `Manager` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `rej_territoires`
+-- Structure de la table `src_clients`
 --
 
-LOCK TABLES `rej_territoires` WRITE;
-/*!40000 ALTER TABLE `rej_territoires` DISABLE KEYS */;
-/*!40000 ALTER TABLE `rej_territoires` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `src_clients`
---
-
-DROP TABLE IF EXISTS `src_clients`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `src_clients` (
+CREATE TABLE IF NOT EXISTS `src_clients` (
   `NoClient` int(10) NOT NULL DEFAULT '0',
   `NomComplet` varchar(60) DEFAULT NULL,
   `Region` varchar(30) DEFAULT NULL,
   `Etat` varchar(30) DEFAULT NULL,
   `Ville` varchar(40) DEFAULT NULL,
-  `CodePostal` varchar(5) DEFAULT NULL,
-  PRIMARY KEY (`NoClient`)
+  `CodePostal` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `src_clients`
+-- Structure de la table `src_commandes`
 --
 
-LOCK TABLES `src_clients` WRITE;
-/*!40000 ALTER TABLE `src_clients` DISABLE KEYS */;
-/*!40000 ALTER TABLE `src_clients` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `src_commandes`
---
-
-DROP TABLE IF EXISTS `src_commandes`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `src_commandes` (
+CREATE TABLE IF NOT EXISTS `src_commandes` (
   `NoCommande` int(11) NOT NULL DEFAULT '0',
   `PrioriteCommande` varchar(25) DEFAULT NULL,
   `NoClient` int(10) NOT NULL DEFAULT '0',
@@ -455,76 +343,146 @@ CREATE TABLE `src_commandes` (
   `DateExpedition` date DEFAULT NULL,
   `Marge` varchar(255) DEFAULT NULL,
   `QuantiteVentes` int(4) DEFAULT NULL,
-  `MontantVentes` decimal(7,2) DEFAULT NULL,
-  PRIMARY KEY (`NoCommande`,`NoClient`,`Produit`)
+  `MontantVentes` decimal(7,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `src_commandes`
+-- Structure de la table `src_produits`
 --
 
-LOCK TABLES `src_commandes` WRITE;
-/*!40000 ALTER TABLE `src_commandes` DISABLE KEYS */;
-/*!40000 ALTER TABLE `src_commandes` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `src_produits`
---
-
-DROP TABLE IF EXISTS `src_produits`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `src_produits` (
+CREATE TABLE IF NOT EXISTS `src_produits` (
   `IdProduit` varchar(20) NOT NULL DEFAULT '',
   `Produit` varchar(20) DEFAULT NULL,
   `CategorieProduit` varchar(60) DEFAULT NULL,
   `SousCategorieProduit` varchar(60) DEFAULT NULL,
-  `TypeEmballage` varchar(40) DEFAULT NULL,
-  PRIMARY KEY (`IdProduit`)
+  `TypeEmballage` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
+
+-- --------------------------------------------------------
 
 --
--- Dumping data for table `src_produits`
+-- Structure de la table `src_territoires`
 --
 
-LOCK TABLES `src_produits` WRITE;
-/*!40000 ALTER TABLE `src_produits` DISABLE KEYS */;
-/*!40000 ALTER TABLE `src_produits` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `src_territoires`
---
-
-DROP TABLE IF EXISTS `src_territoires`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `src_territoires` (
+CREATE TABLE IF NOT EXISTS `src_territoires` (
   `Region` varchar(50) NOT NULL DEFAULT '',
-  `Manager` varchar(50) NOT NULL DEFAULT '',
-  PRIMARY KEY (`Region`,`Manager`)
+  `Manager` varchar(50) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `src_territoires`
+-- Index pour les tables exportées
 --
 
-LOCK TABLES `src_territoires` WRITE;
-/*!40000 ALTER TABLE `src_territoires` DISABLE KEYS */;
-/*!40000 ALTER TABLE `src_territoires` ENABLE KEYS */;
-UNLOCK TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+--
+-- Index pour la table `dim_clients`
+--
+ALTER TABLE `dim_clients`
+ ADD PRIMARY KEY (`PK_noClient`,`PK_dtCreate`);
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+--
+-- Index pour la table `dim_manager`
+--
+ALTER TABLE `dim_manager`
+ ADD PRIMARY KEY (`PK_region`);
+
+--
+-- Index pour la table `dim_produits`
+--
+ALTER TABLE `dim_produits`
+ ADD PRIMARY KEY (`PK_idProduit`);
+
+--
+-- Index pour la table `dim_temps`
+--
+ALTER TABLE `dim_temps`
+ ADD PRIMARY KEY (`PK_idDate`);
+
+--
+-- Index pour la table `fait_commandes`
+--
+ALTER TABLE `fait_commandes`
+ ADD PRIMARY KEY (`PK_noCommande`,`FK_noClient`,`FK_idProduit`,`FK_region`,`FK_dateCommande`,`FK_dateExpedition`), ADD KEY `fait_commande_dim_clients` (`FK_idProduit`), ADD KEY `fait_commande_dim_produits` (`FK_noClient`), ADD KEY `fait_commande_dim_manager` (`FK_region`), ADD KEY `fait_commande_dim_tempsCommande` (`FK_dateCommande`), ADD KEY `fait_commande_dim_tempsExpedition` (`FK_dateExpedition`);
+
+--
+-- Index pour la table `ods_clients`
+--
+ALTER TABLE `ods_clients`
+ ADD PRIMARY KEY (`noClient`);
+
+--
+-- Index pour la table `ods_commandes`
+--
+ALTER TABLE `ods_commandes`
+ ADD PRIMARY KEY (`noCommande`,`noClient`,`region`,`idProduit`), ADD KEY `ods_commandes_ods_clients_noClient_fk` (`noClient`), ADD KEY `ods_commandes_ods_produits_idProduit_fk` (`idProduit`), ADD KEY `ods_commandes_ods_temps_idDate_fk` (`dateCommande`), ADD KEY `ods_commandes_ods_temps_idDate2_fk` (`dateExpedition`), ADD KEY `ods_commandes_ods_manager_region_fk` (`region`);
+
+--
+-- Index pour la table `ods_manager`
+--
+ALTER TABLE `ods_manager`
+ ADD PRIMARY KEY (`region`);
+
+--
+-- Index pour la table `ods_produits`
+--
+ALTER TABLE `ods_produits`
+ ADD PRIMARY KEY (`idProduit`);
+
+--
+-- Index pour la table `ods_temps`
+--
+ALTER TABLE `ods_temps`
+ ADD PRIMARY KEY (`idDate`);
+
+--
+-- Index pour la table `src_clients`
+--
+ALTER TABLE `src_clients`
+ ADD PRIMARY KEY (`NoClient`);
+
+--
+-- Index pour la table `src_commandes`
+--
+ALTER TABLE `src_commandes`
+ ADD PRIMARY KEY (`NoCommande`,`NoClient`,`Produit`);
+
+--
+-- Index pour la table `src_produits`
+--
+ALTER TABLE `src_produits`
+ ADD PRIMARY KEY (`IdProduit`);
+
+--
+-- Index pour la table `src_territoires`
+--
+ALTER TABLE `src_territoires`
+ ADD PRIMARY KEY (`Region`,`Manager`);
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `fait_commandes`
+--
+ALTER TABLE `fait_commandes`
+ADD CONSTRAINT `fait_commande_dim_clients` FOREIGN KEY (`FK_idProduit`) REFERENCES `dim_produits` (`PK_idProduit`),
+ADD CONSTRAINT `fait_commande_dim_manager` FOREIGN KEY (`FK_region`) REFERENCES `dim_manager` (`PK_region`),
+ADD CONSTRAINT `fait_commande_dim_produits` FOREIGN KEY (`FK_noClient`) REFERENCES `dim_clients` (`PK_noClient`),
+ADD CONSTRAINT `fait_commande_dim_tempsCommande` FOREIGN KEY (`FK_dateCommande`) REFERENCES `dim_temps` (`PK_idDate`),
+ADD CONSTRAINT `fait_commande_dim_tempsExpedition` FOREIGN KEY (`FK_dateExpedition`) REFERENCES `dim_temps` (`PK_idDate`);
+
+--
+-- Contraintes pour la table `ods_commandes`
+--
+ALTER TABLE `ods_commandes`
+ADD CONSTRAINT `ods_commandes_ods_clients_noClient_fk` FOREIGN KEY (`noClient`) REFERENCES `ods_clients` (`noClient`),
+ADD CONSTRAINT `ods_commandes_ods_manager_region_fk` FOREIGN KEY (`region`) REFERENCES `ods_manager` (`region`),
+ADD CONSTRAINT `ods_commandes_ods_produits_idProduit_fk` FOREIGN KEY (`idProduit`) REFERENCES `ods_produits` (`idProduit`),
+ADD CONSTRAINT `ods_commandes_ods_temps_idDate2_fk` FOREIGN KEY (`dateExpedition`) REFERENCES `ods_temps` (`idDate`),
+ADD CONSTRAINT `ods_commandes_ods_temps_idDate_fk` FOREIGN KEY (`dateCommande`) REFERENCES `ods_temps` (`idDate`);
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
--- Dump completed on 2016-12-09  1:05:38
