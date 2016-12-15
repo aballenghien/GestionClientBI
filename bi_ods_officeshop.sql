@@ -11,11 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
 --
 -- Base de données :  `bi_ods_officeshop`
 --
@@ -27,24 +22,29 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `dim_clients` (
-  `PK_noClient` int(11) NOT NULL,
-  `PK_dtCreate` date NOT NULL DEFAULT '0000-00-00',
-  `nom` varchar(30) DEFAULT NULL,
-  `prenom` varchar(30) DEFAULT NULL,
-  `etat` varchar(30) NOT NULL DEFAULT '',
-  `ville` varchar(40) NOT NULL DEFAULT '',
-  `codePostal` varchar(5) NOT NULL DEFAULT ''
+  `pk_client` int(11) NOT NULL AUTO_INCREMENT,
+  `no_Client` int(11) NOT NULL,
+  `dt_finval` date NOT NULL DEFAULT '0000-00-00',
+  `dt_debval` date NOT NULL DEFAULT '0000-00-00',
+  `lib_nom` varchar(30) DEFAULT NULL,
+  `lib_prenom` varchar(30) DEFAULT NULL,
+  `lib_etat` varchar(30) NOT NULL DEFAULT '',
+  `lib_ville` varchar(40) NOT NULL DEFAULT '',
+  `lib_codePostal` varchar(5) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `dim_manager`
+-- Structure de la table `dim_managers`
 --
 
-CREATE TABLE IF NOT EXISTS `dim_manager` (
-  `manager` varchar(50) NOT NULL DEFAULT '',
-  `PK_region` varchar(30) NOT NULL DEFAULT ''
+CREATE TABLE IF NOT EXISTS `dim_managers` (
+  `pk_manager` int(11) NOT NULL AUTO_INCREMENT,
+  `dt_debval` date NOT NULL DEFAULT '0000-00-00',
+  `dt_finval` date NOT NULL DEFAULT '0000-00-00',
+  `lib_nommanager` varchar(50) NOT NULL DEFAULT '',
+  `lib_region` varchar(30) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -54,11 +54,14 @@ CREATE TABLE IF NOT EXISTS `dim_manager` (
 --
 
 CREATE TABLE IF NOT EXISTS `dim_produits` (
-  `PK_idProduit` varchar(20) NOT NULL,
-  `LIB_nom` varchar(20) DEFAULT NULL,
-  `LIB_categorieProduit` varchar(60) DEFAULT NULL,
-  `LIB_sousCategorieProduit` varchar(60) DEFAULT NULL,
-  `LIB_typeEmballage` varchar(40) DEFAULT NULL
+  `pk_produit` int(11) NOT NULL AUTO_INCREMENT,
+  `no_produit` varchar(20) NOT NULL,  
+  `dt_debval date DEFAULT '0000-00-00',
+  `dt_finval date DEFAULT '0000-00-00',
+  `lib_nom` varchar(20) DEFAULT NULL,
+  `lib_categorieproduit` varchar(60) DEFAULT NULL,
+  `lib_souscategorieproduit` varchar(60) DEFAULT NULL,
+  `lib_typeemballage` varchar(40) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -67,12 +70,12 @@ CREATE TABLE IF NOT EXISTS `dim_produits` (
 -- Structure de la table `dim_temps`
 --
 
-CREATE TABLE IF NOT EXISTS `dim_temps` (
+CREATE TABLE IF NOT EXISTS `dim_temps` (  
+  `pk_date` date NOT NULL DEFAULT '0000-00-00',
   `annee` int(11) NOT NULL DEFAULT '0',
   `mois` int(11) NOT NULL DEFAULT '0',
   `jour` int(11) NOT NULL DEFAULT '0',
-  `heure` int(11) NOT NULL DEFAULT '0',
-  `PK_idDate` date NOT NULL DEFAULT '0000-00-00'
+  `heure` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -82,22 +85,23 @@ CREATE TABLE IF NOT EXISTS `dim_temps` (
 --
 
 CREATE TABLE IF NOT EXISTS `fait_commandes` (
-  `PK_noCommande` int(11) NOT NULL,
-  `FK_noClient` int(11) NOT NULL DEFAULT '0',
-  `FK_idProduit` varchar(20) NOT NULL DEFAULT '0',
-  `FK_region` varchar(30) NOT NULL,
-  `FK_dateCommande` date NOT NULL DEFAULT '0000-00-00',
-  `FK_dateExpedition` date NOT NULL DEFAULT '0000-00-00',
-  `prioriteCommande` varchar(25) DEFAULT NULL,
-  `MT_prixUnitaire` decimal(10,2) DEFAULT NULL,
-  `MT_margeProduitBrute` decimal(3,2) DEFAULT NULL,
-  `discount` decimal(3,2) DEFAULT NULL,
-  `MT_fraisExpedition` decimal(5,2) DEFAULT NULL,
-  `LIB_modeExpedition` varchar(50) DEFAULT NULL,
-  `LIB_segmentClient` varchar(50) DEFAULT NULL,
-  `marge` varchar(255) DEFAULT NULL,
-  `QT_quantiteVentes` int(4) DEFAULT NULL,
-  `MT_montantVentes` decimal(7,2) DEFAULT NULL
+  `pk_commande` int(11) NOT NULL AUTO_INCREMENT,
+  `no_commande` int(11) NOT NULL,
+  `fk_client` int(11) NOT NULL DEFAULT '0',
+  `fk_idproduit` varchar(20) NOT NULL DEFAULT '0',
+  `fk_region` varchar(30) NOT NULL,
+  `fk_datecommande` date NOT NULL DEFAULT '0000-00-00',
+  `fk_dateexpedition` date NOT NULL DEFAULT '0000-00-00',
+  `lib_prioritecommande` varchar(25) DEFAULT NULL,
+  `mt_prixunitaire` decimal(10,2) DEFAULT NULL,
+  `mt_margeproduitbrute` decimal(3,2) DEFAULT NULL,
+  `lib_discount` decimal(3,2) DEFAULT NULL,
+  `mt_fraisexpedition` decimal(5,2) DEFAULT NULL,
+  `lib_modeexpedition` varchar(50) DEFAULT NULL,
+  `lib_segmentclient` varchar(50) DEFAULT NULL,
+  `lib_marge` varchar(255) DEFAULT NULL,
+  `qt_quantiteVentes` int(4) DEFAULT NULL,
+  `mt_ventes` decimal(7,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -197,9 +201,9 @@ CREATE TABLE IF NOT EXISTS `ods_commandes` (
   `marge` varchar(255) DEFAULT NULL,
   `quantiteVentes` int(4) DEFAULT NULL,
   `montantVentes` decimal(7,2) DEFAULT NULL,
-  `noClient` int(11) NOT NULL DEFAULT '0',
+  `client` int(11) NOT NULL DEFAULT '0',
   `region` varchar(30) NOT NULL,
-  `idProduit` varchar(20) NOT NULL DEFAULT '0',
+  `produit` varchar(20) NOT NULL DEFAULT '0',
   `dateCommande` date DEFAULT NULL,
   `dateExpedition` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -235,12 +239,12 @@ CREATE TABLE IF NOT EXISTS `ods_produits` (
 -- Structure de la table `ods_temps`
 --
 
-CREATE TABLE IF NOT EXISTS `ods_temps` (
+CREATE TABLE IF NOT EXISTS `ods_temps` (  
+  `date` date NOT NULL DEFAULT '0000-00-00',
   `annee` int(11) NOT NULL DEFAULT '0',
   `mois` int(11) NOT NULL DEFAULT '0',
   `jour` int(11) NOT NULL DEFAULT '0',
-  `heure` int(11) NOT NULL DEFAULT '0',
-  `idDate` date NOT NULL DEFAULT '0000-00-00'
+  `heure` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -249,13 +253,16 @@ CREATE TABLE IF NOT EXISTS `ods_temps` (
 -- Structure de la table `rej_clients`
 --
 
-CREATE TABLE IF NOT EXISTS `rej_clients` (
+CREATE TABLE IF NOT EXISTS `rej_src_clients` (
   `NoClient` varchar(255) DEFAULT NULL,
   `NomComplet` varchar(255) DEFAULT NULL,
   `Region` varchar(255) DEFAULT NULL,
   `Etat` varchar(255) DEFAULT NULL,
   `Ville` varchar(255) DEFAULT NULL,
-  `CodePostal` varchar(255) DEFAULT NULL
+  `CodePostal` varchar(255) DEFAULT NULL,
+  `liberror` varchar(255) DEFAULT NULL,
+  `error` varchar(255) DEFAULT NULL,
+  `dateerror` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -264,7 +271,7 @@ CREATE TABLE IF NOT EXISTS `rej_clients` (
 -- Structure de la table `rej_commandes`
 --
 
-CREATE TABLE IF NOT EXISTS `rej_commandes` (
+CREATE TABLE IF NOT EXISTS `rej_src_commandes` (
   `NoCommande` varchar(255) DEFAULT NULL,
   `PrioriteCommande` varchar(255) DEFAULT NULL,
   `NoClient` varchar(255) DEFAULT NULL,
@@ -279,7 +286,10 @@ CREATE TABLE IF NOT EXISTS `rej_commandes` (
   `DateExpedition` varchar(255) DEFAULT NULL,
   `Marge` varchar(255) DEFAULT NULL,
   `QuantiteVentes` varchar(255) DEFAULT NULL,
-  `MontantVentes` varchar(255) DEFAULT NULL
+  `MontantVentes` varchar(255) DEFAULT NULL,
+  `liberror` varchar(255) DEFAULT NULL,
+  `error` varchar(255) DEFAULT NULL,
+  `dateerror` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -288,12 +298,15 @@ CREATE TABLE IF NOT EXISTS `rej_commandes` (
 -- Structure de la table `rej_produits`
 --
 
-CREATE TABLE IF NOT EXISTS `rej_produits` (
+CREATE TABLE IF NOT EXISTS `rej_src_produits` (
   `IdProduit` varchar(255) DEFAULT NULL,
   `Produit` varchar(255) DEFAULT NULL,
   `CategorieProduit` varchar(255) DEFAULT NULL,
   `SousCategorieProduit` varchar(255) DEFAULT NULL,
-  `TypeEmballage` varchar(255) DEFAULT NULL
+  `TypeEmballage` varchar(255) DEFAULT NULL,
+  `liberror` varchar(255) DEFAULT NULL,
+  `error` varchar(255) DEFAULT NULL,
+  `dateerror` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -302,10 +315,40 @@ CREATE TABLE IF NOT EXISTS `rej_produits` (
 -- Structure de la table `rej_territoires`
 --
 
-CREATE TABLE IF NOT EXISTS `rej_territoires` (
+CREATE TABLE IF NOT EXISTS `rej_src_territoires` (
   `Region` varchar(255) DEFAULT NULL,
-  `Manager` varchar(255) DEFAULT NULL
+  `Manager` varchar(255) DEFAULT NULL,
+  `liberror` varchar(255) DEFAULT NULL,
+  `error` varchar(255) DEFAULT NULL,
+  `dateerror` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Structure de la table `rej_ods_commandes`
+--
+
+CREATE TABLE IF NOT EXISTS `rej_ods_commandes` (
+  `noCommande` int(11) NOT NULL,
+  `prioriteCommande` varchar(25) DEFAULT NULL,
+  `prixUnitaire` decimal(10,2) DEFAULT NULL,
+  `margeProduitBrute` decimal(3,2) DEFAULT NULL,
+  `discount` decimal(3,2) DEFAULT NULL,
+  `fraisExpedition` decimal(5,2) DEFAULT NULL,
+  `modeExpedition` varchar(50) DEFAULT NULL,
+  `segmentClient` varchar(50) DEFAULT NULL,
+  `marge` varchar(255) DEFAULT NULL,
+  `quantiteVentes` int(4) DEFAULT NULL,
+  `montantVentes` decimal(7,2) DEFAULT NULL,
+  `client` int(11) NOT NULL DEFAULT '0',
+  `region` varchar(30) NOT NULL,
+  `produit` varchar(20) NOT NULL DEFAULT '0',
+  `dateCommande` date DEFAULT NULL,
+  `dateExpedition` date DEFAULT NULL,
+  `liberror` varchar(25) DEFAULT '',
+  `error` vachar(100) DEFAULT '',
+  `dateerror` date DEFAULT '0000-00-00'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 -- --------------------------------------------------------
 
@@ -379,31 +422,36 @@ CREATE TABLE IF NOT EXISTS `src_territoires` (
 -- Index pour la table `dim_clients`
 --
 ALTER TABLE `dim_clients`
- ADD PRIMARY KEY (`PK_noClient`,`PK_dtCreate`);
+ ADD PRIMARY KEY (`pk_client`);
 
 --
--- Index pour la table `dim_manager`
+-- Index pour la table `dim_managers`
 --
-ALTER TABLE `dim_manager`
- ADD PRIMARY KEY (`PK_region`);
+ALTER TABLE `dim_managers`
+ ADD PRIMARY KEY (`pk_pmanager`);
 
 --
 -- Index pour la table `dim_produits`
 --
 ALTER TABLE `dim_produits`
- ADD PRIMARY KEY (`PK_idProduit`);
+ ADD PRIMARY KEY (`pk_produit`);
 
 --
 -- Index pour la table `dim_temps`
 --
 ALTER TABLE `dim_temps`
- ADD PRIMARY KEY (`PK_idDate`);
+ ADD PRIMARY KEY (`pk_date`);
 
 --
 -- Index pour la table `fait_commandes`
 --
 ALTER TABLE `fait_commandes`
- ADD PRIMARY KEY (`PK_noCommande`,`FK_noClient`,`FK_idProduit`,`FK_region`,`FK_dateCommande`,`FK_dateExpedition`), ADD KEY `fait_commande_dim_clients` (`FK_idProduit`), ADD KEY `fait_commande_dim_produits` (`FK_noClient`), ADD KEY `fait_commande_dim_manager` (`FK_region`), ADD KEY `fait_commande_dim_tempsCommande` (`FK_dateCommande`), ADD KEY `fait_commande_dim_tempsExpedition` (`FK_dateExpedition`);
+ ADD PRIMARY KEY (`pk_commande`,`fk_client`,`fk_produit`,`fk_region`,`fk_datecommande`,`fk_dateexpedition`), 
+ ADD KEY `fait_commande_dim_clients` (`fk_produit`), 
+ ADD KEY `fait_commande_dim_produits` (`fk_client`), 
+ ADD KEY `fait_commande_dim_managers` (`fk_region`), 
+ ADD KEY `fait_commande_dim_tempscommande` (`fk_datecommande`), 
+ ADD KEY `fait_commande_dim_tempsexpedition` (`fk_dateexpedition`);
 
 --
 -- Index pour la table `ods_clients`
@@ -415,7 +463,12 @@ ALTER TABLE `ods_clients`
 -- Index pour la table `ods_commandes`
 --
 ALTER TABLE `ods_commandes`
- ADD PRIMARY KEY (`noCommande`,`noClient`,`region`,`idProduit`), ADD KEY `ods_commandes_ods_clients_noClient_fk` (`noClient`), ADD KEY `ods_commandes_ods_produits_idProduit_fk` (`idProduit`), ADD KEY `ods_commandes_ods_temps_idDate_fk` (`dateCommande`), ADD KEY `ods_commandes_ods_temps_idDate2_fk` (`dateExpedition`), ADD KEY `ods_commandes_ods_manager_region_fk` (`region`);
+ ADD PRIMARY KEY (`noCommande`,`noClient`,`region`,`idProduit`), 
+ ADD KEY `ods_commandes_ods_clients_noClient_fk` (`noClient`), 
+ ADD KEY `ods_commandes_ods_produits_idProduit_fk` (`idProduit`), 
+ ADD KEY `ods_commandes_ods_temps_idDate_fk` (`dateCommande`), 
+ ADD KEY `ods_commandes_ods_temps_idDate2_fk` (`dateExpedition`),
+ ADD KEY `ods_commandes_ods_manager_region_fk` (`region`);
 
 --
 -- Index pour la table `ods_manager`
@@ -433,7 +486,7 @@ ALTER TABLE `ods_produits`
 -- Index pour la table `ods_temps`
 --
 ALTER TABLE `ods_temps`
- ADD PRIMARY KEY (`idDate`);
+ ADD PRIMARY KEY (`date`);
 
 --
 -- Index pour la table `src_clients`
@@ -467,11 +520,11 @@ ALTER TABLE `src_territoires`
 -- Contraintes pour la table `fait_commandes`
 --
 ALTER TABLE `fait_commandes`
-ADD CONSTRAINT `fait_commande_dim_clients` FOREIGN KEY (`FK_idProduit`) REFERENCES `dim_produits` (`PK_idProduit`),
-ADD CONSTRAINT `fait_commande_dim_manager` FOREIGN KEY (`FK_region`) REFERENCES `dim_manager` (`PK_region`),
-ADD CONSTRAINT `fait_commande_dim_produits` FOREIGN KEY (`FK_noClient`) REFERENCES `dim_clients` (`PK_noClient`),
-ADD CONSTRAINT `fait_commande_dim_tempsCommande` FOREIGN KEY (`FK_dateCommande`) REFERENCES `dim_temps` (`PK_idDate`),
-ADD CONSTRAINT `fait_commande_dim_tempsExpedition` FOREIGN KEY (`FK_dateExpedition`) REFERENCES `dim_temps` (`PK_idDate`);
+ADD CONSTRAINT `fait_commande_dim_clients` FOREIGN KEY (`fk_produit`) REFERENCES `dim_produits` (`pk_produit`),
+ADD CONSTRAINT `fait_commande_dim_managers` FOREIGN KEY (`fk_region`) REFERENCES `dim_managers` (`pk_manager`),
+ADD CONSTRAINT `fait_commande_dim_produits` FOREIGN KEY (`fk_client`) REFERENCES `dim_clients` (`pk_client`),
+ADD CONSTRAINT `fait_commande_dim_tempsCommande` FOREIGN KEY (`fk_datecommande`) REFERENCES `dim_temps` (`pk_date`),
+ADD CONSTRAINT `fait_commande_dim_tempsExpedition` FOREIGN KEY (`fk_dateexpedition`) REFERENCES `dim_temps` (`pk_date`);
 
 --
 -- Contraintes pour la table `ods_commandes`
@@ -480,9 +533,6 @@ ALTER TABLE `ods_commandes`
 ADD CONSTRAINT `ods_commandes_ods_clients_noClient_fk` FOREIGN KEY (`noClient`) REFERENCES `ods_clients` (`noClient`),
 ADD CONSTRAINT `ods_commandes_ods_manager_region_fk` FOREIGN KEY (`region`) REFERENCES `ods_manager` (`region`),
 ADD CONSTRAINT `ods_commandes_ods_produits_idProduit_fk` FOREIGN KEY (`idProduit`) REFERENCES `ods_produits` (`idProduit`),
-ADD CONSTRAINT `ods_commandes_ods_temps_idDate2_fk` FOREIGN KEY (`dateExpedition`) REFERENCES `ods_temps` (`idDate`),
-ADD CONSTRAINT `ods_commandes_ods_temps_idDate_fk` FOREIGN KEY (`dateCommande`) REFERENCES `ods_temps` (`idDate`);
+ADD CONSTRAINT `ods_commandes_ods_temps_idDate2_fk` FOREIGN KEY (`dateExpedition`) REFERENCES `ods_temps` (`date`),
+ADD CONSTRAINT `ods_commandes_ods_temps_idDate_fk` FOREIGN KEY (`dateCommande`) REFERENCES `ods_temps` (`date`);
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
