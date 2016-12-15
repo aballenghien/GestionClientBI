@@ -538,6 +538,27 @@
       </column>
       <additionalProperties key="Comment" value=""/>
     </metadata>
+    <metadata connector="FLOW" label="src_clients" name="out1">
+      <column comment="" defaultValue="0" key="true" length="10" name="NoClient" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="60" name="NomComplet" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="30" name="Region" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="30" name="Etat" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="40" name="Ville" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="5" name="CodePostal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <additionalProperties key="Comment" value=""/>
+    </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
@@ -585,6 +606,14 @@
         <mapperTableEntries name="Marge" expression="row2.Marge" type="id_String" nullable="true"/>
         <mapperTableEntries name="QuantiteVentes" expression="row2.QuantiteVentes" type="id_String" nullable="true"/>
         <mapperTableEntries name="MontantVentes" expression="row2.MontantVentes" type="id_String" nullable="true"/>
+      </outputTables>
+      <outputTables sizeState="INTERMEDIATE" name="out1">
+        <mapperTableEntries name="NoClient" type="id_Integer"/>
+        <mapperTableEntries name="NomComplet" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Region" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Etat" type="id_String" nullable="true"/>
+        <mapperTableEntries name="Ville" type="id_String" nullable="true"/>
+        <mapperTableEntries name="CodePostal" type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="NoCommande" type="id_String" nullable="true"/>

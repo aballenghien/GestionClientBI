@@ -2,7 +2,7 @@ NoClient;NomComplet;Région;Etat;Ville;CodePostal
 2;Janice Fletcher;Central;Illinois;Addison;60101
 2;Bonnie Potter;West;Washington;Anacortes;98221
 5;Ronnie Proctor;West;California;San Gabriel;917763322135312135
-6;Dwight Hwang;West;California;San Jose;95123
+c6;Dwight Hwang;West;California;San Jose;95123
 7;Leon Gill;East;Massachusetts;Fall River;2724
 8;Melanie Garner;East;New Hampshire;Bedford;3110
 9;Lorraine Houston;East;New Jersey;Camden;8101

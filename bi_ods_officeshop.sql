@@ -27,8 +27,10 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `dim_clients` (
-  `PK_noClient` int(11) NOT NULL,
-  `PK_dtCreate` date NOT NULL DEFAULT '0000-00-00',
+  `PK_client int(11) NOT NULL,
+  `noClient` int(11) NOT NULL,
+  `DT_debval` date NOT NULL DEFAULT '0000-00-00',
+  `DT_finval` date NOT NULL DEFAULT '0000-00-00',
   `nom` varchar(30) DEFAULT NULL,
   `prenom` varchar(30) DEFAULT NULL,
   `etat` varchar(30) NOT NULL DEFAULT '',
@@ -43,8 +45,9 @@ CREATE TABLE IF NOT EXISTS `dim_clients` (
 --
 
 CREATE TABLE IF NOT EXISTS `dim_manager` (
+  `PK_manager`int(11) NOT NULL,
   `manager` varchar(50) NOT NULL DEFAULT '',
-  `PK_region` varchar(30) NOT NULL DEFAULT ''
+  `region` varchar(30) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -54,6 +57,7 @@ CREATE TABLE IF NOT EXISTS `dim_manager` (
 --
 
 CREATE TABLE IF NOT EXISTS `dim_produits` (
+  `PK_produits
   `PK_idProduit` varchar(20) NOT NULL,
   `LIB_nom` varchar(20) DEFAULT NULL,
   `LIB_categorieProduit` varchar(60) DEFAULT NULL,
