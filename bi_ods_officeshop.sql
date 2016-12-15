@@ -56,8 +56,8 @@ CREATE TABLE IF NOT EXISTS `dim_managers` (
 CREATE TABLE IF NOT EXISTS `dim_produits` (
   `pk_produit` int(11) NOT NULL AUTO_INCREMENT,
   `no_produit` varchar(20) NOT NULL,  
-  `dt_debval date DEFAULT '0000-00-00',
-  `dt_finval date DEFAULT '0000-00-00',
+  `dt_debval` date DEFAULT '0000-00-00',
+  `dt_finval` date DEFAULT '0000-00-00',
   `lib_nom` varchar(20) DEFAULT NULL,
   `lib_categorieproduit` varchar(60) DEFAULT NULL,
   `lib_souscategorieproduit` varchar(60) DEFAULT NULL,
@@ -250,7 +250,7 @@ CREATE TABLE IF NOT EXISTS `ods_temps` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `rej_clients`
+-- Structure de la table `rej_src_clients`
 --
 
 CREATE TABLE IF NOT EXISTS `rej_src_clients` (
@@ -260,15 +260,15 @@ CREATE TABLE IF NOT EXISTS `rej_src_clients` (
   `Etat` varchar(255) DEFAULT NULL,
   `Ville` varchar(255) DEFAULT NULL,
   `CodePostal` varchar(255) DEFAULT NULL,
-  `liberror` varchar(255) DEFAULT NULL,
-  `error` varchar(255) DEFAULT NULL,
+  `liberror` varchar(25) DEFAULT NULL,
+  `error` varchar(100) DEFAULT NULL,
   `dateerror` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `rej_commandes`
+-- Structure de la table `rej_src_commandes`
 --
 
 CREATE TABLE IF NOT EXISTS `rej_src_commandes` (
@@ -287,15 +287,15 @@ CREATE TABLE IF NOT EXISTS `rej_src_commandes` (
   `Marge` varchar(255) DEFAULT NULL,
   `QuantiteVentes` varchar(255) DEFAULT NULL,
   `MontantVentes` varchar(255) DEFAULT NULL,
-  `liberror` varchar(255) DEFAULT NULL,
-  `error` varchar(255) DEFAULT NULL,
+  `liberror` varchar(25) DEFAULT NULL,
+  `error` varchar(100) DEFAULT NULL,
   `dateerror` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `rej_produits`
+-- Structure de la table `rej_src_produits`
 --
 
 CREATE TABLE IF NOT EXISTS `rej_src_produits` (
@@ -304,22 +304,22 @@ CREATE TABLE IF NOT EXISTS `rej_src_produits` (
   `CategorieProduit` varchar(255) DEFAULT NULL,
   `SousCategorieProduit` varchar(255) DEFAULT NULL,
   `TypeEmballage` varchar(255) DEFAULT NULL,
-  `liberror` varchar(255) DEFAULT NULL,
-  `error` varchar(255) DEFAULT NULL,
+  `liberror` varchar(25) DEFAULT NULL,
+  `error` varchar(100) DEFAULT NULL,
   `dateerror` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `rej_territoires`
+-- Structure de la table `rej_src_territoires`
 --
 
 CREATE TABLE IF NOT EXISTS `rej_src_territoires` (
   `Region` varchar(255) DEFAULT NULL,
   `Manager` varchar(255) DEFAULT NULL,
-  `liberror` varchar(255) DEFAULT NULL,
-  `error` varchar(255) DEFAULT NULL,
+  `liberror` varchar(25) DEFAULT NULL,
+  `error` varchar(100) DEFAULT NULL,
   `dateerror` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
