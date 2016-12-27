@@ -167,6 +167,7 @@
       <relatedItems xmi:id="_bMe2DrrqEeals7OC8NPy8A" id="_H_1mAK14Eea1Co-IILr0fg - client" version="Latest" type="schema"/>
       <relatedItems xmi:id="_tikN8LsVEeagG-0RyhE98g" id="_dHjcEK13Eea1Co-IILr0fg - fic_clients" version="Latest" type="schema"/>
       <relatedItems xmi:id="_1ZsLsLuYEeavOr74JwDotQ" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
+      <relatedItems xmi:id="_lFGxQMxfEea9ALVyAxY7bQ" id="_dHjcEK13Eea1Co-IILr0fg - rej_src_clients" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_ymLnoLurEeaa9bG2EzzHFg">
       <baseItem xmi:id="_ymLnoburEeaa9bG2EzzHFg" id="_r_W6ELuqEeaa9bG2EzzHFg" version="0.1" type="job"/>
@@ -182,6 +183,8 @@
       <relatedItems xmi:id="_ymLnq7urEeaa9bG2EzzHFg" id="_dHjcEK13Eea1Co-IILr0fg - fic_commandes" version="Latest" type="schema"/>
       <relatedItems xmi:id="_487GQLu2Eeaf8P73OXwWwQ" id="_dHjcEK13Eea1Co-IILr0fg - src_commandes" version="Latest" type="schema"/>
       <relatedItems xmi:id="_GQi4cLu3Eeaf8P73OXwWwQ" id="_dHjcEK13Eea1Co-IILr0fg - rej_commandes" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_k72uoMxfEea9ALVyAxY7bQ" id="_dHjcEK13Eea1Co-IILr0fg" version="Latest" type="property"/>
+      <relatedItems xmi:id="_k72uocxfEea9ALVyAxY7bQ" id="_dHjcEK13Eea1Co-IILr0fg - rej_src_commandes" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_R73AQLyMEeaJ3s2HNVcqjw">
       <baseItem xmi:id="_R73AQbyMEeaJ3s2HNVcqjw" id="_NpZiALyLEeaJ3s2HNVcqjw" version="0.1" type="job"/>
@@ -198,6 +201,7 @@
       <relatedItems xmi:id="_R73ATLyMEeaJ3s2HNVcqjw" id="_dHjcEK13Eea1Co-IILr0fg - fic_produits" version="Latest" type="schema"/>
       <relatedItems xmi:id="_Uh2gMLyOEeaJ3s2HNVcqjw" id="_dHjcEK13Eea1Co-IILr0fg - rej_produits" version="Latest" type="schema"/>
       <relatedItems xmi:id="_Uh2gMbyOEeaJ3s2HNVcqjw" id="_dHjcEK13Eea1Co-IILr0fg - src_produits" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_GslowMxhEea9ALVyAxY7bQ" id="_dHjcEK13Eea1Co-IILr0fg - rej_src_produits" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_riMkcLyQEeaJ3s2HNVcqjw">
       <baseItem xmi:id="_riMkcbyQEeaJ3s2HNVcqjw" id="_yc2UULyOEeaJ3s2HNVcqjw" version="0.1" type="job"/>
@@ -214,6 +218,7 @@
       <relatedItems xmi:id="_riMkfLyQEeaJ3s2HNVcqjw" id="_dHjcEK13Eea1Co-IILr0fg - fic_territoires" version="Latest" type="schema"/>
       <relatedItems xmi:id="_riMkfbyQEeaJ3s2HNVcqjw" id="_dHjcEK13Eea1Co-IILr0fg - src_territoires" version="Latest" type="schema"/>
       <relatedItems xmi:id="_riMkfryQEeaJ3s2HNVcqjw" id="_dHjcEK13Eea1Co-IILr0fg - rej_territoires" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_GkPlEMxhEea9ALVyAxY7bQ" id="_dHjcEK13Eea1Co-IILr0fg - rej_src_territoires" version="Latest" type="schema"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_qm1vwL2eEeajVoDUVIZhTg">
       <baseItem xmi:id="_qm1vwb2eEeajVoDUVIZhTg" id="_ISCcEL2ZEeajVoDUVIZhTg" version="0.1" type="job"/>
