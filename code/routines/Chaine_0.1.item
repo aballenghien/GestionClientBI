@@ -1,8 +1,5 @@
 package routines;
 
-import java.util.Calendar;
-import java.util.Date;
-
 /*
  * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
  * it must be before the "{talendTypes}" key.
@@ -21,42 +18,28 @@ import java.util.Date;
  * 
  * 5. {example} gives a example for the Function. it is optional.
  */
-public class DateOperation {
-	
-	public static int getJour(Date uneDate){
-		Calendar c = Calendar.getInstance();
-		c.setTime(uneDate);
-		return c.get(Calendar.DAY_OF_MONTH);
-	}
-	
-	public static int getMois(Date uneDate){
-		Calendar c = Calendar.getInstance();
-		c.setTime(uneDate);
-		return c.get(Calendar.MONTH);
-	}
-	
-	public static int getAnnee(Date uneDate){
-		Calendar c = Calendar.getInstance();
-		c.setTime(uneDate);
-		return c.get(Calendar.YEAR);
-	}
-	
-	public static int getHeure(Date uneDate){
-		Calendar c = Calendar.getInstance();
-		c.setTime(uneDate);
-		return c.get(Calendar.HOUR_OF_DAY);
-	}
-	
-	public static boolean isDate(String dateAVerifier){		
-		boolean isDate = true;
-		try{
-			TalendDate.parseDate("dd/MM/yyyy", dateAVerifier);
-		}catch (Exception e){
-			isDate = false;
-		}
-		return isDate;
-	}
+public class Chaine {
 
-
-   
+    
+    public static String toPourcentage(String valeur) {
+    	char[] tab = valeur.toCharArray();
+    	String pourcentage = valeur;
+    	int posVirgule;
+    	int posVirgChar;
+    	int i = 0;
+    	posVirgChar = valeur.indexOf(",");
+    	if (valeur.contains("E")){
+    	   posVirgule = Integer.parseInt(tab[tab.length-2]+""+tab[tab.length-1]);
+    	   posVirgule = posVirgule-1;
+    	   pourcentage = "0,";
+    	   for(i = 1; i <= posVirgule; i++){
+    		   pourcentage+="0";
+    	   }
+    	   for (i=0; i < posVirgChar;i++){
+    		   pourcentage+=tab[i]+"";
+    	   }
+    	   
+        }
+    	return pourcentage;
+    }
 }

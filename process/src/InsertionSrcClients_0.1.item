@@ -122,6 +122,7 @@
     <routinesParameter id="_hxHdoK12Eea1Co-IILr0fg" name="TalendDataGenerator"/>
     <routinesParameter id="_hxt6kK12Eea1Co-IILr0fg" name="TalendDate"/>
     <routinesParameter id="_hynScK12Eea1Co-IILr0fg" name="TalendString"/>
+    <routinesParameter id="_Hh2GgNEnEeaNLIjF9Iv6Eg" name="Entier"/>
   </parameters>
   <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
@@ -356,18 +357,16 @@
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="NoClientInt" expression="Integer.parseInt(row2.NoClient)" type="id_Integer"/>
-      </varTables>
-      <outputTables sizeState="INTERMEDIATE" name="out" expressionFilter="Var.NoClientInt > 0 &amp;&amp; Integer.toString(Var.NoClientInt).length() &lt;= 10 &amp;&amp;&#xD;&#xA;row2.NomComplet.length()> 0 &amp;&amp; row2.NomComplet.length() &lt;= 60  &amp;&amp;&#xA;row2.Region.length() > 0 &amp;&amp; row2.Region.length() &lt;= 30 &amp;&amp;&#xD;&#xA;row2.Etat.length() > 0 &amp;&amp; row2.Etat.length() &lt;= 30 &amp;&amp;&#xA;row2.Ville.length() > 0 &amp;&amp; row2.Ville.length() &lt;= 40 &amp;&amp;&#xA;row2.CodePostal.length() > 0 &amp;&amp; row2.CodePostal.length() &lt;= 5" activateExpressionFilter="true">
-        <mapperTableEntries name="NoClient" expression="Var.NoClientInt " type="id_Integer"/>
+      <varTables sizeState="INTERMEDIATE" name="Var"/>
+      <outputTables sizeState="INTERMEDIATE" name="out" expressionFilter="Entier.isInt(row2.NoClient) &amp;&amp;&#xA;Integer.parseInt(row2.NoClient) > 0 &amp;&amp; row2.NoClient.length() &lt;= 10 &amp;&amp;&#xD;&#xA;row2.NomComplet.length()> 0 &amp;&amp; row2.NomComplet.length() &lt;= 60  &amp;&amp;&#xA;row2.Region.length() > 0 &amp;&amp; row2.Region.length() &lt;= 30 &amp;&amp;&#xD;&#xA;row2.Etat.length() > 0 &amp;&amp; row2.Etat.length() &lt;= 30 &amp;&amp;&#xA;row2.Ville.length() > 0 &amp;&amp; row2.Ville.length() &lt;= 40 &amp;&amp;&#xA;row2.CodePostal.length() > 0 &amp;&amp; row2.CodePostal.length() &lt;= 5" activateExpressionFilter="true">
+        <mapperTableEntries name="NoClient" expression="Integer.parseInt(row2.NoClient)" type="id_Integer"/>
         <mapperTableEntries name="NomComplet" expression="row2.NomComplet" type="id_String" nullable="true"/>
         <mapperTableEntries name="Region" expression="row2.Region" type="id_String" nullable="true"/>
         <mapperTableEntries name="Etat" expression="row2.Etat" type="id_String" nullable="true"/>
         <mapperTableEntries name="Ville" expression="row2.Ville" type="id_String" nullable="true"/>
         <mapperTableEntries name="CodePostal" expression="row2.CodePostal" type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="rejects" expressionFilter="Var.NoClientInt &lt;= 0 || Integer.toString(Var.NoClientInt).length() > 10 ||&#xD;&#xA;row2.NomComplet.length()== 0 || row2.NomComplet.length() > 60  ||&#xD;&#xA;row2.Region.length() == 0 || row2.Region.length() > 30 ||&#xD;&#xA;row2.Etat.length() == 0 || row2.Etat.length() > 30 ||&#xD;&#xA;row2.Ville.length() == 0 || row2.Ville.length() > 40 ||&#xD;&#xA;row2.CodePostal.length() == 0 || row2.CodePostal.length() > 5" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="rejects" expressionFilter="!(Entier.isInt(row2.NoClient)) ||&#xA;Integer.parseInt(row2.NoClient) &lt;= 0 || row2.NoClient.length() > 10 ||&#xD;&#xA;row2.NomComplet.length()== 0 || row2.NomComplet.length() > 60  ||&#xD;&#xA;row2.Region.length() == 0 || row2.Region.length() > 30 ||&#xD;&#xA;row2.Etat.length() == 0 || row2.Etat.length() > 30 ||&#xD;&#xA;row2.Ville.length() == 0 || row2.Ville.length() > 40 ||&#xD;&#xA;row2.CodePostal.length() == 0 || row2.CodePostal.length() > 5" activateExpressionFilter="true">
         <mapperTableEntries name="NoClient" expression="row2.NoClient " type="id_String" nullable="true"/>
         <mapperTableEntries name="NomComplet" expression="row2.NomComplet " type="id_String" nullable="true"/>
         <mapperTableEntries name="Region" expression="row2.Region " type="id_String" nullable="true"/>
@@ -599,7 +598,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="outerr">
         <mapperTableEntries name="NoClient" expression="row3.NoClient" type="id_String" nullable="true"/>
