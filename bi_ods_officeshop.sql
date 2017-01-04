@@ -550,8 +550,8 @@ CREATE TABLE `ods_commandes` (
   `quantiteVentes` int(4) DEFAULT NULL,
   `montantVentes` decimal(7,2) DEFAULT NULL,
   `client` int(11) NOT NULL DEFAULT '0',
-  `region` varchar(30) NOT NULL,
-  `produit` varchar(20) NOT NULL DEFAULT '0',
+  `region` int(11) NOT NULL DEFAULT '0',
+  `produit` int(11) NOT NULL DEFAULT '0',
   `dateCommande` date DEFAULT NULL,
   `dateExpedition` date DEFAULT NULL,
   PRIMARY KEY (`noCommande`,`client`,`region`,`produit`),
@@ -560,11 +560,11 @@ CREATE TABLE `ods_commandes` (
   KEY `ods_commandes_ods_temps_idDate_fk` (`dateCommande`),
   KEY `ods_commandes_ods_temps_idDate2_fk` (`dateExpedition`),
   KEY `ods_commandes_ods_manager_region_fk` (`region`),
-  CONSTRAINT `ods_commandes_ods_clients_noClient_fk` FOREIGN KEY (`client`) REFERENCES `ods_clients` (`noClient`),
-  CONSTRAINT `ods_commandes_ods_manager_region_fk` FOREIGN KEY (`region`) REFERENCES `ods_manager` (`region`),
-  CONSTRAINT `ods_commandes_ods_produits_idProduit_fk` FOREIGN KEY (`produit`) REFERENCES `ods_produits` (`idProduit`),
-  CONSTRAINT `ods_commandes_ods_temps_idDate2_fk` FOREIGN KEY (`dateExpedition`) REFERENCES `ods_temps` (`date`),
-  CONSTRAINT `ods_commandes_ods_temps_idDate_fk` FOREIGN KEY (`dateCommande`) REFERENCES `ods_temps` (`date`)
+  CONSTRAINT `ods_commandes_ods_clients_noClient_fk` FOREIGN KEY (`client`) REFERENCES `dim_client` (`pk_client`),
+  CONSTRAINT `ods_commandes_ods_manager_region_fk` FOREIGN KEY (`region`) REFERENCES `dim_managers` (`pk_manager`),
+  CONSTRAINT `ods_commandes_ods_produits_idProduit_fk` FOREIGN KEY (`produit`) REFERENCES `dim_produit` (`pk_produit`),
+  CONSTRAINT `ods_commandes_ods_temps_idDate2_fk` FOREIGN KEY (`dateExpedition`) REFERENCES `dim_temps` (`pk_date`),
+  CONSTRAINT `ods_commandes_ods_temps_idDate_fk` FOREIGN KEY (`dateCommande`) REFERENCES `dim_temps` (`pk_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
