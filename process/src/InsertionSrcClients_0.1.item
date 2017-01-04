@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="env_audrey" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="new1" prompt="new1?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/data/"/>
@@ -356,7 +356,7 @@
       <column comment="" key="false" length="255" name="CodePostal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="out" expressionFilter="Entier.isInt(row2.NoClient) &amp;&amp;&#xA;Integer.parseInt(row2.NoClient) > 0 &amp;&amp; row2.NoClient.length() &lt;= 10 &amp;&amp;&#xD;&#xA;row2.NomComplet.length()> 0 &amp;&amp; row2.NomComplet.length() &lt;= 60  &amp;&amp;&#xA;row2.Region.length() > 0 &amp;&amp; row2.Region.length() &lt;= 30 &amp;&amp;&#xD;&#xA;row2.Etat.length() > 0 &amp;&amp; row2.Etat.length() &lt;= 30 &amp;&amp;&#xA;row2.Ville.length() > 0 &amp;&amp; row2.Ville.length() &lt;= 40 &amp;&amp;&#xA;row2.CodePostal.length() > 0 &amp;&amp; row2.CodePostal.length() &lt;= 5" activateExpressionFilter="true">
         <mapperTableEntries name="NoClient" expression="Integer.parseInt(row2.NoClient)" type="id_Integer"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="env_audrey" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
@@ -292,7 +292,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="update" expressionFilter="row1.noClient==row2.no_client &amp;&amp;&#xD;&#xA;TalendDate.compareDate(row2.dt_finval,TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;02-02-0002&quot;),&quot;yyyy-MM-dd&quot;)==0&#xA;&amp;&amp;(&#xA;!(row1.nom.equals(row2.lib_nom)) ||&#xA;!(row1.prenom.equals(row2.lib_prenom))||&#xA;!(row1.etat.equals(row2.lib_etat)) ||&#xA;!(row1.ville.equals(row2.lib_ville)) ||&#xA;!(row1.codePostal.equals(row2.lib_codePostal))&#xA;)" activateExpressionFilter="true">
         <mapperTableEntries name="pk_client" expression="row2.pk_client" type="id_Integer"/>
