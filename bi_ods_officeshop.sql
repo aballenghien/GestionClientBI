@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `dim_clients` (
 
-  `pk_client` int(11) NOT NULL AUTO_INCREMENT,
+  `pk_client` int(11) NOT NULL,
   `no_Client` int(11) NOT NULL,
   `dt_finval` date NOT NULL DEFAULT '0000-00-00',
   `dt_debval` date NOT NULL DEFAULT '0000-00-00',
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `dim_clients` (
 
 
 CREATE TABLE IF NOT EXISTS `dim_managers` (
-  `pk_manager` int(11) NOT NULL AUTO_INCREMENT,
+  `pk_manager` int(11) NOT NULL,
   `dt_debval` date NOT NULL DEFAULT '0000-00-00',
   `dt_finval` date NOT NULL DEFAULT '0000-00-00',
   `lib_nommanager` varchar(50) NOT NULL DEFAULT '',
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `dim_managers` (
 
 CREATE TABLE IF NOT EXISTS `dim_produits` (
 
-  `pk_produit` int(11) NOT NULL AUTO_INCREMENT,
+  `pk_produit` int(11) NOT NULL,
   `no_produit` varchar(20) NOT NULL,  
   `dt_debval` date DEFAULT '0000-00-00',
   `dt_finval` date DEFAULT '0000-00-00',
@@ -88,11 +88,11 @@ CREATE TABLE IF NOT EXISTS `dim_temps` (
 --
 
 CREATE TABLE IF NOT EXISTS `fait_commandes` (
-  `pk_commande` int(11) NOT NULL AUTO_INCREMENT,
+  `pk_commande` int(11) NOT NULL,
   `no_commande` int(11) NOT NULL,
   `fk_client` int(11) NOT NULL DEFAULT '0',
-  `fk_idproduit` varchar(20) NOT NULL DEFAULT '0',
-  `fk_region` varchar(30) NOT NULL,
+  `fk_idproduit` int(11) NOT NULL DEFAULT '0',
+  `fk_region` int(11) NOT NULL,
   `fk_datecommande` date NOT NULL DEFAULT '0000-00-00',
   `fk_dateexpedition` date NOT NULL DEFAULT '0000-00-00',
   `lib_prioritecommande` varchar(25) DEFAULT NULL,
@@ -348,7 +348,7 @@ CREATE TABLE IF NOT EXISTS `rej_ods_commandes` (
   `dateCommande` date DEFAULT NULL,
   `dateExpedition` date DEFAULT NULL,
   `liberror` varchar(25) DEFAULT '',
-  `error` vachar(100) DEFAULT '',
+  `error` varchar(100) DEFAULT '',
   `dateerror` date DEFAULT '0000-00-00'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -431,7 +431,7 @@ ALTER TABLE `dim_clients`
 -- Index pour la table `dim_managers`
 --
 ALTER TABLE `dim_managers`
- ADD PRIMARY KEY (`pk_pmanager`);
+ ADD PRIMARY KEY (`pk_manager`);
 
 --
 -- Index pour la table `dim_produits`
@@ -449,12 +449,17 @@ ALTER TABLE `dim_temps`
 -- Index pour la table `fait_commandes`
 --
 ALTER TABLE `fait_commandes`
- ADD PRIMARY KEY (`pk_commande`,`fk_client`,`fk_produit`,`fk_region`,`fk_datecommande`,`fk_dateexpedition`), 
- ADD KEY `fait_commande_dim_clients` (`fk_produit`), 
+ ADD PRIMARY KEY (`pk_commande`,`fk_client`,`fk_idproduit`,`fk_region`,`fk_datecommande`,`fk_dateexpedition`),
+ ADD KEY `fait_commande_dim_clients` (`fk_idproduit`),
  ADD KEY `fait_commande_dim_produits` (`fk_client`), 
  ADD KEY `fait_commande_dim_managers` (`fk_region`), 
  ADD KEY `fait_commande_dim_tempscommande` (`fk_datecommande`), 
  ADD KEY `fait_commande_dim_tempsexpedition` (`fk_dateexpedition`);
+
+ALTER TABLE `fait_commandes` CHANGE pk_commande pk_commande INT(11) AUTO_INCREMENT;
+ALTER TABLE `dim_clients` CHANGE pk_client pk_client INT(11) AUTO_INCREMENT;
+ALTER TABLE `dim_managers` CHANGE pk_manager pk_manager INT(11) AUTO_INCREMENT;
+ALTER TABLE `dim_produits` CHANGE pk_produit pk_produit INT(11) AUTO_INCREMENT;
 
 --
 -- Index pour la table `ods_clients`
@@ -466,9 +471,9 @@ ALTER TABLE `ods_clients`
 -- Index pour la table `ods_commandes`
 --
 ALTER TABLE `ods_commandes`
- ADD PRIMARY KEY (`noCommande`,`noClient`,`region`,`idProduit`), 
- ADD KEY `ods_commandes_ods_clients_noClient_fk` (`noClient`), 
- ADD KEY `ods_commandes_ods_produits_idProduit_fk` (`idProduit`), 
+ ADD PRIMARY KEY (`noCommande`,`client`,`region`,`produit`),
+ ADD KEY `ods_commandes_ods_clients_noClient_fk` (`client`),
+ ADD KEY `ods_commandes_ods_produits_idProduit_fk` (`produit`),
  ADD KEY `ods_commandes_ods_temps_idDate_fk` (`dateCommande`), 
  ADD KEY `ods_commandes_ods_temps_idDate2_fk` (`dateExpedition`),
  ADD KEY `ods_commandes_ods_manager_region_fk` (`region`);
@@ -523,7 +528,7 @@ ALTER TABLE `src_territoires`
 -- Contraintes pour la table `fait_commandes`
 --
 ALTER TABLE `fait_commandes`
-ADD CONSTRAINT `fait_commande_dim_clients` FOREIGN KEY (`fk_produit`) REFERENCES `dim_produits` (`pk_produit`),
+ADD CONSTRAINT `fait_commande_dim_clients` FOREIGN KEY (`fk_idproduit`) REFERENCES `dim_produits` (`pk_produit`),
 ADD CONSTRAINT `fait_commande_dim_managers` FOREIGN KEY (`fk_region`) REFERENCES `dim_managers` (`pk_manager`),
 ADD CONSTRAINT `fait_commande_dim_produits` FOREIGN KEY (`fk_client`) REFERENCES `dim_clients` (`pk_client`),
 ADD CONSTRAINT `fait_commande_dim_tempsCommande` FOREIGN KEY (`fk_datecommande`) REFERENCES `dim_temps` (`pk_date`),
@@ -533,9 +538,9 @@ ADD CONSTRAINT `fait_commande_dim_tempsExpedition` FOREIGN KEY (`fk_dateexpediti
 -- Contraintes pour la table `ods_commandes`
 --
 ALTER TABLE `ods_commandes`
-ADD CONSTRAINT `ods_commandes_ods_clients_noClient_fk` FOREIGN KEY (`noClient`) REFERENCES `ods_clients` (`noClient`),
+ADD CONSTRAINT `ods_commandes_ods_clients_noClient_fk` FOREIGN KEY (`client`) REFERENCES `ods_clients` (`noClient`),
 ADD CONSTRAINT `ods_commandes_ods_manager_region_fk` FOREIGN KEY (`region`) REFERENCES `ods_manager` (`region`),
-ADD CONSTRAINT `ods_commandes_ods_produits_idProduit_fk` FOREIGN KEY (`idProduit`) REFERENCES `ods_produits` (`idProduit`),
+ADD CONSTRAINT `ods_commandes_ods_produits_idProduit_fk` FOREIGN KEY (`produit`) REFERENCES `ods_produits` (`idProduit`),
 ADD CONSTRAINT `ods_commandes_ods_temps_idDate2_fk` FOREIGN KEY (`dateExpedition`) REFERENCES `ods_temps` (`date`),
 ADD CONSTRAINT `ods_commandes_ods_temps_idDate_fk` FOREIGN KEY (`dateCommande`) REFERENCES `ods_temps` (`date`);
 
