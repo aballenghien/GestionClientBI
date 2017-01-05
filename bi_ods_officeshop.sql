@@ -188,7 +188,7 @@ DROP TABLE IF EXISTS `src_produits`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `src_produits` (
   `IdProduit` varchar(20) NOT NULL DEFAULT '',
-  `Produit` varchar(20) DEFAULT NULL,
+  `Produit` varchar(60) DEFAULT NULL,
   `CategorieProduit` varchar(60) DEFAULT NULL,
   `SousCategorieProduit` varchar(60) DEFAULT NULL,
   `TypeEmballage` varchar(40) DEFAULT NULL,
@@ -249,7 +249,7 @@ DROP TABLE IF EXISTS `dim_clients`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dim_clients` (
   `pk_client` int(11) NOT NULL AUTO_INCREMENT,
-  `no_Client` int(11) NOT NULL,
+  `no_client` int(11) NOT NULL,
   `dt_finval` date NOT NULL DEFAULT '0000-00-00',
   `dt_debval` date NOT NULL DEFAULT '0000-00-00',
   `lib_nom` varchar(30) DEFAULT NULL,
@@ -353,7 +353,7 @@ CREATE TABLE `dim_produits` (
   `no_produit` varchar(20) NOT NULL,
   `dt_debval` date DEFAULT '0000-00-00',
   `dt_finval` date DEFAULT '0000-00-00',
-  `lib_nom` varchar(20) DEFAULT NULL,
+  `lib_nom` varchar(60) DEFAULT NULL,
   `lib_categorieproduit` varchar(60) DEFAULT NULL,
   `lib_souscategorieproduit` varchar(60) DEFAULT NULL,
   `lib_typeemballage` varchar(40) DEFAULT NULL,
@@ -463,7 +463,7 @@ DROP TABLE IF EXISTS `ods_produits`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ods_produits` (
   `idProduit` varchar(20) NOT NULL,
-  `nom` varchar(20) DEFAULT NULL,
+  `nom` varchar(60) DEFAULT NULL,
   `categorieProduit` varchar(60) DEFAULT NULL,
   `sousCategorieProduit` varchar(60) DEFAULT NULL,
   `typeEmballage` varchar(40) DEFAULT NULL,

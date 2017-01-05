@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
-  <context confirmationNeeded="false" name="Default"/>
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
+    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="rhunault"/>
+    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value="82xhSEMyWGS1bjJcGopo/Q=="/>
+    <contextParameter comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="3306"/>
+    <contextParameter comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="localhost"/>
+  </context>
+  <context confirmationNeeded="false" name="env_audrey">
+    <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
+    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="root"/>
+    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value=""/>
+    <contextParameter comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="3306"/>
+    <contextParameter comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="localhost"/>
+  </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
@@ -119,7 +134,7 @@
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
-    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -139,7 +154,7 @@
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
-    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -159,7 +174,7 @@
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
-    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -170,6 +185,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_4" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="exec_part4"/>
@@ -179,7 +195,7 @@
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
-    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -190,6 +206,7 @@
   </node>
   <node componentName="tRunJob" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="768" posY="64">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tRunJob_5" show="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CHECK" name="USE_DYNAMIC_JOB" value="false"/>
     <elementParameter field="TEXT" name="CONTEXT_JOB" value="" show="false"/>
     <elementParameter field="PROCESS_TYPE" name="PROCESS" value="exec_part5"/>
@@ -199,7 +216,7 @@
     <elementParameter field="TEXT" name="CONTEXT_NAME" value="Default" show="false"/>
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
-    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
+    <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="true"/>
     <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
@@ -215,9 +232,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk2" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_3" offsetLabelX="0" offsetLabelY="0" source="tRunJob_3" target="tRunJob_4">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk3" show="false"/>
   </connection>
   <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tRunJob_4" offsetLabelX="0" offsetLabelY="0" source="tRunJob_4" target="tRunJob_5">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk4" show="false"/>
   </connection>
   <subjob>
