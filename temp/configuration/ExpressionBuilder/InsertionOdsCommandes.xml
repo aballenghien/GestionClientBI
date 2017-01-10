@@ -1,0 +1,45 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_1=>" expression="row1.DateCommande &amp;&amp; row1.DateExpedition">
+  <variables name="row1.NoCommande" value="0" talendType="id_Integer"/>
+  <variables name="row1.PrioriteCommande" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.NoClient" value="0" talendType="id_Integer"/>
+  <variables name="row1.Produit" value="null" talendType="id_String"/>
+  <variables name="row1.Prix_Unitaire" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="row1.Marge_Produit_Brut" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="row1.Discount" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="row1.FraisExpedition" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="row1.ModeExpedition" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.SegmentClient" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.DateCommande" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="row1.DateExpedition" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="row1.Marge" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row1.QuantiteVentes" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row1.MontantVentes" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="row2.pk_produit" value="0" talendType="id_Integer"/>
+  <variables name="row2.no_produit" value="null" talendType="id_String"/>
+  <variables name="row2.dt_debval" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="row2.dt_finval" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="row2.lib_nom" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.lib_categorieproduit" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.lib_souscategorieproduit" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row2.lib_typeemballage" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.pk_manager" value="0" talendType="id_Integer"/>
+  <variables name="row3.dt_debval" value="null" talendType="id_Date"/>
+  <variables name="row3.dt_finval" value="null" talendType="id_Date"/>
+  <variables name="row3.lib_nommanager" value="null" talendType="id_String"/>
+  <variables name="row3.lib_region" value="null" talendType="id_String"/>
+  <variables name="row4.pk_date" value="null" talendType="id_Date"/>
+  <variables name="row4.annee" value="0" talendType="id_Integer"/>
+  <variables name="row4.mois" value="0" talendType="id_Integer"/>
+  <variables name="row4.jour" value="0" talendType="id_Integer"/>
+  <variables name="row4.heure" value="0" talendType="id_Integer"/>
+  <variables name="row5.pk_client" value="0" talendType="id_Integer"/>
+  <variables name="row5.no_client" value="0" talendType="id_Integer"/>
+  <variables name="row5.dt_finval" value="null" talendType="id_Date"/>
+  <variables name="row5.dt_debval" value="null" talendType="id_Date"/>
+  <variables name="row5.lib_nom" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row5.lib_prenom" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row5.lib_etat" value="null" talendType="id_String"/>
+  <variables name="row5.lib_ville" value="null" talendType="id_String"/>
+  <variables name="row5.lib_codePostal" value="null" talendType="id_String"/>
+</expression:EMFExpression>

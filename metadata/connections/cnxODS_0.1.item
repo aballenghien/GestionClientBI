@@ -71,7 +71,7 @@
         <sqlDataType xmi:id="_THsH6ruoEeaa9bG2EzzHFg" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12" nullable="columnNullable"/>
       </feature>
     </ownedElement>
-    <ownedElement xsi:type="relational:TdTable" xmi:id="_9UsG8b8HEeaD85dWjGG3YQ" name="dim_manager" id="_9UsG8L8HEeaD85dWjGG3YQ" label="dim_manager" tableType="TABLE">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_9UsG8b8HEeaD85dWjGG3YQ" name="dim_manager" properties="deleted&#xA;&#xA;true&#xA;&#xA;" id="_9UsG8L8HEeaD85dWjGG3YQ" label="dim_manager" tableType="TABLE">
       <taggedValue xmi:id="_9UsG8r8HEeaD85dWjGG3YQ" tag="Comment" value=""/>
       <feature xsi:type="relational:TdColumn" xmi:id="_9UsG9L8HEeaD85dWjGG3YQ" name="manager" label="manager" length="50" sourceType="VARCHAR" talendType="id_String" nullable="false">
         <taggedValue xmi:id="_9UsG9b8HEeaD85dWjGG3YQ" tag="Comment" value=""/>
