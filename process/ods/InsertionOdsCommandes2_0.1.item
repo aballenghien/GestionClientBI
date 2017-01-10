@@ -777,10 +777,10 @@
         <mapperTableEntries name="segmentClient" expression="copyOfinsert.segmentClient " type="id_String" nullable="true"/>
         <mapperTableEntries name="marge" expression="copyOfinsert.marge" type="id_String" nullable="true"/>
         <mapperTableEntries name="quantiteVentes" expression="copyOfinsert.quantiteVentes " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="montantVentes" expression="copyOfinsert.montantVentes " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="client" expression="copyOfinsert.client " type="id_Integer"/>
+        <mapperTableEntries name="montantVentes" expression="copyOfinsert.montantVentes" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="client" expression="copyOfinsert.client" type="id_Integer"/>
         <mapperTableEntries name="region" expression="" type="id_String"/>
-        <mapperTableEntries name="produit" expression="copyOfinsert.produit " type="id_String"/>
+        <mapperTableEntries name="produit" expression="Integer.toString(copyOfinsert.produit)" type="id_String"/>
         <mapperTableEntries name="dateCommande" expression="copyOfinsert.dateCommande " type="id_Date" nullable="true"/>
         <mapperTableEntries name="dateExpedition" expression="copyOfinsert.dateExpedition " type="id_Date" nullable="true"/>
         <mapperTableEntries name="liberror" expression="&quot;clé étrangère&quot;" type="id_String" nullable="true"/>
@@ -1126,9 +1126,9 @@
         <mapperTableEntries name="marge" expression="copyOfinsert_1.marge " type="id_String" nullable="true"/>
         <mapperTableEntries name="quantiteVentes" expression="copyOfinsert_1.quantiteVentes " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="montantVentes" expression="copyOfinsert_1.montantVentes " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="client" expression="copyOfinsert_1.client " type="id_Integer"/>
+        <mapperTableEntries name="client" expression="copyOfinsert_1.client" type="id_Integer"/>
         <mapperTableEntries name="region" expression="" type="id_String"/>
-        <mapperTableEntries name="produit" expression="copyOfinsert_1.produit " type="id_String"/>
+        <mapperTableEntries name="produit" expression="Integer.toString(copyOfinsert_1.produit) " type="id_String"/>
         <mapperTableEntries name="dateCommande" expression="copyOfinsert_1.dateCommande " type="id_Date" nullable="true"/>
         <mapperTableEntries name="dateExpedition" expression="copyOfinsert_1.dateExpedition " type="id_Date" nullable="true"/>
         <mapperTableEntries name="liberror" expression="&quot;clé étrangère&quot;" type="id_String" nullable="true"/>
@@ -1450,9 +1450,9 @@
         <mapperTableEntries name="marge" expression="copyOfinsert_0.marge " type="id_String" nullable="true"/>
         <mapperTableEntries name="quantiteVentes" expression="copyOfinsert_0.quantiteVentes " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="montantVentes" expression="copyOfinsert_0.montantVentes " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="client" expression="copyOfinsert_0.client " type="id_Integer"/>
-        <mapperTableEntries name="region" expression="copyOfinsert_0.region" type="id_String"/>
-        <mapperTableEntries name="produit" expression="copyOfinsert_0.produit " type="id_String"/>
+        <mapperTableEntries name="client" expression="copyOfinsert_0.client" type="id_Integer"/>
+        <mapperTableEntries name="region" expression="" type="id_String"/>
+        <mapperTableEntries name="produit" expression="Integer.toString(copyOfinsert_0.produit)" type="id_String"/>
         <mapperTableEntries name="dateCommande" expression="copyOfinsert_0.dateCommande " type="id_Date" nullable="true"/>
         <mapperTableEntries name="dateExpedition" expression="copyOfinsert_0.dateExpedition " type="id_Date" nullable="true"/>
         <mapperTableEntries name="liberror" expression="&quot;clé étrangère&quot;" type="id_String" nullable="true"/>
@@ -2822,9 +2822,9 @@
         <mapperTableEntries name="marge" expression="copyOfcopyOfinsert_0.marge " type="id_String" nullable="true"/>
         <mapperTableEntries name="quantiteVentes" expression="copyOfcopyOfinsert_0.quantiteVentes " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="montantVentes" expression="copyOfcopyOfinsert_0.montantVentes " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="client" expression="copyOfcopyOfinsert_0.client  " type="id_Integer"/>
+        <mapperTableEntries name="client" expression="copyOfcopyOfinsert_0.client" type="id_Integer"/>
         <mapperTableEntries name="region" expression="&quot;région&quot;" type="id_String"/>
-        <mapperTableEntries name="produit" expression="copyOfcopyOfinsert_0.produit" type="id_String"/>
+        <mapperTableEntries name="produit" expression="Integer.toString(copyOfcopyOfinsert_0.produit)" type="id_String"/>
         <mapperTableEntries name="dateCommande" expression="copyOfcopyOfinsert_0.dateCommande" type="id_Date" nullable="true"/>
         <mapperTableEntries name="dateExpedition" expression="copyOfcopyOfinsert_0.dateExpedition" type="id_Date" nullable="true"/>
         <mapperTableEntries name="liberror" expression="&quot;clé étrangère&quot;" type="id_String" nullable="true"/>
