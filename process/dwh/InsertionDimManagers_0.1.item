@@ -218,7 +218,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="insert" expressionFilter="!(row1.manager.equals(row2.lib_nommanager))" activateExpressionFilter="true">
         <mapperTableEntries name="pk_manager" type="id_Integer"/>

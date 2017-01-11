@@ -47,6 +47,12 @@ public class DateOperation {
 		return c.get(Calendar.HOUR_OF_DAY);
 	}
 	
+	public static int getMinute(Date uneDate){
+		Calendar c = Calendar.getInstance();
+		c.setTime(uneDate);
+		return c.get(Calendar.MINUTE);
+	}
+	
 	public static boolean isDate(String dateAVerifier){		
 		boolean isDate = true;
 		try{

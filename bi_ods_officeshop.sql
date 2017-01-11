@@ -31,7 +31,8 @@ CREATE TABLE `dim_clients` (
   `lib_prenom` varchar(30) DEFAULT NULL,
   `lib_etat` varchar(30) NOT NULL DEFAULT '',
   `lib_ville` varchar(40) NOT NULL DEFAULT '',
-  `lib_codePostal` varchar(5) NOT NULL DEFAULT '',
+  `lib_codepostal` varchar(5) NOT NULL DEFAULT '',
+  `lib_region` varchar(30) NOT NULL DEFAULT '',
   PRIMARY KEY (`pk_client`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -81,11 +82,12 @@ DROP TABLE IF EXISTS `dim_temps`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `dim_temps` (
-  `pk_date` date NOT NULL DEFAULT '0000-00-00',
-  `annee` int(11) NOT NULL DEFAULT '0',
-  `mois` int(11) NOT NULL DEFAULT '0',
-  `jour` int(11) NOT NULL DEFAULT '0',
-  `heure` int(11) NOT NULL DEFAULT '0',
+  `pk_date` datetime NOT NULL DEFAULT '0000-00-00 00:00',
+  `lib_annee` int(4) NOT NULL DEFAULT '0',
+  `lib_mois` int(2) NOT NULL DEFAULT '0',
+  `lib_jour` int(2) NOT NULL DEFAULT '0',
+  `lib_heure` int(2) NOT NULL DEFAULT '0',
+  `lib_minute` int(2) NOT NULL DEFAULT '0',
   PRIMARY KEY (`pk_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -101,31 +103,31 @@ CREATE TABLE `fait_commandes` (
   `pk_commande` int(11) NOT NULL AUTO_INCREMENT,
   `no_commande` int(11) NOT NULL,
   `fk_client` int(11) NOT NULL DEFAULT '0',
-  `fk_idproduit` int(11) NOT NULL DEFAULT '0',
+  `fk_produit` int(11) NOT NULL DEFAULT '0',
   `fk_region` int(11) NOT NULL,
-  `fk_datecommande` date NOT NULL DEFAULT '0000-00-00',
-  `fk_dateexpedition` date NOT NULL DEFAULT '0000-00-00',
+  `dt_commande` datetime NOT NULL DEFAULT '0000-00-00 00:00',
+  `dt_expedition` datetime NOT NULL DEFAULT '0000-00-00 00:00',
   `lib_prioritecommande` varchar(25) DEFAULT NULL,
   `mt_prixunitaire` decimal(10,2) DEFAULT NULL,
-  `mt_margeproduitbrute` decimal(3,2) DEFAULT NULL,
+  `mt_margeproduitbrute` decimal(10,4) DEFAULT NULL,
   `lib_discount` decimal(3,2) DEFAULT NULL,
   `mt_fraisexpedition` decimal(5,2) DEFAULT NULL,
   `lib_modeexpedition` varchar(50) DEFAULT NULL,
   `lib_segmentclient` varchar(50) DEFAULT NULL,
   `lib_marge` varchar(255) DEFAULT NULL,
-  `qt_quantiteVentes` int(4) DEFAULT NULL,
+  `qt_ventes` int(4) DEFAULT NULL,
   `mt_ventes` decimal(7,2) DEFAULT NULL,
-  PRIMARY KEY (`pk_commande`,`fk_client`,`fk_idproduit`,`fk_region`,`fk_datecommande`,`fk_dateexpedition`),
-  KEY `fait_commande_dim_clients` (`fk_idproduit`),
+  PRIMARY KEY (`pk_commande`,`fk_client`,`fk_produit`,`fk_region`,`dt_commande`,`dt_expedition`),
+  KEY `fait_commande_dim_clients` (`fk_produit`),
   KEY `fait_commande_dim_produits` (`fk_client`),
   KEY `fait_commande_dim_managers` (`fk_region`),
-  KEY `fait_commande_dim_tempscommande` (`fk_datecommande`),
-  KEY `fait_commande_dim_tempsexpedition` (`fk_dateexpedition`),
-  CONSTRAINT `fait_commande_dim_clients` FOREIGN KEY (`fk_idproduit`) REFERENCES `dim_produits` (`pk_produit`),
+  KEY `fait_commande_dim_tempscommande` (`dt_commande`),
+  KEY `fait_commande_dim_tempsexpedition` (`dt_expedition`),
+  CONSTRAINT `fait_commande_dim_produits` FOREIGN KEY (`fk_produit`) REFERENCES `dim_produits` (`pk_produit`),
   CONSTRAINT `fait_commande_dim_managers` FOREIGN KEY (`fk_region`) REFERENCES `dim_managers` (`pk_manager`),
-  CONSTRAINT `fait_commande_dim_produits` FOREIGN KEY (`fk_client`) REFERENCES `dim_clients` (`pk_client`),
-  CONSTRAINT `fait_commande_dim_tempsCommande` FOREIGN KEY (`fk_datecommande`) REFERENCES `dim_temps` (`pk_date`),
-  CONSTRAINT `fait_commande_dim_tempsExpedition` FOREIGN KEY (`fk_dateexpedition`) REFERENCES `dim_temps` (`pk_date`)
+  CONSTRAINT `fait_commande_dim_clients` FOREIGN KEY (`fk_client`) REFERENCES `dim_clients` (`pk_client`),
+  CONSTRAINT `fait_commande_dim_tempsCommande` FOREIGN KEY (`dt_commande`) REFERENCES `dim_temps` (`pk_date`),
+  CONSTRAINT `fait_commande_dim_tempsExpedition` FOREIGN KEY (`dt_expedition`) REFERENCES `dim_temps` (`pk_date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -215,6 +217,7 @@ CREATE TABLE `ods_clients` (
   `etat` varchar(30) NOT NULL DEFAULT '',
   `ville` varchar(40) NOT NULL DEFAULT '',
   `codePostal` varchar(5) NOT NULL DEFAULT '',
+  `region` varchar(30) NOT NULL DEFAULT '',
   PRIMARY KEY (`noClient`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -230,7 +233,7 @@ CREATE TABLE `ods_commandes` (
   `noCommande` int(11) NOT NULL,
   `prioriteCommande` varchar(25) DEFAULT NULL,
   `prixUnitaire` decimal(10,2) DEFAULT NULL,
-  `margeProduitBrute` decimal(3,2) DEFAULT NULL,
+  `margeProduitBrute` decimal(10,4) DEFAULT NULL,
   `discount` decimal(3,2) DEFAULT NULL,
   `fraisExpedition` decimal(5,2) DEFAULT NULL,
   `modeExpedition` varchar(50) DEFAULT NULL,
@@ -241,8 +244,8 @@ CREATE TABLE `ods_commandes` (
   `client` int(11) NOT NULL DEFAULT '0',
   `region` int(11) NOT NULL DEFAULT '0',
   `produit` int(11) NOT NULL DEFAULT '0',
-  `dateCommande` date DEFAULT NULL,
-  `dateExpedition` date DEFAULT NULL,
+  `dateCommande` datetime NOT NULL DEFAULT '0000-00-00 00:00',
+  `dateExpedition` datetime NOT NULL DEFAULT '0000-00-00 00:00',
   PRIMARY KEY (`noCommande`,`client`,`region`,`produit`),
   KEY `ods_commandes_ods_clients_noClient_fk` (`client`),
   KEY `ods_commandes_ods_produits_idProduit_fk` (`produit`),
@@ -291,11 +294,12 @@ DROP TABLE IF EXISTS `ods_temps`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `ods_temps` (
-  `date` date NOT NULL DEFAULT '0000-00-00',
-  `annee` int(11) NOT NULL DEFAULT '0',
-  `mois` int(11) NOT NULL DEFAULT '0',
-  `jour` int(11) NOT NULL DEFAULT '0',
-  `heure` int(11) NOT NULL DEFAULT '0',
+  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00',
+  `annee` int(4) NOT NULL DEFAULT '0',
+  `mois` int(2) NOT NULL DEFAULT '0',
+  `jour` int(2) NOT NULL DEFAULT '0',
+  `heure` int(2) NOT NULL DEFAULT '0',
+  `minute` int(2) NOT NULL DEFAULT '0',
   PRIMARY KEY (`date`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -311,7 +315,7 @@ CREATE TABLE `rej_ods_commandes` (
   `noCommande` int(11) NOT NULL,
   `prioriteCommande` varchar(25) DEFAULT NULL,
   `prixUnitaire` decimal(10,2) DEFAULT NULL,
-  `margeProduitBrute` decimal(3,2) DEFAULT NULL,
+  `margeProduitBrute` decimal(10,4) DEFAULT NULL,
   `discount` decimal(3,2) DEFAULT NULL,
   `fraisExpedition` decimal(5,2) DEFAULT NULL,
   `modeExpedition` varchar(50) DEFAULT NULL,
@@ -322,8 +326,8 @@ CREATE TABLE `rej_ods_commandes` (
   `client` int(11) NOT NULL DEFAULT '0',
   `region` varchar(30) NOT NULL,
   `produit` varchar(20) NOT NULL DEFAULT '0',
-  `dateCommande` date DEFAULT NULL,
-  `dateExpedition` date DEFAULT NULL,
+  `dateCommande` datetime NOT NULL DEFAULT '0000-00-00 00:00',
+  `dateExpedition` datetime NOT NULL DEFAULT '0000-00-00 00:00',
   `liberror` varchar(25) DEFAULT '',
   `error` varchar(100) DEFAULT '',
   `dateerror` date DEFAULT '0000-00-00'
@@ -446,13 +450,13 @@ CREATE TABLE `src_commandes` (
   `NoClient` int(10) NOT NULL DEFAULT '0',
   `Produit` varchar(20) NOT NULL DEFAULT '',
   `Prix_Unitaire` decimal(10,2) DEFAULT NULL,
-  `Marge_Produit_Brut` decimal(3,2) DEFAULT NULL,
+  `Marge_Produit_Brut` decimal(10,4) DEFAULT NULL,
   `Discount` decimal(3,2) DEFAULT NULL,
   `FraisExpedition` decimal(5,2) DEFAULT NULL,
   `ModeExpedition` varchar(50) DEFAULT NULL,
   `SegmentClient` varchar(50) DEFAULT NULL,
-  `DateCommande` date DEFAULT NULL,
-  `DateExpedition` date DEFAULT NULL,
+  `DateCommande` datetime NOT NULL DEFAULT '0000-00-00 00:00',
+  `DateExpedition` datetime NOT NULL DEFAULT '0000-00-00 00:00',
   `Marge` varchar(255) DEFAULT NULL,
   `QuantiteVentes` int(4) DEFAULT NULL,
   `MontantVentes` decimal(7,2) DEFAULT NULL,

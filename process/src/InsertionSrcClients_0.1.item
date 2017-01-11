@@ -347,16 +347,8 @@
       </column>
       <additionalProperties key="Comment" value=""/>
     </metadata>
-    <metadata connector="FLOW" label="test" name="test">
-      <column comment="" key="false" length="255" name="NoClient" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="NomComplet" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="Region" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="Etat" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="Ville" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="CodePostal" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-    </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="out" expressionFilter="Entier.isInt(row2.NoClient) &amp;&amp;&#xA;Integer.parseInt(row2.NoClient) > 0 &amp;&amp; row2.NoClient.length() &lt;= 10 &amp;&amp;&#xD;&#xA;row2.NomComplet.length()> 0 &amp;&amp; row2.NomComplet.length() &lt;= 60  &amp;&amp;&#xA;row2.Region.length() > 0 &amp;&amp; row2.Region.length() &lt;= 30 &amp;&amp;&#xD;&#xA;row2.Etat.length() > 0 &amp;&amp; row2.Etat.length() &lt;= 30 &amp;&amp;&#xA;row2.Ville.length() > 0 &amp;&amp; row2.Ville.length() &lt;= 40 &amp;&amp;&#xA;row2.CodePostal.length() > 0 &amp;&amp; row2.CodePostal.length() &lt;= 5" activateExpressionFilter="true">
         <mapperTableEntries name="NoClient" expression="Integer.parseInt(row2.NoClient)" type="id_Integer"/>
@@ -376,14 +368,6 @@
         <mapperTableEntries name="liberror" expression="&quot;format&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="error" expression="&quot;La valeur ne peut pas être tronquée&quot;" type="id_String" nullable="true"/>
         <mapperTableEntries name="dateerror" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
-      </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="test">
-        <mapperTableEntries name="NoClient" expression="row2.NoClient " type="id_String" nullable="true"/>
-        <mapperTableEntries name="NomComplet" expression="row2.NomComplet " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Region" expression="row2.Region " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Etat" expression="row2.Etat " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Ville" expression="row2.Ville " type="id_String" nullable="true"/>
-        <mapperTableEntries name="CodePostal" expression="row2.CodePostal " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="NoClient" type="id_String" nullable="true"/>

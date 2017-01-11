@@ -1,6 +1,6 @@
 IdProduit;Produit;CategorieProduit;SousCategorieProduit;TypeEmballage
 P00001;*Staples* Surligneurs;Fournitures de bureau;Stylos et fournitures d'art;Sac enveloppe
-P00002;*Staples* Ouvre-lettres;Fournitures de bureau;Ciseaux, règles;Sac enveloppe
+P00002;*Staples* Ouvre-lettres;Fournitures de bureau;Ciseaux, Règles;Sac enveloppe
 P00003;Accessoire1;Technologie;Telephones et Communication;Boîte XS
 P00004;Accessoire2;Technologie;Telephones et Communication;Boîte S
 P00005;Epson C62 Color Inkjet Printer;Technologie;Machines de bureau;Boîte XL
@@ -17,3 +17,94 @@ P00015;Panasonic KX-P1150;Technologie;Machines de bureau;Boîte XL
 P00016;Panasonic KX-P2130;Technologie;Machines de bureau;Boîte XL
 P00017;Panasonic KX-P3200;Technologie;Machines de bureau;Boîte XL
 P00018;Panasonic KX-P3626;Technologie;Machines de bureau;Boîte XL
+P00019;*Staples* Etiquettes d'emballage;Fournitures de bureau;Etiquettes;Boîte S
+P00020;Papier d'affaires multi-usage 4200 de Xerox;Fournitures de bureau;Papier;Boîte S
+P00021;Tennsco Casiers à deux étages;Fournitures de bureau;Stockage & Organisation;Sac enveloppe
+P00022;Tennsco Casiers Gris;Fournitures de bureau;Stockage & Organisation;Sac enveloppe
+P00023;Tennsco Casiers Sable;Fournitures de bureau;Stockage & Organisation;Sac enveloppe
+P00024;Tennsco Etagère Commerciale;Fournitures de bureau;Stockage & Organisation;Boîte L
+P00025;Tennsco Etagère Industrielle;Fournitures de bureau;Stockage & Organisation;Boîte L
+P00026;Tennsco Etagère ouverte;Fournitures de bureau;Stockage & Organisation;Boîte L
+P00027;Tennsco Etagère Utilitaire;Fournitures de bureau;Stockage & Organisation;Boîte L
+P00028;Xerox 188;Fournitures de bureau;Papier;Boîte S
+P00029;Xerox 1880;Fournitures de bureau;Papier;Boîte S
+P00030;Xerox 1881;Fournitures de bureau;Papier;Boîte S
+P00031;Xerox 1882;Fournitures de bureau;Papier;Boîte S
+P00032;Xerox 1883;Fournitures de bureau;Papier;Boîte S
+P00033;Xerox 1888;Fournitures de bureau;Papier;Boîte S
+P00034;Xerox 1891;Fournitures de bureau;Papier;Boîte S
+P00035;Xerox 1892;Fournitures de bureau;Papier;Boîte S
+P00036;Xerox 1893;Fournitures de bureau;Papier;Boîte S
+P00037;Xerox 1894;Fournitures de bureau;Papier;Boîte S
+P00038;Xerox 1896;Fournitures de bureau;Papier;Boîte S
+P00039;Xerox 1897;Fournitures de bureau;Papier;Boîte S
+P00040;Xerox 1898;Fournitures de bureau;Papier;Boîte S
+P00041;Xerox 19;Fournitures de bureau;Papier;Boîte S
+P00042;Xerox 1903;Fournitures de bureau;Papier;Boîte S
+P00043;Xerox 1905;Fournitures de bureau;Papier;Boîte S
+P00044;Xerox 1906;Fournitures de bureau;Papier;Boîte S
+P00045;Xerox 1908;Fournitures de bureau;Papier;Boîte S
+P00046;Xerox 1910;Fournitures de bureau;Papier;Boîte S
+P00047;Xerox 1916;Fournitures de bureau;Papier;Boîte S
+P00048;Xerox 1917;Fournitures de bureau;Papier;Boîte S
+P00049;Xerox 1920;Fournitures de bureau;Papier;Boîte S
+P00050;Xerox 1922;Fournitures de bureau;Papier;Boîte S
+P00051;Xerox 1923;Fournitures de bureau;Papier;Boîte S
+P00052;Xerox 1928;Fournitures de bureau;Papier;Boîte S
+P00053;Xerox 1929;Fournitures de bureau;Papier;Boîte S
+P00054;Xerox 193;Fournitures de bureau;Papier;Boîte S
+P00055;Xerox 1930;Fournitures de bureau;Papier;Boîte S
+P00056;Xerox 1932;Fournitures de bureau;Papier;Boîte S
+P00057;Xerox 1933;Fournitures de bureau;Papier;Boîte S
+P00058;Xerox 1936;Fournitures de bureau;Papier;Boîte S
+P00059;Xerox 1937;Fournitures de bureau;Papier;Boîte S
+P00060;Xerox 1938;Fournitures de bureau;Papier;Boîte S
+P00061;Xerox 1939;Fournitures de bureau;Papier;Boîte S
+P00062;Xerox 194;Fournitures de bureau;Papier;Boîte S
+P00063;Xerox 1941;Fournitures de bureau;Papier;Boîte S
+P00064;Xerox 1947;Fournitures de bureau;Papier;Boîte S
+P00065;Xerox 1950;Fournitures de bureau;Papier;Boîte S
+P00066;Xerox 1951;Fournitures de bureau;Papier;Boîte S
+P00067;Xerox 1952;Fournitures de bureau;Papier;Boîte S
+P00068;Xerox 1954;Fournitures de bureau;Papier;Boîte S
+P00069;Xerox 196;Fournitures de bureau;Papier;Boîte S
+P00070;Xerox 1961;Fournitures de bureau;Papier;Boîte S
+P00071;Xerox 1962;Fournitures de bureau;Papier;Boîte S
+P00072;Xerox 1964;Fournitures de bureau;Papier;Boîte S
+P00073;Xerox 197;Fournitures de bureau;Papier;Boîte S
+P00074;Xerox 1971;Fournitures de bureau;Papier;Boîte S
+P00075;Xerox 1973;Fournitures de bureau;Papier;Boîte S
+P00076;Xerox 1974;Fournitures de bureau;Papier;Boîte S
+P00077;Xerox 1976;Fournitures de bureau;Papier;Boîte S
+P00078;Xerox 1978;Fournitures de bureau;Papier;Boîte S
+P00079;Xerox 1979;Fournitures de bureau;Papier;Boîte S
+P00080;Xerox 1982;Fournitures de bureau;Papier;Boîte S
+P00081;Xerox 1983;Fournitures de bureau;Papier;Boîte S
+P00082;Xerox 1984;Fournitures de bureau;Papier;Boîte S
+P00083;Xerox 1985;Fournitures de bureau;Papier;Boîte S
+P00084;Xerox 1986;Fournitures de bureau;Papier;Boîte S
+P00085;Xerox 1989;Fournitures de bureau;Papier;Boîte S
+P00086;Xerox 199;Fournitures de bureau;Papier;Boîte S
+P00087;Xerox 1991;Fournitures de bureau;Papier;Boîte S
+P00088;Xerox 1993;Fournitures de bureau;Papier;Boîte S
+P00089;Xerox 1994;Fournitures de bureau;Papier;Boîte S
+P00090;Xerox 1995;Fournitures de bureau;Papier;Boîte S
+P00091;Xerox 1996;Fournitures de bureau;Papier;Boîte S
+P00092;Xerox 1997;Fournitures de bureau;Papier;Boîte S
+P00093;Xerox 20;Fournitures de bureau;Papier;Boîte S
+P00094;Xerox 200;Fournitures de bureau;Papier;Boîte S
+P00095;Xerox 204;Fournitures de bureau;Papier;Boîte S
+P00096;Xerox 207;Fournitures de bureau;Papier;Boîte S
+P00097;Xerox 21;Fournitures de bureau;Papier;Boîte S
+P00098;Xerox 210;Fournitures de bureau;Papier;Boîte S
+P00099;Xerox 212;Fournitures de bureau;Papier;Boîte S
+P00100;Xerox 213;Fournitures de bureau;Papier;Boîte S
+P00101;Xerox 214;Fournitures de bureau;Papier;Boîte S
+P00102;Xerox 216;Fournitures de bureau;Papier;Boîte S
+P00103;Xerox 217;Fournitures de bureau;Papier;Boîte S
+P00104;Xerox 220;Fournitures de bureau;Papier;Boîte S
+P00105;Xerox 224;Fournitures de bureau;Papier;Boîte S
+P00106;Xerox 227;Fournitures de bureau;Papier;Boîte S
+P00107;Xerox 23;Fournitures de bureau;Papier;Boîte S
+P00108;Xerox 231;Fournitures de bureau;Papier;Boîte S
+P00109;Xerox Papier blanc d'impression;Fournitures de bureau;Papier;Boîte S

@@ -1,9 +1,183 @@
 NoClient;NomComplet;Région;Etat;Ville;CodePostal
-2;Janice Fletcher;Central;Illinois;Addison;60101
-2;Bonnie Potter;West;Washington;Anacortes;98221
-5;Ronnie Proctor;West;California;San Gabriel;917763322135312135
-c6;Dwight Hwang;West;California;San Jose;95123
-7;Leon Gill;East;Massachusetts;Fall River;2724
-8;Melanie Garner;East;New Hampshire;Bedford;3110
-9;Lorraine Houston;East;New Jersey;Camden;8101
-10;Meredith Norris Thomas;East;New Jersey;Pennsauken;8109
+24;Edna Thomas;West;California;Laguna Niguel;92677
+53;Sidney Russell Austin;West;Washington;Redmond;98052
+62;Pam Gilbert;Central;Texas;Round Rock;78664
+92;Victoria Baker Hoover;South;Louisiana;Terrytown;70056
+136;Dale Gillespie;West;California;Petaluma;94952
+142;Brooke Weeks Taylor;East;Connecticut;Ansonia;6401
+164;Robin Kramer Vaughn;West;Washington;Richland;99352
+194;Tammy Goldman;West;Utah;Lehi;84043
+202;Max Small;Central;Oklahoma;Bartlesville;74006
+240;Gilbert Scarborough;West;Colorado;Fountain;80817
+266;Ross Frederick;Central;Texas;San Antonio;78207
+269;Calvin Boyette;West;Arizona;Gilbert;85234
+272;Eleanor Swain;South;North Carolina;Charlotte;28204
+317;Katherine Kearney;West;California;Lemon Grove;91945
+353;Bonnie Chambers;West;Arizona;Glendale;85301
+373;Jeanne Werner;Central;Michigan;Detroit;48234
+375;Sandra Sharma;South;Tennessee;Morristown;37814
+395;Monica McCormick;South;North Carolina;Albemarle;28001
+470;Tony Doyle;East;New Jersey;Trenton;8601
+488;Ronnie Creech;East;Maine;South Portland;4106
+491;Toni Swanson;East;New York;New York City;10154
+493;Douglas Buck;West;Washington;Seatac;98158
+494;Jimmy Alston Holder;West;Washington;Seattle;98115
+507;Carol Saunders;South;Kentucky;Bowling Green;42104
+508;Cameron Owens;South;Kentucky;Covington;41011
+510;Gregory Rao;West;California;Manteca;95336
+526;April Hu;West;Arizona;Mesa;85204
+553;Kristine Connolly;West;California;Los Angeles;90008
+555;Walter Young;West;Utah;Pleasant Grove;84062
+597;Alexandra Wise;Central;Indiana;Columbus;47201
+600;Vickie Morse;East;Maryland;Reisterstown;21136
+623;Jenny Petty;East;New Hampshire;Manchester;3101
+669;Amy Shea;Central;Iowa;Ottumwa;52501
+688;Ashley Reese;Central;Missouri;Saint Louis;63116
+691;Alicia Curtis;West;Washington;Tacoma;98408
+699;Jenny Gold;West;California;Los Angeles;90041
+702;Kelly O'Connor;West;California;Santa Rosa;95404
+731;June Herbert;East;Massachusetts;Burlington;1803
+737;Danny Vaughn;East;New Jersey;Bloomfield;7003
+772;Jean Webster;East;Pennsylvania;Allentown;18103
+792;Holly Pate;Central;Oklahoma;Mustang;73064
+797;Eileen Riddle;West;Utah;Roy;84067
+800;Cheryl Guthrie;West;Utah;Roy;84067
+865;Dana Burgess;Central;Indiana;East Chicago;46312
+868;Sharon Ellis;Central;Minnesota;Shoreview;55126
+871;Sandy Ellington;West;Nevada;Reno;89502
+880;Ellen Beck;West;Arizona;Scottsdale;85254
+898;Harriet Hodges;East;New York;New York City;10039
+899;Jordan Berry;East;Pennsylvania;Altoona;16602
+910;Carla Hauser;South;Arkansas;Texarkana;71854
+936;Robyn Garner;West;California;Redlands;92374
+949;Ernest Oh;West;California;Los Angeles;90049
+950;Jane Shah;Central;Minnesota;Prior Lake;55372
+993;Gail Currin;West;California;Oxnard;93030
+1005;Lloyd Dickson;Central;Illinois;Buffalo Grove;60089
+1016;Francis Sherrill;South;North Carolina;Asheville;28806
+1044;Erin Ballard;West;California;Los Angeles;90004
+1047;Gayle Pearson;East;Massachusetts;Boston;2109
+1054;Keith R Atkinson;West;Arizona;Surprise;85374
+1068;Erik Barr;Central;Illinois;Calumet City;60409
+1129;Pam Patton;East;Massachusetts;Boston;2118
+1133;Marjorie Owens;Central;Texas;Farmers Branch;75234
+1142;Russell Chan;Central;Texas;Waco;76706
+1265;Danielle Kramer;Central;Oklahoma;Altus;73521
+1314;Keith Marsh;West;California;Los Angeles;90058
+1316;Marion Lindsey;West;Colorado;Commerce City;80022
+1361;Kristina Collier;Central;Michigan;Allen Park;48101
+1364;Chris Ford;East;Maryland;Camp Springs;20746
+1418;Rebecca Lindsey;Central;Indiana;Kokomo;46901
+1433;Frances Jackson;Central;Indiana;Jeffersonville;47130
+1439;Kyle Kaufman;East;Ohio;Euclid;44117
+1485;Wayne Sutherland;Central;Illinois;Downers Grove;60516
+1494;Kate Lehman;East;Maryland;Dundalk;21222
+1499;Charlotte L Doyle;South;Florida;Coral Gables;33134
+1519;Randall Boykin;East;Maine;Auburn;4210
+1526;Larry Hall;South;Alabama;Birmingham;35211
+1556;Carol Wood;South;Virginia;Alexandria;22304
+1625;Molly Browning;East;New York;Glen Cove;11542
+1653;Charles Cline;West;California;Thousand Oaks;91360
+1672;Sidney Scarborough;South;Virginia;Charlottesville;22901
+1689;Larry Church;Central;Indiana;Highland;46322
+1699;Joseph Hurst;East;Pennsylvania;Levittown;19057
+1723;Constance Flowers;West;California;San Diego;92037
+1733;Nina Horne Kelly;East;District of Columbia;Washington;20012
+1735;Eric West;East;New York;Hempstead;11550
+1738;Dean Solomon;South;North Carolina;Gastonia;28052
+1776;Charlotte Patterson;Central;Indiana;Terre Haute;47802
+1781;Jackie Capps;West;California;San Carlos;94070
+1802;Jack Morse;South;Florida;Dunedin;34698
+1818;Ian Hall;Central;Michigan;Dearborn;48126
+1821;Vanessa Boyer;East;New York;New York City;10177
+1828;Stacey Lucas;Central;Iowa;Cedar Falls;50613
+1837;Herbert Williamson;West;California;San Gabriel;91776
+1852;Joy Kaplan McNeill;West;California;Carlsbad;92008
+1873;Lisa Kim;South;Florida;Palm Beach Gardens;33403
+1882;Anita Kent;East;New Jersey;Linden;7036
+1946;Teresa Wallace;East;Pennsylvania;Mount Lebanon;15228
+1950;Leslie Shannon;West;Montana;Butte;59750
+1959;Bonnie Matthews Rowland;South;Florida;Miami;33916
+1962;Sean Burton;Central;Michigan;Saginaw;48601
+1976;Sherri F Vogel;Central;Michigan;East Lansing;48823
+1991;Paula Hubbard;West;Utah;Kearns;84118
+2006;Cynthia Khan;West;Colorado;Durango;81301
+2014;Cathy Simon;Central;Iowa;Council Bluffs;51503
+2030;Lindsay O'Connell;Central;Texas;Greenville;75401
+2038;Peter Adams;East;New York;Mount Vernon;10550
+2046;Eileen Schwartz;Central;Kansas;Liberal;67901
+2058;Louise Webster Sharma;South;North Carolina;Hickory;28601
+2072;Malcolm S Lanier;Central;Michigan;Flint;48505
+2107;Leigh Burnette Hurley;Central;Illinois;Chicago;60601
+2108;Alfred Barber;Central;Missouri;Mehlville;63129
+2114;Paige Mason;South;Virginia;Norfolk;23518
+2127;Joyce Kern;Central;Michigan;Sterling Heights;48310
+2146;Courtney Boyd;South;Virginia;Fairfax;20151
+2159;Wesley Field;Central;Michigan;Westland;48185
+2198;Lester Woodward Maynard;East;New York;Lindenhurst;11757
+2216;Clara Kaplan;East;Ohio;Medina;44256
+2254;Jeff Meadows;South;Kentucky;Paducah;42003
+2265;James Davenport;Central;Missouri;Kansas City;64130
+2282;Jimmy Waters;Central;Wisconsin;Fitchburg;53713
+2287;Samuel Newman;South;South Carolina;Summerville;29483
+2351;Faye Silver;East;Maryland;Crofton;21114
+2369;Mike G Hartman;South;Florida;Pembroke Pines;33024
+2391;Jacob McNeill;East;New York;Oceanside;11572
+2393;Debbie Dillon;South;Georgia;Roswell;30076
+2448;Melanie Morrow;Central;Minnesota;Edina;55410
+2458;Troy Casey;Central;Minnesota;Edina;55410
+2460;Lucille Gibbons;East;New York;New York City;10035
+2466;Gilbert Godfrey;Central;Michigan;Sault Sainte Marie;49783
+2484;Rhonda Bryant;South;Florida;Winter Haven;33881
+2506;Alfred Harmon;East;Connecticut;Cheshire;6408
+2509;Sidney Larson;East;Maine;South Portland;4106
+2512;Frances Holt;East;Massachusetts;Cambridge;2138
+2520;Sandy Mueller;East;Rhode Island;Providence;2908
+2547;Edna Freeman;South;Virginia;Virginia Beach;23464
+2548;Wayne Bass;West;California;Los Angeles;90068
+2549;Martha Bowers;East;Ohio;Whitehall;43213
+2587;Eugene H Walsh;Central;Wisconsin;Manitowoc;54220
+2618;Amy Hamrick Melvin;East;New York;New York City;10004
+2619;Brandon E Shepherd;Central;South Dakota;Sioux Falls;57103
+2652;Brenda Ross;West;California;Bakersfield;93309
+2667;Pat Baker;East;Ohio;Lakewood;44107
+2668;Carlos Hanson;Central;South Dakota;Rapid City;57701
+2693;Lloyd Cannon;East;Vermont;Bennington;5201
+2724;Erika Clapp;South;Tennessee;Chattanooga;37421
+2781;Kelly Byers;West;Oregon;Woodburn;97071
+2840;Bob Berg;South;Florida;North Miami;33161
+2874;Marian Willis;Central;Nebraska;La Vista;68128
+2882;Andrew Gonzalez;South;North Carolina;Charlotte;28206
+2883;Stuart Sharma;East;Ohio;North Olmsted;44070
+2896;Anna Ellis;Central;Minnesota;Mankato;56001
+2897;Betty Giles;Central;Minnesota;Maple Grove;55369
+2912;Hannah Carver;Central;North Dakota;Grand Forks;58201
+2932;Phyllis Hull;East;Connecticut;Stratford;6614
+2938;Laurie Case Daniel;East;Massachusetts;Stoneham;2180
+2987;Natalie Watts;Central;Iowa;West Des Moines;50265
+2992;Lindsay Webb;Central;Wisconsin;Sheboygan;53081
+3004;Maurice Everett;West;California;Los Angeles;90049
+3006;Thomas Spence;West;Idaho;Idaho Falls;83402
+3008;Penny Rich;Central;Minnesota;Minnetonka Mills;55343
+3011;Tammy Raynor;East;Massachusetts;Boston;2113
+3012;Annie Livingston;East;New York;Rochester;14609
+3036;Edith Reynolds;Central;North Dakota;Mandan;58554
+3041;Carrie Duke;Central;Kansas;Garden City;67846
+3045;Jordan Beard;Central;Kansas;Leavenworth;66048
+3078;Kate McKenna;East;Ohio;Toledo;43615
+3079;Andrew Levine;East;Pennsylvania;Philadelphia;19112
+3098;Lorraine Boykin;East;New York;Shirley;11967
+3105;Lawrence Hester;South;Kentucky;Murray;42071
+3106;Alexander O'Brien;Central;Texas;Houston;77041
+3113;Wayne English;South;Louisiana;New Iberia;70560
+3141;Jerome McIntosh;Central;Texas;Pasadena;77506
+3167;Ray Silverman;South;Florida;Ponte Vedra Beach;32004
+3179;Marie Pittman;Central;Minnesota;Owatonna;55060
+3194;Angela Rose;South;Florida;Spring Hill;34609
+3206;Dana Rankin;West;Idaho;Twin Falls;83301
+3230;Monica Stuart;Central;Wisconsin;Waukesha;53186
+3251;Peter Brooks;East;New York;New York City;10112
+3252;Milton Harrell;East;New York;Rotterdam;12306
+3285;Ricky Garner;South;Virginia;Herndon;20170
+3324;Leslie Jacobson;West;Arizona;El Mirage;85335
+3324;Leslie Jacobson;West;Arizona;El Mirage;85335

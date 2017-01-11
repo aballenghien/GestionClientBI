@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_fMWa0a12Eea1Co-IILr0fg" label="OFFICE_SHOP" description="" language="java" technicalLabel="OFFICE_SHOP" local="true" author="_fMWa0q12Eea1Co-IILr0fg" productVersion="Talend Open Studio for Data Integration-6.3.0.20161026_1219" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_fMWa0a12Eea1Co-IILr0fg" label="OFFICESHOP" description="" language="java" technicalLabel="OFFICESHOP" local="true" author="_fMWa0q12Eea1Co-IILr0fg" productVersion="Talend Open Studio for Data Integration-6.3.0.20161026_1219" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_hSg2EK12Eea1Co-IILr0fg" label="development" code="DEV"/>
     <technicalStatus xmi:id="_hSg2Ea12Eea1Co-IILr0fg" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_hSg2Eq12Eea1Co-IILr0fg" label="production" code="PROD"/>
@@ -436,6 +436,7 @@
       <relatedItems xmi:id="_ISmvpNKcEeayfNJVt9yZww" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_ISmvpdKcEeayfNJVt9yZww" id="Entier" version="Latest" type="routine"/>
       <relatedItems xmi:id="_ISmvptKcEeayfNJVt9yZww" id="Flottant" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_ZGJy8NhHEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_J0z3QNKeEeayfNJVt9yZww">
       <baseItem xmi:id="_J0z3QdKeEeayfNJVt9yZww" id="_Dc_ZkNKeEeayfNJVt9yZww" version="0.1" type="job"/>
@@ -456,6 +457,7 @@
       <relatedItems xmi:id="_J0z3UNKeEeayfNJVt9yZww" id="Entier" version="Latest" type="routine"/>
       <relatedItems xmi:id="_J0z3UdKeEeayfNJVt9yZww" id="Flottant" version="Latest" type="routine"/>
       <relatedItems xmi:id="_m5L04NMsEea9YeEjJ2FR-g" id="_sBWh4K13Eea1Co-IILr0fg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_ZCTNsNhHEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_sslHYNKeEeayfNJVt9yZww">
       <baseItem xmi:id="_sslHYdKeEeayfNJVt9yZww" id="_iG_owNKeEeayfNJVt9yZww" version="0.1" type="job"/>
@@ -476,6 +478,7 @@
       <relatedItems xmi:id="_sslHcNKeEeayfNJVt9yZww" id="Entier" version="Latest" type="routine"/>
       <relatedItems xmi:id="_sslHcdKeEeayfNJVt9yZww" id="Flottant" version="Latest" type="routine"/>
       <relatedItems xmi:id="_ua1ocNMsEea9YeEjJ2FR-g" id="_sBWh4K13Eea1Co-IILr0fg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_Y_ejMNhHEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_4rTjMNKeEeayfNJVt9yZww">
       <baseItem xmi:id="_4rTjMdKeEeayfNJVt9yZww" id="_2FWNkNKeEeayfNJVt9yZww" version="0.1" type="job"/>
@@ -494,6 +497,7 @@
       <relatedItems xmi:id="_4rctI9KeEeayfNJVt9yZww" id="Flottant" version="Latest" type="routine"/>
       <relatedItems xmi:id="_wAcUUNMsEea9YeEjJ2FR-g" id="_sBWh4K13Eea1Co-IILr0fg" version="Latest" type="context"/>
       <relatedItems xmi:id="_ZGup0NOpEeaG6qTnYkF0-w" id="_2QL6cNM0Eea9YeEjJ2FR-g" version="Latest" type="job"/>
+      <relatedItems xmi:id="_Y5cMoNhHEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_OAFvcNKfEeayfNJVt9yZww">
       <baseItem xmi:id="_OAFvcdKfEeayfNJVt9yZww" id="_D78J8NKfEeayfNJVt9yZww" version="0.1" type="job"/>
@@ -515,6 +519,7 @@
       <relatedItems xmi:id="_OAFvgdKfEeayfNJVt9yZww" id="Entier" version="Latest" type="routine"/>
       <relatedItems xmi:id="_OAFvgtKfEeayfNJVt9yZww" id="Flottant" version="Latest" type="routine"/>
       <relatedItems xmi:id="_e5UbUNMsEea9YeEjJ2FR-g" id="_sBWh4K13Eea1Co-IILr0fg" version="Latest" type="context"/>
+      <relatedItems xmi:id="_dpge0NhGEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_wBvU0NMsEea9YeEjJ2FR-g">
       <baseItem xmi:id="_wBvU0dMsEea9YeEjJ2FR-g" id="_8VjnYNKeEeayfNJVt9yZww" version="0.1" type="job"/>
@@ -532,6 +537,7 @@
       <relatedItems xmi:id="_wBvU3dMsEea9YeEjJ2FR-g" id="Entier" version="Latest" type="routine"/>
       <relatedItems xmi:id="_wBvU3tMsEea9YeEjJ2FR-g" id="Flottant" version="Latest" type="routine"/>
       <relatedItems xmi:id="_er3zcNeFEeaufv236PMHOQ" id="_b5pjcNeFEeaufv236PMHOQ" version="Latest" type="job"/>
+      <relatedItems xmi:id="_Y7wg0NhHEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_2RKK0NM0Eea9YeEjJ2FR-g">
       <baseItem xmi:id="_2RKK0dM0Eea9YeEjJ2FR-g" id="_2QL6cNM0Eea9YeEjJ2FR-g" version="0.1" type="job"/>
@@ -552,6 +558,7 @@
       <relatedItems xmi:id="_2RKK4NM0Eea9YeEjJ2FR-g" id="_dHjcEK13Eea1Co-IILr0fg - dim_managers" version="Latest" type="schema"/>
       <relatedItems xmi:id="_2RKK4dM0Eea9YeEjJ2FR-g" id="_dHjcEK13Eea1Co-IILr0fg - dim_clients" version="Latest" type="schema"/>
       <relatedItems xmi:id="_2RKK4tM0Eea9YeEjJ2FR-g" id="_dHjcEK13Eea1Co-IILr0fg - rej_ods_commandes" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_EYNAYNhLEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_4WJwYNdxEeaGz7aUyh4SAg">
       <baseItem xmi:id="_4WJwYddxEeaGz7aUyh4SAg" id="_qRcU8NdwEeaGz7aUyh4SAg" version="0.1" type="job"/>
@@ -592,6 +599,7 @@
       <relatedItems xmi:id="_lR-kz9eFEeaufv236PMHOQ" id="Flottant" version="Latest" type="routine"/>
       <relatedItems xmi:id="_lR-k0NeFEeaufv236PMHOQ" id="_dHjcEK13Eea1Co-IILr0fg - ods_commandes" version="Latest" type="schema"/>
       <relatedItems xmi:id="__SuJ0NeFEeaufv236PMHOQ" id="_dHjcEK13Eea1Co-IILr0fg - fait_commandes" version="Latest" type="schema"/>
+      <relatedItems xmi:id="_nCRBINhKEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
     </ItemsRelations>
     <migrationTask xmi:id="_fjfIcK12Eea1Co-IILr0fg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_fjfIca12Eea1Co-IILr0fg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
