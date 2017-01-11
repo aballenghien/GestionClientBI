@@ -272,9 +272,9 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
-      <outputTables sizeState="INTERMEDIATE" name="insert" expressionFilter="row1.noClient==row2.no_client &amp;&amp;(&#xA;!(row1.nom.equals(row2.lib_nom)) ||&#xD;&#xA;!(row1.prenom.equals(row2.lib_prenom))||&#xD;&#xA;!(row1.etat.equals(row2.lib_etat)) ||&#xD;&#xA;!(row1.ville.equals(row2.lib_ville)) ||&#xD;&#xA;!(row1.codePostal.equals(row2.lib_codepostal))||&#xA;!(row1.region.equals(row2.lib_region)))&#xA;||&#xA;row1.noClient!=row2.no_client" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="insert" expressionFilter="!(row1.nom.equals(row2.lib_nom)) ||&#xD;&#xA;!(row1.prenom.equals(row2.lib_prenom))||&#xD;&#xA;!(row1.etat.equals(row2.lib_etat)) ||&#xD;&#xA;!(row1.ville.equals(row2.lib_ville)) ||&#xD;&#xA;!(row1.codePostal.equals(row2.lib_codepostal))||&#xA;!(row1.region.equals(row2.lib_region))" activateExpressionFilter="true">
         <mapperTableEntries name="pk_client" type="id_Integer"/>
         <mapperTableEntries name="no_client" expression="row1.noClient " type="id_Integer"/>
         <mapperTableEntries name="dt_finval" expression="TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;02-02-0002&quot;)" type="id_Date"/>
@@ -307,9 +307,9 @@
         <mapperTableEntries name="codePostal" type="id_String"/>
         <mapperTableEntries name="region" type="id_String"/>
       </inputTables>
-      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="ALL_ROWS" lookupMode="LOAD_ONCE">
+      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="pk_client" type="id_Integer"/>
-        <mapperTableEntries name="no_client" type="id_Integer"/>
+        <mapperTableEntries name="no_client" expression="row1.noClient " type="id_Integer" operator="="/>
         <mapperTableEntries name="dt_finval" type="id_Date"/>
         <mapperTableEntries name="dt_debval" type="id_Date"/>
         <mapperTableEntries name="lib_nom" expression="" type="id_String" nullable="true"/>

@@ -251,7 +251,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="insert" expressionFilter="!(row1.nom.equals(row2.lib_nom))||&#xA;!(row1.categorieProduit.equals(row2.lib_categorieproduit))||&#xA;!(row1.sousCategorieProduit.equals(row2.lib_souscategorieproduit))||&#xA;!(row1.typeEmballage.equals(row2.lib_typeemballage))" activateExpressionFilter="true">
         <mapperTableEntries name="pk_produit" type="id_Integer"/>
