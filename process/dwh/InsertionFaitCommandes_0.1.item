@@ -310,26 +310,26 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="insert">
-        <mapperTableEntries name="pk_commande" type="id_Integer"/>
+        <mapperTableEntries name="pk_commande" expression="row1.noCommande " type="id_Integer"/>
         <mapperTableEntries name="no_commande" expression="row1.noCommande " type="id_Integer"/>
-        <mapperTableEntries name="fk_client" expression="row1.client  " type="id_Integer"/>
-        <mapperTableEntries name="fk_produit" expression="row1.region  " type="id_Integer"/>
-        <mapperTableEntries name="fk_region" expression="row1.produit  " type="id_Integer"/>
-        <mapperTableEntries name="dt_commande" expression="row1.dateCommande  " type="id_Date"/>
-        <mapperTableEntries name="dt_expedition" expression="row1.dateExpedition  " type="id_Date"/>
-        <mapperTableEntries name="lib_prioritecommande" expression="row1.prioriteCommande  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="mt_prixunitaire" expression="row1.prixUnitaire  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="mt_margeproduitbrute" expression="row1.margeProduitBrute  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="lib_discount" expression="row1.discount  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="mt_fraisexpedition" expression="row1.fraisExpedition  " type="id_Float" nullable="true"/>
-        <mapperTableEntries name="lib_modeexpedition" expression="row1.modeExpedition  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="lib_segmentclient" expression="row1.segmentClient  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="lib_marge" expression="row1.marge  " type="id_String" nullable="true"/>
-        <mapperTableEntries name="qt_ventes" expression="row1.quantiteVentes  " type="id_Integer" nullable="true"/>
-        <mapperTableEntries name="mt_ventes" expression="row1.montantVentes  " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="fk_client" expression="row1.client " type="id_Integer"/>
+        <mapperTableEntries name="fk_produit" expression="row1.produit " type="id_Integer"/>
+        <mapperTableEntries name="fk_region" expression="row1.region " type="id_Integer"/>
+        <mapperTableEntries name="dt_commande" expression="row1.dateCommande " type="id_Date"/>
+        <mapperTableEntries name="dt_expedition" expression="row1.dateExpedition " type="id_Date"/>
+        <mapperTableEntries name="lib_prioritecommande" expression="row1.prioriteCommande " type="id_String" nullable="true"/>
+        <mapperTableEntries name="mt_prixunitaire" expression="row1.prixUnitaire " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="mt_margeproduitbrute" expression="row1.margeProduitBrute " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="lib_discount" expression="row1.discount " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="mt_fraisexpedition" expression="row1.fraisExpedition " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="lib_modeexpedition" expression="row1.modeExpedition " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lib_segmentclient" expression="row1.segmentClient " type="id_String" nullable="true"/>
+        <mapperTableEntries name="lib_marge" expression="row1.marge " type="id_String" nullable="true"/>
+        <mapperTableEntries name="qt_ventes" expression="row1.quantiteVentes " type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="mt_ventes" expression="row1.montantVentes " type="id_Float" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="noCommande" type="id_Integer"/>
