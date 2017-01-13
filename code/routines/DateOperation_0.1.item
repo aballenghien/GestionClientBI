@@ -32,7 +32,11 @@ public class DateOperation {
 	public static int getMois(Date uneDate){
 		Calendar c = Calendar.getInstance();
 		c.setTime(uneDate);
-		return c.get(Calendar.MONTH);
+		if (c.get(Calendar.MONTH)== 0 ){
+			return 1;
+		}else{
+			return c.get(Calendar.MONTH);			
+		}
 	}
 	
 	public static int getAnnee(Date uneDate){

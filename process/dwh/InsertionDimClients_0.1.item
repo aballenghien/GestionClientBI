@@ -277,7 +277,7 @@
       <outputTables sizeState="INTERMEDIATE" name="insert" expressionFilter="!(row1.nom.equals(row2.lib_nom)) ||&#xD;&#xA;!(row1.prenom.equals(row2.lib_prenom))||&#xD;&#xA;!(row1.etat.equals(row2.lib_etat)) ||&#xD;&#xA;!(row1.ville.equals(row2.lib_ville)) ||&#xD;&#xA;!(row1.codePostal.equals(row2.lib_codepostal))||&#xA;!(row1.region.equals(row2.lib_region))" activateExpressionFilter="true">
         <mapperTableEntries name="pk_client" type="id_Integer"/>
         <mapperTableEntries name="no_client" expression="row1.noClient " type="id_Integer"/>
-        <mapperTableEntries name="dt_finval" expression="TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;02-02-0002&quot;)" type="id_Date"/>
+        <mapperTableEntries name="dt_finval" expression="TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;31-12-9999&quot;)" type="id_Date"/>
         <mapperTableEntries name="dt_debval" expression="TalendDate.getCurrentDate()" type="id_Date"/>
         <mapperTableEntries name="lib_nom" expression="row1.nom  " type="id_String" nullable="true"/>
         <mapperTableEntries name="lib_prenom" expression="row1.prenom  " type="id_String" nullable="true"/>
@@ -286,7 +286,7 @@
         <mapperTableEntries name="lib_codepostal" expression="row1.codePostal  " type="id_String"/>
         <mapperTableEntries name="lib_region" expression="row1.region  " type="id_String"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="update" expressionFilter="row1.noClient==row2.no_client &amp;&amp;&#xD;&#xA;TalendDate.compareDate(row2.dt_finval,TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;02-02-0002&quot;),&quot;yyyy-MM-dd&quot;)==0&#xD;&#xA;&amp;&amp;(&#xD;&#xA;!(row1.nom.equals(row2.lib_nom)) ||&#xD;&#xA;!(row1.prenom.equals(row2.lib_prenom))||&#xD;&#xA;!(row1.etat.equals(row2.lib_etat)) ||&#xD;&#xA;!(row1.ville.equals(row2.lib_ville)) ||&#xD;&#xA;!(row1.codePostal.equals(row2.lib_codepostal))||&#xA;!(row1.region.equals(row2.lib_region))&#xD;&#xA;)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="update" expressionFilter="row1.noClient==row2.no_client &amp;&amp;&#xD;&#xA;TalendDate.compareDate(row2.dt_finval,TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;31-12-9999&quot;),&quot;dd-MM-yyyy&quot;)==0&#xD;&#xA;&amp;&amp;(&#xD;&#xA;!(row1.nom.equals(row2.lib_nom)) ||&#xD;&#xA;!(row1.prenom.equals(row2.lib_prenom))||&#xD;&#xA;!(row1.etat.equals(row2.lib_etat)) ||&#xD;&#xA;!(row1.ville.equals(row2.lib_ville)) ||&#xD;&#xA;!(row1.codePostal.equals(row2.lib_codepostal))||&#xA;!(row1.region.equals(row2.lib_region))&#xD;&#xA;)" activateExpressionFilter="true">
         <mapperTableEntries name="pk_client" expression="row2.pk_client  " type="id_Integer"/>
         <mapperTableEntries name="no_client" expression="row2.no_client  " type="id_Integer"/>
         <mapperTableEntries name="dt_finval" expression="TalendDate.getCurrentDate()" type="id_Date"/>

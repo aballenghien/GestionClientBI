@@ -1,0 +1,29 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_4=>" expression="&quot;&quot;">
+  <variables name="copyOfinsert.noCommande" value="0" talendType="id_Integer"/>
+  <variables name="copyOfinsert.prioriteCommande" value="null" talendType="id_String" nullable="true"/>
+  <variables name="copyOfinsert.prixUnitaire" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="copyOfinsert.margeProduitBrute" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="copyOfinsert.discount" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="copyOfinsert.fraisExpedition" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="copyOfinsert.modeExpedition" value="null" talendType="id_String" nullable="true"/>
+  <variables name="copyOfinsert.segmentClient" value="null" talendType="id_String" nullable="true"/>
+  <variables name="copyOfinsert.marge" value="null" talendType="id_String" nullable="true"/>
+  <variables name="copyOfinsert.quantiteVentes" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="copyOfinsert.montantVentes" value="null" talendType="id_Float" nullable="true"/>
+  <variables name="copyOfinsert.client" value="0" talendType="id_Integer"/>
+  <variables name="copyOfinsert.region" value="0" talendType="id_Integer"/>
+  <variables name="copyOfinsert.produit" value="0" talendType="id_Integer"/>
+  <variables name="copyOfinsert.dateCommande" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="copyOfinsert.dateExpedition" value="null" talendType="id_Date" nullable="true"/>
+  <variables name="row3.pk_client" value="0" talendType="id_Integer"/>
+  <variables name="row3.no_client" value="0" talendType="id_Integer"/>
+  <variables name="row3.dt_finval" value="null" talendType="id_Date"/>
+  <variables name="row3.dt_debval" value="null" talendType="id_Date"/>
+  <variables name="row3.lib_nom" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.lib_prenom" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row3.lib_etat" value="null" talendType="id_String"/>
+  <variables name="row3.lib_ville" value="null" talendType="id_String"/>
+  <variables name="row3.lib_codepostal" value="null" talendType="id_String"/>
+  <variables name="row3.lib_region" value="null" talendType="id_String"/>
+</expression:EMFExpression>

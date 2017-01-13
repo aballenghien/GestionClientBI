@@ -223,11 +223,11 @@
       <outputTables sizeState="INTERMEDIATE" name="insert" expressionFilter="!(row1.manager.equals(row2.lib_nommanager))" activateExpressionFilter="true">
         <mapperTableEntries name="pk_manager" type="id_Integer"/>
         <mapperTableEntries name="dt_debval" expression="TalendDate.getCurrentDate()" type="id_Date"/>
-        <mapperTableEntries name="dt_finval" expression="TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;02-02-0002&quot;)" type="id_Date"/>
+        <mapperTableEntries name="dt_finval" expression="TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;31-12-9999&quot;)" type="id_Date"/>
         <mapperTableEntries name="lib_nommanager" expression="row1.manager " type="id_String"/>
         <mapperTableEntries name="lib_region" expression="row1.region " type="id_String"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="update" expressionFilter="row1.region.equals(row2.lib_region)&amp;&amp;&#xD;&#xA;TalendDate.compareDate(row2.dt_finval,TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;02-02-0002&quot;),&quot;dd-MM-yyyy&quot;)==0&amp;&amp;&#xA;!(row1.manager.equals(row2.lib_nommanager))" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="update" expressionFilter="row1.region.equals(row2.lib_region)&amp;&amp;&#xD;&#xA;TalendDate.compareDate(row2.dt_finval,TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;31-12-9999&quot;),&quot;dd-MM-yyyy&quot;)==0&amp;&amp;&#xA;!(row1.manager.equals(row2.lib_nommanager))" activateExpressionFilter="true">
         <mapperTableEntries name="pk_manager" expression="row2.pk_manager " type="id_Integer"/>
         <mapperTableEntries name="dt_debval" expression="row2.dt_debval " type="id_Date"/>
         <mapperTableEntries name="dt_finval" expression="TalendDate.getCurrentDate()" type="id_Date"/>

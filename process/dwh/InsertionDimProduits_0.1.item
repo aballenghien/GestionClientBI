@@ -257,13 +257,13 @@
         <mapperTableEntries name="pk_produit" type="id_Integer"/>
         <mapperTableEntries name="no_produit" expression="row1.idProduit " type="id_String"/>
         <mapperTableEntries name="dt_debval" expression="TalendDate.getCurrentDate()" type="id_Date" nullable="true"/>
-        <mapperTableEntries name="dt_finval" expression="TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;02-02-0002&quot;)" type="id_Date" nullable="true"/>
+        <mapperTableEntries name="dt_finval" expression="TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;31-12-9999&quot;)" type="id_Date" nullable="true"/>
         <mapperTableEntries name="lib_nom" expression="row1.nom " type="id_String" nullable="true"/>
         <mapperTableEntries name="lib_categorieproduit" expression="row1.categorieProduit " type="id_String" nullable="true"/>
         <mapperTableEntries name="lib_souscategorieproduit" expression="row1.sousCategorieProduit " type="id_String" nullable="true"/>
         <mapperTableEntries name="lib_typeemballage" expression="row1.typeEmballage " type="id_String" nullable="true"/>
       </outputTables>
-      <outputTables sizeState="INTERMEDIATE" name="update" expressionFilter="row2.no_produit==row1.idProduit &amp;&amp;&#xD;&#xA;TalendDate.compareDate(row2.dt_finval,TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;02-0-0002&quot;),&quot;dd-MM-yyyy&quot;)==0 &amp;&amp;&#xA;(!(row1.nom.equals(row2.lib_nom))||&#xA;!(row1.categorieProduit.equals(row2.lib_categorieproduit))||&#xA;!(row1.sousCategorieProduit.equals(row2.lib_souscategorieproduit))||&#xA;!(row1.typeEmballage.equals(row2.lib_typeemballage))&#xA;)" activateExpressionFilter="true">
+      <outputTables sizeState="INTERMEDIATE" name="update" expressionFilter="row2.no_produit==row1.idProduit &amp;&amp;&#xD;&#xA;TalendDate.compareDate(row2.dt_finval,TalendDate.parseDate(&quot;dd-MM-yyyy&quot;,&quot;31-12-9999&quot;),&quot;dd-MM-yyyy&quot;)==0 &amp;&amp;&#xA;(!(row1.nom.equals(row2.lib_nom))||&#xA;!(row1.categorieProduit.equals(row2.lib_categorieproduit))||&#xA;!(row1.sousCategorieProduit.equals(row2.lib_souscategorieproduit))||&#xA;!(row1.typeEmballage.equals(row2.lib_typeemballage))&#xA;)" activateExpressionFilter="true">
         <mapperTableEntries name="pk_produit" type="id_Integer"/>
         <mapperTableEntries name="no_produit" expression="row2.no_produit " type="id_String"/>
         <mapperTableEntries name="dt_debval" expression="row2.dt_debval " type="id_Date" nullable="true"/>

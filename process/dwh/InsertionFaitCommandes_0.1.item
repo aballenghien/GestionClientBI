@@ -125,7 +125,7 @@
     <routinesParameter id="_Hh2GgNEnEeaNLIjF9Iv6Eg" name="Entier"/>
     <routinesParameter id="_Nk0OMNEqEeaNLIjF9Iv6Eg" name="Flottant"/>
   </parameters>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="192" posY="224">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlInput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dHjcEK13Eea1Co-IILr0fg" show="false"/>
@@ -280,16 +280,16 @@
       <column comment="" key="false" length="25" name="lib_prioritecommande" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="mt_prixunitaire" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="10" name="mt_prixunitaire" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="3" name="mt_margeproduitbrute" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="10" name="mt_margeproduitbrute" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="3" name="lib_discount" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="3" name="lib_discount" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="mt_fraisexpedition" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="5" name="mt_fraisexpedition" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="50" name="lib_modeexpedition" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -304,16 +304,30 @@
       <column comment="" key="false" length="10" name="qt_ventes" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="7" name="mt_ventes" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="7" name="mt_ventes" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="3" name="pc_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="mt_ventesttc" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="mt_cout" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="mt_achatprod" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <varTables sizeState="INTERMEDIATE" name="Var">
+        <mapperTableEntries name="pctTaxe" expression="1-(row1.montantVentes/row1.quantiteVentes)/row1.prixUnitaire" type="id_Float"/>
+      </varTables>
       <outputTables sizeState="INTERMEDIATE" name="insert">
-        <mapperTableEntries name="pk_commande" expression="row1.noCommande " type="id_Integer"/>
+        <mapperTableEntries name="pk_commande" expression="" type="id_Integer"/>
         <mapperTableEntries name="no_commande" expression="row1.noCommande " type="id_Integer"/>
         <mapperTableEntries name="fk_client" expression="row1.client " type="id_Integer"/>
         <mapperTableEntries name="fk_produit" expression="row1.produit " type="id_Integer"/>
@@ -330,6 +344,10 @@
         <mapperTableEntries name="lib_marge" expression="row1.marge " type="id_String" nullable="true"/>
         <mapperTableEntries name="qt_ventes" expression="row1.quantiteVentes " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="mt_ventes" expression="row1.montantVentes " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="pc_charges" expression="Var.pctTaxe " type="id_Float" nullable="true"/>
+        <mapperTableEntries name="mt_ventesttc" expression="row1.montantVentes+(row1.prixUnitaire*  Var.pctTaxe *row1.quantiteVentes)" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="mt_cout" expression="" type="id_Float" nullable="true"/>
+        <mapperTableEntries name="mt_achatprod" expression="(row1.montantVentes-row1.margeProduitBrute)/row1.quantiteVentes" type="id_Float" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row1" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="noCommande" type="id_Integer"/>
@@ -351,7 +369,7 @@
       </inputTables>
     </nodeData>
   </node>
-  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="736" posY="224">
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="704" posY="224">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMysqlOutput_1" show="false"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_dHjcEK13Eea1Co-IILr0fg" show="false"/>
@@ -471,6 +489,26 @@
       <elementValue elementRef="DELETE_KEY" value="false"/>
       <elementValue elementRef="UPDATABLE" value="true"/>
       <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pc_charges"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="mt_ventesttc"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="mt_cout"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="mt_achatprod"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
     </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
@@ -505,16 +543,16 @@
       <column comment="" key="false" length="25" name="lib_prioritecommande" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="mt_prixunitaire" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="10" name="mt_prixunitaire" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="mt_margeproduitbrute" nullable="true" pattern="" precision="4" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="10" name="mt_margeproduitbrute" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="3" name="lib_discount" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="3" name="lib_discount" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="mt_fraisexpedition" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="5" name="mt_fraisexpedition" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="50" name="lib_modeexpedition" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -529,7 +567,19 @@
       <column comment="" key="false" length="10" name="qt_ventes" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="7" name="mt_ventes" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="7" name="mt_ventes" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="3" name="pc_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="mt_ventesttc" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="mt_cout" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="mt_achatprod" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <additionalProperties key="Comment" value=""/>
@@ -559,16 +609,16 @@
       <column comment="" key="false" length="25" name="lib_prioritecommande" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="mt_prixunitaire" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="10" name="mt_prixunitaire" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="10" name="mt_margeproduitbrute" nullable="true" pattern="" precision="4" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="10" name="mt_margeproduitbrute" nullable="true" pattern="" precision="4" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="3" name="lib_discount" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="3" name="lib_discount" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="5" name="mt_fraisexpedition" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="5" name="mt_fraisexpedition" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="50" name="lib_modeexpedition" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
@@ -583,7 +633,19 @@
       <column comment="" key="false" length="10" name="qt_ventes" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="7" name="mt_ventes" nullable="true" pattern="" precision="2" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" key="false" length="7" name="mt_ventes" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="3" name="pc_charges" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="mt_ventesttc" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="mt_cout" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="7" name="mt_achatprod" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_Float" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
