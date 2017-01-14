@@ -25,18 +25,21 @@ public class Flottant {
         char [] tab = valeur.toCharArray();
         boolean isFloat = true;
         int nbVirgule = 0;
+        int nbMoins = 0;
         if(tab.length == 0){
         	isFloat = false;
         }else{
             for(char c : tab){
             	if( c== '.'){
             		nbVirgule = nbVirgule + 1;
+            	}else if( c== '-'){
+            		nbMoins = nbMoins + 1;
             	}else if ( !Character.isDigit(c)){
             		isFloat = false;
             	}
             }
         }
-        if(nbVirgule > 1){
+        if(nbVirgule > 1 || nbMoins > 1){
         	isFloat = false;
         }
         return isFloat;
