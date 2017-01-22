@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="env_audrey" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/archive/"/>
     <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/data/"/>
+    <contextParameter comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Client.txt"/>
+    <contextParameter comment="" name="fichier_commandes" prompt="fichier_commandes?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Commande.txt"/>
+    <contextParameter comment="" name="fichier_produits" prompt="fichier_produits?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Produit.txt"/>
+    <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\env.properties"/>
+    <contextParameter comment="" name="fichier_territoires" prompt="fichier_territoires?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Territoire.txt"/>
     <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
     <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="rhunault"/>
@@ -10,13 +16,19 @@
     <contextParameter comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="localhost"/>
   </context>
   <context confirmationNeeded="false" name="env_audrey">
+    <contextParameter comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
     <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\"/>
-    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value=""/>
+    <contextParameter comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
+    <contextParameter comment="" name="fichier_commandes" prompt="fichier_commandes?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
+    <contextParameter comment="" name="fichier_produits" prompt="fichier_produits?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
+    <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="env"/>
+    <contextParameter comment="" name="fichier_territoires" prompt="fichier_territoires?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
     <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
-    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="root"/>
-    <contextParameter comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
+    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="root"/>
+    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value=""/>
     <contextParameter comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="3306"/>
+    <contextParameter comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="localhost"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -124,7 +136,7 @@
   <node componentName="tFileInputDelimited" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputDelimited_1" show="false"/>
     <elementParameter field="LABEL" name="FILENAMETEXT" value="&quot;When the input source is a stream or a zip file,footer and random shouldn't be bigger than 0.&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="context.dossier_data+&quot;Commande.txt&quot;"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.dossier_data+context.fichier_commandes"/>
     <elementParameter field="CHECK" name="CSV_OPTION" value="false"/>
     <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
     <elementParameter field="OPENED_LIST" name="CSVROWSEPARATOR" value="&quot;\n&quot;" show="false"/>

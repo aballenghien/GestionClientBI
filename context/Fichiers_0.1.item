@@ -3,13 +3,19 @@
   <talendfile:ContextType xmi:id="_1Hon0LuXEeavOr74JwDotQ" confirmationNeeded="false" name="Default">
     <contextParameter xmi:id="_1Hon0buXEeavOr74JwDotQ" comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/data/"/>
     <contextParameter xmi:id="_Du4joOC8EeaI9La_LZWX3A" comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\env.properties"/>
-    <contextParameter xmi:id="_z49AMODQEea5-YpRiyr7oQ" comment="" name="new1" prompt="new1?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter xmi:id="_9fQWoODREea5-YpRiyr7oQ" comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/archive/"/>
+    <contextParameter xmi:id="_z49AMODQEea5-YpRiyr7oQ" comment="" name="fichier_commandes" prompt="fichier_commandes?" promptNeeded="false" type="id_String" value="Commande.txt"/>
+    <contextParameter xmi:id="_4-1oAODoEeapgaVLgbezjA" comment="" name="fichier_produits" prompt="fichier_produits?" promptNeeded="false" type="id_String" value="Produit.txt"/>
+    <contextParameter xmi:id="_4-1oAeDoEeapgaVLgbezjA" comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" type="id_String" value="Client.txt"/>
+    <contextParameter xmi:id="_4-1oAuDoEeapgaVLgbezjA" comment="" name="fichier_territoires" prompt="fichier_territoires?" promptNeeded="false" type="id_String" value="Territoire.txt"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_9rIkEL1yEeawws064L34vQ" confirmationNeeded="false" name="env_audrey">
     <contextParameter xmi:id="_9rIkEb1yEeawws064L34vQ" comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\"/>
     <contextParameter xmi:id="_Du4joeC8EeaI9La_LZWX3A" comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" type="id_String" value="env"/>
-    <contextParameter xmi:id="_z49AMeDQEea5-YpRiyr7oQ" comment="" name="new1" prompt="new1?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter xmi:id="_9fQWoeDREea5-YpRiyr7oQ" comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_z49AMeDQEea5-YpRiyr7oQ" comment="" name="fichier_commandes" prompt="fichier_commandes?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_4-1oA-DoEeapgaVLgbezjA" comment="" name="fichier_produits" prompt="fichier_produits?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_4-1oBODoEeapgaVLgbezjA" comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_4-1oBeDoEeapgaVLgbezjA" comment="" name="fichier_territoires" prompt="fichier_territoires?" promptNeeded="false" type="id_String" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>

@@ -4,13 +4,13 @@
     <contextParameter comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/archive/"/>
     <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/data/"/>
     <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\env.properties"/>
-    <contextParameter comment="" name="new1" prompt="new1?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
+    <contextParameter comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Client.txt"/>
   </context>
   <context confirmationNeeded="false" name="env_audrey">
     <contextParameter comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
     <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\"/>
     <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="env"/>
-    <contextParameter comment="" name="new1" prompt="new1?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
+    <contextParameter comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
