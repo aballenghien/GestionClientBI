@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_fMWa0a12Eea1Co-IILr0fg" label="OFFICESHOP" description="" language="java" technicalLabel="OFFICESHOP" local="true" author="_fMWa0q12Eea1Co-IILr0fg" productVersion="Talend Open Studio for Data Integration-6.3.0.20161026_1219" itemsRelationVersion="1.3">
+  <TalendProperties:Project xmi:id="_fMWa0a12Eea1Co-IILr0fg" label="OFFICE_SHOP" description="" language="java" technicalLabel="OFFICE_SHOP" local="true" author="_fMWa0q12Eea1Co-IILr0fg" productVersion="Talend Open Studio for Data Integration-6.3.0.20161026_1219" itemsRelationVersion="1.3">
     <technicalStatus xmi:id="_hSg2EK12Eea1Co-IILr0fg" label="development" code="DEV"/>
     <technicalStatus xmi:id="_hSg2Ea12Eea1Co-IILr0fg" label="testing" code="TEST"/>
     <technicalStatus xmi:id="_hSg2Eq12Eea1Co-IILr0fg" label="production" code="PROD"/>
@@ -520,6 +520,7 @@
       <relatedItems xmi:id="_OAFvgtKfEeayfNJVt9yZww" id="Flottant" version="Latest" type="routine"/>
       <relatedItems xmi:id="_e5UbUNMsEea9YeEjJ2FR-g" id="_sBWh4K13Eea1Co-IILr0fg" version="Latest" type="context"/>
       <relatedItems xmi:id="_dpge0NhGEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
+      <relatedItems xmi:id="__j3V4ODVEea5-YpRiyr7oQ" id="_nfH0MOC5EeaI9La_LZWX3A" version="Latest" type="job"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_wBvU0NMsEea9YeEjJ2FR-g">
       <baseItem xmi:id="_wBvU0dMsEea9YeEjJ2FR-g" id="_8VjnYNKeEeayfNJVt9yZww" version="0.1" type="job"/>
@@ -617,6 +618,22 @@
       <relatedItems xmi:id="_yO9bDeC5EeaI9La_LZWX3A" id="Mathematical" version="Latest" type="routine"/>
       <relatedItems xmi:id="_hsOzEOC6EeaI9La_LZWX3A" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
       <relatedItems xmi:id="_hsOzEeC6EeaI9La_LZWX3A" id="_sBWh4K13Eea1Co-IILr0fg" version="Latest" type="context"/>
+    </ItemsRelations>
+    <ItemsRelations xmi:id="_tdbRwODREea5-YpRiyr7oQ">
+      <baseItem xmi:id="_tdbRweDREea5-YpRiyr7oQ" id="_EnyxgODQEea5-YpRiyr7oQ" version="0.1" type="job"/>
+      <relatedItems xmi:id="_tdbRwuDREea5-YpRiyr7oQ" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
+      <relatedItems xmi:id="_tdbRw-DREea5-YpRiyr7oQ" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRxODREea5-YpRiyr7oQ" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRxeDREea5-YpRiyr7oQ" id="DateOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRxuDREea5-YpRiyr7oQ" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRx-DREea5-YpRiyr7oQ" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRyODREea5-YpRiyr7oQ" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRyeDREea5-YpRiyr7oQ" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRyuDREea5-YpRiyr7oQ" id="Chaine" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRy-DREea5-YpRiyr7oQ" id="Mathematical" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRzODREea5-YpRiyr7oQ" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRzeDREea5-YpRiyr7oQ" id="Entier" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_tdbRzuDREea5-YpRiyr7oQ" id="Flottant" version="Latest" type="routine"/>
     </ItemsRelations>
     <migrationTask xmi:id="_fjfIcK12Eea1Co-IILr0fg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_fjfIca12Eea1Co-IILr0fg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
