@@ -356,7 +356,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfinsert" activateExpressionFilter="true">
         <mapperTableEntries name="noCommande" expression="row1.NoCommande " type="id_Integer"/>
@@ -886,7 +886,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfinsert_1" activateExpressionFilter="true">
         <mapperTableEntries name="noCommande" expression="copyOfinsert.noCommande  " type="id_Integer"/>
@@ -1083,7 +1083,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfinsert_0" activateExpressionFilter="true">
         <mapperTableEntries name="noCommande" expression="copyOfinsert_1.noCommande " type="id_Integer"/>
@@ -1327,7 +1327,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="copyOfcopyOfinsert_0" activateExpressionFilter="true">
         <mapperTableEntries name="noCommande" expression="copyOfinsert_0.noCommande " type="id_Integer"/>
@@ -2286,7 +2286,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="insert1">
         <mapperTableEntries name="noCommande" expression="copyOfcopyOfinsert_0.noCommande   " type="id_Integer"/>

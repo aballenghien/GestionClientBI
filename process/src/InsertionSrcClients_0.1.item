@@ -348,7 +348,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="out" expressionFilter="Entier.isInt(row2.NoClient) &amp;&amp;&#xA;Integer.parseInt(row2.NoClient) > 0 &amp;&amp; row2.NoClient.length() &lt;= 10 &amp;&amp;&#xD;&#xA;row2.NomComplet.length()> 0 &amp;&amp; row2.NomComplet.length() &lt;= 60  &amp;&amp;&#xA;row2.Region.length() > 0 &amp;&amp; row2.Region.length() &lt;= 30 &amp;&amp;&#xD;&#xA;row2.Etat.length() > 0 &amp;&amp; row2.Etat.length() &lt;= 30 &amp;&amp;&#xA;row2.Ville.length() > 0 &amp;&amp; row2.Ville.length() &lt;= 40 &amp;&amp;&#xA;row2.CodePostal.length() > 0 &amp;&amp; row2.CodePostal.length() &lt;= 5" activateExpressionFilter="true">
         <mapperTableEntries name="NoClient" expression="Integer.parseInt(row2.NoClient)" type="id_Integer"/>

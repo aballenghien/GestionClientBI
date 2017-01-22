@@ -1,110 +1,218 @@
-IdProduit;Produit;CategorieProduit;SousCategorieProduit;TypeEmballage
-P00001;*Staples* Surligneurs;Fournitures de bureau;Stylos et fournitures d'art;Sac enveloppe
-P00002;*Staples* Ouvre-lettres;Fournitures de bureau;Ciseaux, RËgles;Sac enveloppe
-P00003;Accessoire1;Technologie;Telephones et Communication;BoÓte XS
-P00004;Accessoire2;Technologie;Telephones et Communication;BoÓte S
-P00005;Epson C62 Color Inkjet Printer;Technologie;Machines de bureau;BoÓte XL
-P00006;Epson C82 Color Inkjet Printer;Technologie;Machines de bureau;BoÓte XL
-P00007;Lexmark 4227 Plus Dot Matrix Printer;Technologie;Machines de bureau;BoÓte XL
-P00008;Lexmark Z25 Color Inkjet Printer;Technologie;Machines de bureau;BoÓte XL
-P00009;Lexmark Z54se Color Inkjet Printer;Technologie;Machines de bureau;BoÓte XL
-P00010;Lexmark Z55se Color Inkjet Printer;Technologie;Machines de bureau;BoÓte XL
-P00011;Panasonic KP-150;Fournitures de bureau;Stylos et fournitures d'art;BoÓte XS
-P00012;Panasonic KP-310;Fournitures de bureau;Stylos et fournitures d'art;BoÓte XS
-P00013;Panasonic KP-350BK;Fournitures de bureau;Stylos et fournitures d'art;BoÓte XS
-P00014;Panasonic KX-P1131;Technologie;Machines de bureau;BoÓte XL
-P00015;Panasonic KX-P1150;Technologie;Machines de bureau;BoÓte XL
-P00016;Panasonic KX-P2130;Technologie;Machines de bureau;BoÓte XL
-P00017;Panasonic KX-P3200;Technologie;Machines de bureau;BoÓte XL
-P00018;Panasonic KX-P3626;Technologie;Machines de bureau;BoÓte XL
-P00019;*Staples* Etiquettes d'emballage;Fournitures de bureau;Etiquettes;BoÓte S
-P00020;Papier d'affaires multi-usage 4200 de Xerox;Fournitures de bureau;Papier;BoÓte S
-P00021;Tennsco Casiers ‡ deux Ètages;Fournitures de bureau;Stockage & Organisation;Sac enveloppe
-P00022;Tennsco Casiers Gris;Fournitures de bureau;Stockage & Organisation;Sac enveloppe
-P00023;Tennsco Casiers Sable;Fournitures de bureau;Stockage & Organisation;Sac enveloppe
-P00024;Tennsco EtagËre Commerciale;Fournitures de bureau;Stockage & Organisation;BoÓte L
-P00025;Tennsco EtagËre Industrielle;Fournitures de bureau;Stockage & Organisation;BoÓte L
-P00026;Tennsco EtagËre ouverte;Fournitures de bureau;Stockage & Organisation;BoÓte L
-P00027;Tennsco EtagËre Utilitaire;Fournitures de bureau;Stockage & Organisation;BoÓte L
-P00028;Xerox 188;Fournitures de bureau;Papier;BoÓte S
-P00029;Xerox 1880;Fournitures de bureau;Papier;BoÓte S
-P00030;Xerox 1881;Fournitures de bureau;Papier;BoÓte S
-P00031;Xerox 1882;Fournitures de bureau;Papier;BoÓte S
-P00032;Xerox 1883;Fournitures de bureau;Papier;BoÓte S
-P00033;Xerox 1888;Fournitures de bureau;Papier;BoÓte S
-P00034;Xerox 1891;Fournitures de bureau;Papier;BoÓte S
-P00035;Xerox 1892;Fournitures de bureau;Papier;BoÓte S
-P00036;Xerox 1893;Fournitures de bureau;Papier;BoÓte S
-P00037;Xerox 1894;Fournitures de bureau;Papier;BoÓte S
-P00038;Xerox 1896;Fournitures de bureau;Papier;BoÓte S
-P00039;Xerox 1897;Fournitures de bureau;Papier;BoÓte S
-P00040;Xerox 1898;Fournitures de bureau;Papier;BoÓte S
-P00041;Xerox 19;Fournitures de bureau;Papier;BoÓte S
-P00042;Xerox 1903;Fournitures de bureau;Papier;BoÓte S
-P00043;Xerox 1905;Fournitures de bureau;Papier;BoÓte S
-P00044;Xerox 1906;Fournitures de bureau;Papier;BoÓte S
-P00045;Xerox 1908;Fournitures de bureau;Papier;BoÓte S
-P00046;Xerox 1910;Fournitures de bureau;Papier;BoÓte S
-P00047;Xerox 1916;Fournitures de bureau;Papier;BoÓte S
-P00048;Xerox 1917;Fournitures de bureau;Papier;BoÓte S
-P00049;Xerox 1920;Fournitures de bureau;Papier;BoÓte S
-P00050;Xerox 1922;Fournitures de bureau;Papier;BoÓte S
-P00051;Xerox 1923;Fournitures de bureau;Papier;BoÓte S
-P00052;Xerox 1928;Fournitures de bureau;Papier;BoÓte S
-P00053;Xerox 1929;Fournitures de bureau;Papier;BoÓte S
-P00054;Xerox 193;Fournitures de bureau;Papier;BoÓte S
-P00055;Xerox 1930;Fournitures de bureau;Papier;BoÓte S
-P00056;Xerox 1932;Fournitures de bureau;Papier;BoÓte S
-P00057;Xerox 1933;Fournitures de bureau;Papier;BoÓte S
-P00058;Xerox 1936;Fournitures de bureau;Papier;BoÓte S
-P00059;Xerox 1937;Fournitures de bureau;Papier;BoÓte S
-P00060;Xerox 1938;Fournitures de bureau;Papier;BoÓte S
-P00061;Xerox 1939;Fournitures de bureau;Papier;BoÓte S
-P00062;Xerox 194;Fournitures de bureau;Papier;BoÓte S
-P00063;Xerox 1941;Fournitures de bureau;Papier;BoÓte S
-P00064;Xerox 1947;Fournitures de bureau;Papier;BoÓte S
-P00065;Xerox 1950;Fournitures de bureau;Papier;BoÓte S
-P00066;Xerox 1951;Fournitures de bureau;Papier;BoÓte S
-P00067;Xerox 1952;Fournitures de bureau;Papier;BoÓte S
-P00068;Xerox 1954;Fournitures de bureau;Papier;BoÓte S
-P00069;Xerox 196;Fournitures de bureau;Papier;BoÓte S
-P00070;Xerox 1961;Fournitures de bureau;Papier;BoÓte S
-P00071;Xerox 1962;Fournitures de bureau;Papier;BoÓte S
-P00072;Xerox 1964;Fournitures de bureau;Papier;BoÓte S
-P00073;Xerox 197;Fournitures de bureau;Papier;BoÓte S
-P00074;Xerox 1971;Fournitures de bureau;Papier;BoÓte S
-P00075;Xerox 1973;Fournitures de bureau;Papier;BoÓte S
-P00076;Xerox 1974;Fournitures de bureau;Papier;BoÓte S
-P00077;Xerox 1976;Fournitures de bureau;Papier;BoÓte S
-P00078;Xerox 1978;Fournitures de bureau;Papier;BoÓte S
-P00079;Xerox 1979;Fournitures de bureau;Papier;BoÓte S
-P00080;Xerox 1982;Fournitures de bureau;Papier;BoÓte S
-P00081;Xerox 1983;Fournitures de bureau;Papier;BoÓte S
-P00082;Xerox 1984;Fournitures de bureau;Papier;BoÓte S
-P00083;Xerox 1985;Fournitures de bureau;Papier;BoÓte S
-P00084;Xerox 1986;Fournitures de bureau;Papier;BoÓte S
-P00085;Xerox 1989;Fournitures de bureau;Papier;BoÓte S
-P00086;Xerox 199;Fournitures de bureau;Papier;BoÓte S
-P00087;Xerox 1991;Fournitures de bureau;Papier;BoÓte S
-P00088;Xerox 1993;Fournitures de bureau;Papier;BoÓte S
-P00089;Xerox 1994;Fournitures de bureau;Papier;BoÓte S
-P00090;Xerox 1995;Fournitures de bureau;Papier;BoÓte S
-P00091;Xerox 1996;Fournitures de bureau;Papier;BoÓte S
-P00092;Xerox 1997;Fournitures de bureau;Papier;BoÓte S
-P00093;Xerox 20;Fournitures de bureau;Papier;BoÓte S
-P00094;Xerox 200;Fournitures de bureau;Papier;BoÓte S
-P00095;Xerox 204;Fournitures de bureau;Papier;BoÓte S
-P00096;Xerox 207;Fournitures de bureau;Papier;BoÓte S
-P00097;Xerox 21;Fournitures de bureau;Papier;BoÓte S
-P00098;Xerox 210;Fournitures de bureau;Papier;BoÓte S
-P00099;Xerox 212;Fournitures de bureau;Papier;BoÓte S
-P00100;Xerox 213;Fournitures de bureau;Papier;BoÓte S
-P00101;Xerox 214;Fournitures de bureau;Papier;BoÓte S
-P00102;Xerox 216;Fournitures de bureau;Papier;BoÓte S
-P00103;Xerox 217;Fournitures de bureau;Papier;BoÓte S
-P00104;Xerox 220;Fournitures de bureau;Papier;BoÓte S
-P00105;Xerox 224;Fournitures de bureau;Papier;BoÓte S
-P00106;Xerox 227;Fournitures de bureau;Papier;BoÓte S
-P00107;Xerox 23;Fournitures de bureau;Papier;BoÓte S
-P00108;Xerox 231;Fournitures de bureau;Papier;BoÓte S
-P00109;Xerox Papier blanc d'impression;Fournitures de bureau;Papier;BoÓte S
+Produit	IdProduit	Produit	CategorieProduit	SousCategorieProduit	TypeEmballage
+*Staples* Etiquettes d'emballage	P00019	*Staples* Etiquettes d'emballage	Technologie	Machines de bureau	Boåte XL
+*Staples* Ouvre-lettres	P00002	*Staples* Ouvre-lettres	Fournitures de bureau	Ciseaux, Rägles	Sac enveloppe
+*Staples* Surligneurs	P00001	*Staples* Surligneurs	Fournitures de bureau	Etiquettes	Boåte S
+Accessoire1	P00003	Accessoire1	Fournitures de bureau	Stylos et fournitures d'art	Sac enveloppe
+Accessoire2	P00004	Accessoire2	Technologie	Telephones et Communication	Boåte XS
+Acco 3-Hole Punch	P00145	Acco 3-Hole Punch			
+Acco 6 Outlet Guardian Premium Surge Suppressor	P00160	Acco 6 Outlet Guardian Premium Surge Suppressor			
+Acco Clips to Go? Binder Clips, 24 Clips in Two Sizes	P00164	Acco Clips to Go? Binder Clips, 24 Clips in Two Sizes			
+Acco D-Ring Binder w/DublLock©	P00152	Acco D-Ring Binder w/DublLock©			
+"Acco Four Pocket Poly Ring Binder with Label Holder, Smoke, 1"""	P00167	"Acco Four Pocket Poly Ring Binder with Label Holder, Smoke, 1"""			
+Acco Perma© 2700 Stacking Storage Drawers	P00159	Acco Perma© 2700 Stacking Storage Drawers			
+Acco Perma© 3000 Stacking Storage Drawers	P00165	Acco Perma© 3000 Stacking Storage Drawers			
+"Acco Pressboard Covers with Storage Hooks, 14 7/8"" x 11"", Dark Blue"	P00155	"Acco Pressboard Covers with Storage Hooks, 14 7/8"" x 11"", Dark Blue"			
+"Acco Pressboard Covers with Storage Hooks, 14 7/8"" x 11"", Light Blue"	P00161	"Acco Pressboard Covers with Storage Hooks, 14 7/8"" x 11"", Light Blue"			
+"Acco Recycled 2"" Capacity Laser Printer Hanging Data Binders"	P00162	"Acco Recycled 2"" Capacity Laser Printer Hanging Data Binders"			
+Acco Suede Grain Vinyl Round Ring Binder	P00163	Acco Suede Grain Vinyl Round Ring Binder			
+Acco© Hot Clips? Clips to Go	P00168	Acco© Hot Clips? Clips to Go			
+Accohide Poly Flexible Ring Binders	P00169	Accohide Poly Flexible Ring Binders			
+ACCOHIDE© Binder by Acco	P00150	ACCOHIDE© Binder by Acco			
+"Acme Design Line 8"" Stainless Steel Bent Scissors w/Champagne Handles, 3-1/8"" Cut"	P00148	"Acme Design Line 8"" Stainless Steel Bent Scissors w/Champagne Handles, 3-1/8"" Cut"			
+"Acme Hot Forged Carbon Steel Scissors with Nickel-Plated Handles, 3 7/8"" Cut, 8""L"	P00146	"Acme Hot Forged Carbon Steel Scissors with Nickel-Plated Handles, 3 7/8"" Cut, 8""L"			
+Acme Kleencut© Forged Steel Scissors	P00153	Acme Kleencut© Forged Steel Scissors			
+"Acme© 8"" Straight Scissors"	P00158	"Acme© 8"" Straight Scissors"			
+Acme© Box Cutter Scissors	P00157	Acme© Box Cutter Scissors			
+Acme© Design Stainless Steel Bent Scissors	P00166	Acme© Design Stainless Steel Bent Scissors			
+Acme© Elite Stainless Steel Scissors	P00171	Acme© Elite Stainless Steel Scissors			
+Acme© Preferred Stainless Steel Scissors	P00154	Acme© Preferred Stainless Steel Scissors			
+"Adams ""While You Were Out"" Message Pads"	P00173	"Adams ""While You Were Out"" Message Pads"			
+Adams Phone Message Book, 200 Message Capacity, 8 1/16? x 11?	P00151	Adams Phone Message Book, 200 Message Capacity, 8 1/16? x 11?			
+Adams Phone Message Book, Professional, 400 Message Capacity, 5 3/6? x 11?	P00156	Adams Phone Message Book, Professional, 400 Message Capacity, 5 3/6? x 11?			
+"Adams Telephone Message Book W/Dividers/Space For Phone Numbers, 5 1/4""X8 1/2"", 200/Messages"	P00170	"Adams Telephone Message Book W/Dividers/Space For Phone Numbers, 5 1/4""X8 1/2"", 200/Messages"			
+"Adams Telephone Message Book W/Dividers/Space For Phone Numbers, 5 1/4""X8 1/2"", 300/Messages"	P00149	"Adams Telephone Message Book W/Dividers/Space For Phone Numbers, 5 1/4""X8 1/2"", 300/Messages"			
+Adams Telephone Message Books, 5 1/4? x 11?	P00172	Adams Telephone Message Books, 5 1/4? x 11?			
+"Adams Write n' Stick Phone Message Book, 11"" X 5 1/4"", 200 Messages"	P00147	"Adams Write n' Stick Phone Message Book, 11"" X 5 1/4"", 200 Messages"			
+Avery 05222 Permanent Self-Adhesive File Folder Labels for Typewriters, on Rolls, White, 250/Roll	P00211	Avery 05222 Permanent Self-Adhesive File Folder Labels for Typewriters, on Rolls, White, 250/Roll			
+Avery 474	P00174	Avery 474			
+Avery 478	P00217	Avery 478			
+Avery 479	P00203	Avery 479			
+Avery 48	P00196	Avery 48			
+Avery 481	P00192	Avery 481			
+Avery 484	P00175	Avery 484			
+Avery 487	P00191	Avery 487			
+Avery 49	P00193	Avery 49			
+Avery 491	P00195	Avery 491			
+Avery 492	P00176	Avery 492			
+Avery 493	P00216	Avery 493			
+Avery 494	P00183	Avery 494			
+Avery 496	P00190	Avery 496			
+Avery 498	P00209	Avery 498			
+Avery 501	P00205	Avery 501			
+Avery 503	P00208	Avery 503			
+Avery 504	P00199	Avery 504			
+Avery 506	P00177	Avery 506			
+Avery 507	P00212	Avery 507			
+Avery 508	P00207	Avery 508			
+Avery 51	P00210	Avery 51			
+Avery 510	P00201	Avery 510			
+Avery 511	P00187	Avery 511			
+Avery 52	P00184	Avery 52			
+Avery 520	P00178	Avery 520			
+Avery File Folder Labels	P00179	Avery File Folder Labels			
+Avery Flip-Chart Easel Binder, Black	P00180	Avery Flip-Chart Easel Binder, Black			
+Avery Hanging File Binders	P00181	Avery Hanging File Binders			
+Avery Hi-Liter Comfort Grip Fluorescent Highlighter, Yellow Ink	P00213	Avery Hi-Liter Comfort Grip Fluorescent Highlighter, Yellow Ink			
+Avery Hi-Liter GlideStik Fluorescent Highlighter, Yellow Ink	P00186	Avery Hi-Liter GlideStik Fluorescent Highlighter, Yellow Ink			
+Avery Hi-Liter Pen Style Six-Color Fluorescent Set	P00198	Avery Hi-Liter Pen Style Six-Color Fluorescent Set			
+Avery Hi-Liter© EverBold? Pen Style Fluorescent Highlighters, 4/Pack	P00197	Avery Hi-Liter© EverBold? Pen Style Fluorescent Highlighters, 4/Pack			
+Avery Hi-Liter© Fluorescent Desk Style Markers	P00206	Avery Hi-Liter© Fluorescent Desk Style Markers			
+Avery Hi-Liter© Smear-Safe Highlighters	P00185	Avery Hi-Liter© Smear-Safe Highlighters			
+Avery Poly Binder Pockets	P00189	Avery Poly Binder Pockets			
+Avery Printable Repositionable Plastic Tabs	P00204	Avery Printable Repositionable Plastic Tabs			
+Avery Reinforcements for Hole-Punch Pages	P00194	Avery Reinforcements for Hole-Punch Pages			
+Avery Round Ring Poly Binders	P00202	Avery Round Ring Poly Binders			
+Avery Self-Adhesive Photo Pockets for Polaroid Photos	P00182	Avery Self-Adhesive Photo Pockets for Polaroid Photos			
+"Avery Trapezoid Extra Heavy Duty 4"" Binders"	P00214	"Avery Trapezoid Extra Heavy Duty 4"" Binders"			
+"Avery Trapezoid Ring Binder, 3"" Capacity, Black, 1040 sheets"	P00200	"Avery Trapezoid Ring Binder, 3"" Capacity, Black, 1040 sheets"			
+Avery White Multi-Purpose Labels	P00215	Avery White Multi-Purpose Labels			
+"Avery© Durable Plastic 1"" Binders"	P00188	"Avery© Durable Plastic 1"" Binders"			
+Belkin 105-Key Black Keyboard	P00136	Belkin 105-Key Black Keyboard			
+Belkin 5 Outlet SurgeMaster? Power Centers	P00142	Belkin 5 Outlet SurgeMaster? Power Centers			
+Belkin 6 Outlet Metallic Surge Strip	P00139	Belkin 6 Outlet Metallic Surge Strip			
+Belkin 8 Outlet Surge Protector	P00137	Belkin 8 Outlet Surge Protector			
+Belkin 8 Outlet SurgeMaster II Gold Surge Protector	P00144	Belkin 8 Outlet SurgeMaster II Gold Surge Protector			
+Belkin 8 Outlet SurgeMaster II Gold Surge Protector with Phone Protection	P00138	Belkin 8 Outlet SurgeMaster II Gold Surge Protector with Phone Protection			
+Belkin ErgoBoard? Keyboard	P00141	Belkin ErgoBoard? Keyboard			
+Belkin F9M820V08 8 Outlet Surge	P00143	Belkin F9M820V08 8 Outlet Surge			
+Belkin MediaBoard 104- Keyboard	P00135	Belkin MediaBoard 104- Keyboard			
+Belkin Premiere Surge Master II 8-outlet surge protector	P00140	Belkin Premiere Surge Master II 8-outlet surge protector			
+Epson C62 Color Inkjet Printer	P00005	Epson C62 Color Inkjet Printer	Technologie	Telephones et Communication	Boåte S
+Epson C82 Color Inkjet Printer	P00006	Epson C82 Color Inkjet Printer	Technologie	Machines de bureau	Boåte XL
+Lexmark 4227 Plus Dot Matrix Printer	P00007	Lexmark 4227 Plus Dot Matrix Printer	Technologie	Machines de bureau	Boåte XL
+Lexmark Z25 Color Inkjet Printer	P00008	Lexmark Z25 Color Inkjet Printer	Technologie	Machines de bureau	Boåte XL
+Lexmark Z54se Color Inkjet Printer	P00009	Lexmark Z54se Color Inkjet Printer	Technologie	Machines de bureau	Boåte XL
+Lexmark Z55se Color Inkjet Printer	P00010	Lexmark Z55se Color Inkjet Printer	Technologie	Machines de bureau	Boåte XL
+Panasonic KP-150	P00011	Panasonic KP-150	Technologie	Machines de bureau	Boåte XL
+Panasonic KP-310	P00012	Panasonic KP-310	Fournitures de bureau	Stylos et fournitures d'art	Boåte XS
+Panasonic KP-350BK	P00013	Panasonic KP-350BK	Fournitures de bureau	Stylos et fournitures d'art	Boåte XS
+Panasonic KX-P1131	P00014	Panasonic KX-P1131	Fournitures de bureau	Stylos et fournitures d'art	Boåte XS
+Panasonic KX-P1150	P00015	Panasonic KX-P1150	Technologie	Machines de bureau	Boåte XL
+Panasonic KX-P2130	P00016	Panasonic KX-P2130	Technologie	Machines de bureau	Boåte XL
+Panasonic KX-P3200	P00017	Panasonic KX-P3200	Technologie	Machines de bureau	Boåte XL
+Panasonic KX-P3626	P00018	Panasonic KX-P3626	Technologie	Machines de bureau	Boåte XL
+Papier d'affaires multi-usage 4200 de Xerox	P00020	Papier d'affaires multi-usage 4200 de Xerox	Fournitures de bureau	Papier	Boåte S
+Tennsco Casiers Ö deux Çtages	P00021	Tennsco Casiers Ö deux Çtages	Fournitures de bureau	Stockage & Organisation	Sac enveloppe
+Tennsco Casiers Gris	P00022	Tennsco Casiers Gris	Fournitures de bureau	Stockage & Organisation	Sac enveloppe
+Tennsco Casiers Sable	P00023	Tennsco Casiers Sable	Fournitures de bureau	Stockage & Organisation	Sac enveloppe
+Tennsco Etagäre Commerciale	P00024	Tennsco Etagäre Commerciale	Fournitures de bureau	Stockage & Organisation	Boåte L
+Tennsco Etagäre Industrielle	P00025	Tennsco Etagäre Industrielle	Fournitures de bureau	Stockage & Organisation	Boåte L
+Tennsco Etagäre ouverte	P00026	Tennsco Etagäre ouverte	Fournitures de bureau	Stockage & Organisation	Boåte L
+Tennsco Etagäre Utilitaire	P00027	Tennsco Etagäre Utilitaire	Fournitures de bureau	Stockage & Organisation	Boåte L
+Xerox 188	P00028	Xerox 188	Fournitures de bureau	Papier	Boåte S
+Xerox 1880	P00029	Xerox 1880	Fournitures de bureau	Papier	Boåte S
+Xerox 1881	P00030	Xerox 1881	Fournitures de bureau	Papier	Boåte S
+Xerox 1882	P00031	Xerox 1882	Fournitures de bureau	Papier	Boåte S
+Xerox 1883	P00032	Xerox 1883	Fournitures de bureau	Papier	Boåte S
+Xerox 1885	P00110	Xerox 1885	Fournitures de bureau	Papier	Boåte S
+Xerox 1887	P00134	Xerox 1887	Fournitures de bureau	Papier	Boåte S
+Xerox 1888	P00033	Xerox 1888	Fournitures de bureau	Papier	Boåte S
+Xerox 1891	P00034	Xerox 1891	Fournitures de bureau	Papier	Boåte S
+Xerox 1892	P00035	Xerox 1892	Fournitures de bureau	Papier	Boåte S
+Xerox 1893	P00036	Xerox 1893	Fournitures de bureau	Papier	Boåte S
+Xerox 1894	P00037	Xerox 1894	Fournitures de bureau	Papier	Boåte S
+Xerox 1895	P00111	Xerox 1895	Fournitures de bureau	Papier	Boåte S
+Xerox 1896	P00038	Xerox 1896	Fournitures de bureau	Papier	Boåte S
+Xerox 1897	P00039	Xerox 1897	Fournitures de bureau	Papier	Boåte S
+Xerox 1898	P00040	Xerox 1898	Fournitures de bureau	Papier	Boåte S
+Xerox 1899	P00112	Xerox 1899	Fournitures de bureau	Papier	Boåte S
+Xerox 19	P00041	Xerox 19	Fournitures de bureau	Papier	Boåte S
+Xerox 190	P00113	Xerox 190	Fournitures de bureau	Papier	Boåte S
+Xerox 1903	P00042	Xerox 1903	Fournitures de bureau	Papier	Boåte S
+Xerox 1905	P00043	Xerox 1905	Fournitures de bureau	Papier	Boåte S
+Xerox 1906	P00044	Xerox 1906	Fournitures de bureau	Papier	Boåte S
+Xerox 1908	P00045	Xerox 1908	Fournitures de bureau	Papier	Boåte S
+Xerox 1910	P00046	Xerox 1910	Fournitures de bureau	Papier	Boåte S
+Xerox 1916	P00047	Xerox 1916	Fournitures de bureau	Papier	Boåte S
+Xerox 1917	P00048	Xerox 1917	Fournitures de bureau	Papier	Boåte S
+Xerox 1919	P00114	Xerox 1919	Fournitures de bureau	Papier	Boåte S
+Xerox 1920	P00049	Xerox 1920	Fournitures de bureau	Papier	Boåte S
+Xerox 1922	P00050	Xerox 1922	Fournitures de bureau	Papier	Boåte S
+Xerox 1923	P00051	Xerox 1923	Fournitures de bureau	Papier	Boåte S
+Xerox 1924	P00115	Xerox 1924	Fournitures de bureau	Papier	Boåte S
+Xerox 1926	P00116	Xerox 1926	Fournitures de bureau	Papier	Boåte S
+Xerox 1927	P00117	Xerox 1927	Fournitures de bureau	Papier	Boåte S
+Xerox 1928	P00052	Xerox 1928	Fournitures de bureau	Papier	Boåte S
+Xerox 1929	P00053	Xerox 1929	Fournitures de bureau	Papier	Boåte S
+Xerox 193	P00054	Xerox 193	Fournitures de bureau	Papier	Boåte S
+Xerox 1930	P00055	Xerox 1930	Fournitures de bureau	Papier	Boåte S
+Xerox 1932	P00056	Xerox 1932	Fournitures de bureau	Papier	Boåte S
+Xerox 1933	P00057	Xerox 1933	Fournitures de bureau	Papier	Boåte S
+Xerox 1934	P00118	Xerox 1934	Fournitures de bureau	Papier	Boåte S
+Xerox 1935	P00119	Xerox 1935	Fournitures de bureau	Papier	Boåte S
+Xerox 1936	P00058	Xerox 1936	Fournitures de bureau	Papier	Boåte S
+Xerox 1937	P00059	Xerox 1937	Fournitures de bureau	Papier	Boåte S
+Xerox 1938	P00060	Xerox 1938	Fournitures de bureau	Papier	Boåte S
+Xerox 1939	P00061	Xerox 1939	Fournitures de bureau	Papier	Boåte S
+Xerox 194	P00062	Xerox 194	Fournitures de bureau	Papier	Boåte S
+Xerox 1940	P00120	Xerox 1940	Fournitures de bureau	Papier	Boåte S
+Xerox 1941	P00063	Xerox 1941	Fournitures de bureau	Papier	Boåte S
+Xerox 1947	P00064	Xerox 1947	Fournitures de bureau	Papier	Boåte S
+Xerox 1948	P00121	Xerox 1948	Fournitures de bureau	Papier	Boåte S
+Xerox 1949	P00122	Xerox 1949	Fournitures de bureau	Papier	Boåte S
+Xerox 1950	P00065	Xerox 1950	Fournitures de bureau	Papier	Boåte S
+Xerox 1951	P00066	Xerox 1951	Fournitures de bureau	Papier	Boåte S
+Xerox 1952	P00067	Xerox 1952	Fournitures de bureau	Papier	Boåte S
+Xerox 1953	P00123	Xerox 1953	Fournitures de bureau	Papier	Boåte S
+Xerox 1954	P00068	Xerox 1954	Fournitures de bureau	Papier	Boåte S
+Xerox 1959	P00124	Xerox 1959	Fournitures de bureau	Papier	Boåte S
+Xerox 196	P00069	Xerox 196	Fournitures de bureau	Papier	Boåte S
+Xerox 1961	P00070	Xerox 1961	Fournitures de bureau	Papier	Boåte S
+Xerox 1962	P00071	Xerox 1962	Fournitures de bureau	Papier	Boåte S
+Xerox 1964	P00072	Xerox 1964	Fournitures de bureau	Papier	Boåte S
+Xerox 1966	P00125	Xerox 1966	Fournitures de bureau	Papier	Boåte S
+Xerox 1968	P00126	Xerox 1968	Fournitures de bureau	Papier	Boåte S
+Xerox 197	P00073	Xerox 197	Fournitures de bureau	Papier	Boåte S
+Xerox 1971	P00074	Xerox 1971	Fournitures de bureau	Papier	Boåte S
+Xerox 1973	P00075	Xerox 1973	Fournitures de bureau	Papier	Boåte S
+Xerox 1974	P00076	Xerox 1974	Fournitures de bureau	Papier	Boåte S
+Xerox 1976	P00077	Xerox 1976	Fournitures de bureau	Papier	Boåte S
+Xerox 1977	P00127	Xerox 1977	Fournitures de bureau	Papier	Boåte S
+Xerox 1978	P00078	Xerox 1978	Fournitures de bureau	Papier	Boåte S
+Xerox 1979	P00079	Xerox 1979	Fournitures de bureau	Papier	Boåte S
+Xerox 198	P00128	Xerox 198	Fournitures de bureau	Papier	Boåte S
+Xerox 1980	P00129	Xerox 1980	Fournitures de bureau	Papier	Boåte S
+Xerox 1981	P00130	Xerox 1981	Fournitures de bureau	Papier	Boåte S
+Xerox 1982	P00080	Xerox 1982	Fournitures de bureau	Papier	Boåte S
+Xerox 1983	P00081	Xerox 1983	Fournitures de bureau	Papier	Boåte S
+Xerox 1984	P00082	Xerox 1984	Fournitures de bureau	Papier	Boåte S
+Xerox 1985	P00083	Xerox 1985	Fournitures de bureau	Papier	Boåte S
+Xerox 1986	P00084	Xerox 1986	Fournitures de bureau	Papier	Boåte S
+Xerox 1989	P00085	Xerox 1989	Fournitures de bureau	Papier	Boåte S
+Xerox 199	P00086	Xerox 199	Fournitures de bureau	Papier	Boåte S
+Xerox 1991	P00087	Xerox 1991	Fournitures de bureau	Papier	Boåte S
+Xerox 1992	P00131	Xerox 1992	Fournitures de bureau	Papier	Boåte S
+Xerox 1993	P00088	Xerox 1993	Fournitures de bureau	Papier	Boåte S
+Xerox 1994	P00089	Xerox 1994	Fournitures de bureau	Papier	Boåte S
+Xerox 1995	P00090	Xerox 1995	Fournitures de bureau	Papier	Boåte S
+Xerox 1996	P00091	Xerox 1996	Fournitures de bureau	Papier	Boåte S
+Xerox 1997	P00092	Xerox 1997	Fournitures de bureau	Papier	Boåte S
+Xerox 1998	P00132	Xerox 1998	Fournitures de bureau	Papier	Boåte S
+Xerox 20	P00093	Xerox 20	Fournitures de bureau	Papier	Boåte S
+Xerox 200	P00094	Xerox 200	Fournitures de bureau	Papier	Boåte S
+Xerox 204	P00095	Xerox 204	Fournitures de bureau	Papier	Boåte S
+Xerox 207	P00096	Xerox 207	Fournitures de bureau	Papier	Boåte S
+Xerox 21	P00097	Xerox 21	Fournitures de bureau	Papier	Boåte S
+Xerox 210	P00098	Xerox 210	Fournitures de bureau	Papier	Boåte S
+Xerox 212	P00099	Xerox 212	Fournitures de bureau	Papier	Boåte S
+Xerox 213	P00100	Xerox 213	Fournitures de bureau	Papier	Boåte S
+Xerox 214	P00101	Xerox 214	Fournitures de bureau	Papier	Boåte S
+Xerox 216	P00102	Xerox 216	Fournitures de bureau	Papier	Boåte S
+Xerox 217	P00103	Xerox 217	Fournitures de bureau	Papier	Boåte S
+Xerox 220	P00104	Xerox 220	Fournitures de bureau	Papier	Boåte S
+Xerox 224	P00105	Xerox 224	Fournitures de bureau	Papier	Boåte S
+Xerox 227	P00106	Xerox 227	Fournitures de bureau	Papier	Boåte S
+Xerox 229	P00133	Xerox 229	Fournitures de bureau	Papier	Boåte S
+Xerox 23	P00107	Xerox 23	Fournitures de bureau	Papier	Boåte S
+Xerox 231	P00108	Xerox 231	Fournitures de bureau	Papier	Boåte S
+Xerox Papier blanc d'impression	P00109	Xerox Papier blanc d'impression	Fournitures de bureau	Papier	Boåte S

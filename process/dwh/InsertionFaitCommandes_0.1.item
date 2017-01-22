@@ -322,7 +322,7 @@
       <additionalProperties key="Comment" value=""/>
     </metadata>
     <nodeData xsi:type="MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="pctTaxe" expression="1-(row1.montantVentes/row1.quantiteVentes)/row1.prixUnitaire" type="id_Float"/>
       </varTables>
