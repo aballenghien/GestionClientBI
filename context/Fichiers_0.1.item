@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
   <talendfile:ContextType xmi:id="_1Hon0LuXEeavOr74JwDotQ" confirmationNeeded="false" name="Default">
     <contextParameter xmi:id="_1Hon0buXEeavOr74JwDotQ" comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/data/"/>
-    <contextParameter xmi:id="_Du4joOC8EeaI9La_LZWX3A" comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\env.properties"/>
+    <contextParameter xmi:id="_Du4joOC8EeaI9La_LZWX3A" comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/env.properties"/>
     <contextParameter xmi:id="_9fQWoODREea5-YpRiyr7oQ" comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/archive/"/>
     <contextParameter xmi:id="_z49AMODQEea5-YpRiyr7oQ" comment="" name="fichier_commandes" prompt="fichier_commandes?" promptNeeded="false" type="id_String" value="Commande.txt"/>
     <contextParameter xmi:id="_4-1oAODoEeapgaVLgbezjA" comment="" name="fichier_produits" prompt="fichier_produits?" promptNeeded="false" type="id_String" value="Produit.txt"/>

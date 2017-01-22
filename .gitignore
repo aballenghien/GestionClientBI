@@ -1,1 +1,4 @@
 .settings/*
+env.properties
+data/*
+archive/*

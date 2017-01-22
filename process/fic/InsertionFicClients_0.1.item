@@ -6,7 +6,7 @@
     <contextParameter comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Client.txt"/>
     <contextParameter comment="" name="fichier_commandes" prompt="fichier_commandes?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Commande.txt"/>
     <contextParameter comment="" name="fichier_produits" prompt="fichier_produits?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Produit.txt"/>
-    <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\env.properties"/>
+    <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/env.properties"/>
     <contextParameter comment="" name="fichier_territoires" prompt="fichier_territoires?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Territoire.txt"/>
     <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
