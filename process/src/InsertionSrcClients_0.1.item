@@ -12,7 +12,7 @@
   </context>
   <context confirmationNeeded="false" name="env_audrey">
     <contextParameter comment="" name="new1" prompt="new1?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\"/>
+    <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\\Workspace_Talend\\OFFICESHOP\\data\\"/>
     <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value=""/>
     <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
     <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="root"/>

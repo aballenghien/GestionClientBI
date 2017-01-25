@@ -3,14 +3,32 @@
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/archive/"/>
     <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/data/"/>
-    <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/env.properties"/>
     <contextParameter comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Client.txt"/>
+    <contextParameter comment="" name="fichier_commandes" prompt="fichier_commandes?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Commande.txt"/>
+    <contextParameter comment="" name="fichier_produits" prompt="fichier_produits?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Produit.txt"/>
+    <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="/home/romain/projets/bi/OFFICE_SHOP/env.properties"/>
+    <contextParameter comment="" name="fichier_territoires" prompt="fichier_territoires?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Territoire.txt"/>
+    <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
+    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="rhunault"/>
+    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value="82xhSEMyWGS1bjJcGopo/Q=="/>
+    <contextParameter comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="3306"/>
+    <contextParameter comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="localhost"/>
   </context>
   <context confirmationNeeded="false" name="env_audrey">
-    <contextParameter comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
-    <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\Workspace_Talend\OFFICESHOP\data\"/>
-    <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="env"/>
-    <contextParameter comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value=""/>
+    <contextParameter comment="" name="dossier_archive" prompt="dossier_archive?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\\Workspace_Talend\\OFFICESHOP\\archive\\"/>
+    <contextParameter comment="" name="dossier_data" prompt="dossier_data?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\\Workspace_Talend\\OFFICESHOP\\data\\"/>
+    <contextParameter comment="" name="fichier_clients" prompt="fichier_clients?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Client.txt"/>
+    <contextParameter comment="" name="fichier_commandes" prompt="fichier_commandes?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Commande.txt"/>
+    <contextParameter comment="" name="fichier_produits" prompt="fichier_produits?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Produit.txt"/>
+    <contextParameter comment="" name="fichier_properties" prompt="fichier_properties?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="C:\\Workspace_Talend\\OFFICESHOP\\env.properties"/>
+    <contextParameter comment="" name="fichier_territoires" prompt="fichier_territoires?" promptNeeded="false" repositoryContextId="_1HVs4LuXEeavOr74JwDotQ" type="id_String" value="Territoire.txt"/>
+    <contextParameter comment="" name="cnxODS_AdditionalParams" prompt="cnxODS_AdditionalParams?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="noDatetimeStringSync=true"/>
+    <contextParameter comment="" name="cnxODS_Database" prompt="cnxODS_Database?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="bi_ods_officeshop"/>
+    <contextParameter comment="" name="cnxODS_Login" prompt="cnxODS_Login?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="root"/>
+    <contextParameter comment="" name="cnxODS_Password" prompt="cnxODS_Password?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_Password" value=""/>
+    <contextParameter comment="" name="cnxODS_Port" prompt="cnxODS_Port?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="3306"/>
+    <contextParameter comment="" name="cnxODS_Server" prompt="cnxODS_Server?" promptNeeded="false" repositoryContextId="_sBWh4K13Eea1Co-IILr0fg" type="id_String" value="localhost"/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
@@ -124,7 +142,7 @@
     <elementParameter field="DIRECTORY" name="SOURCE" value="context.dossier_data"/>
     <elementParameter field="FILE" name="SOURCE_FILE" value="&quot;/home/romain/projets/bi/source.csv&quot;" show="false"/>
     <elementParameter field="CHECK" name="SUB_DIRECTROY" value="true"/>
-    <elementParameter field="FILE" name="TARGET" value="context.dossier_archive+&quot;/&quot;+TalendDate.getDate(&quot;YYYY_MM_dd hh:mm:ss&quot;)+&quot;.zip&quot;"/>
+    <elementParameter field="FILE" name="TARGET" value="context.dossier_archive+TalendDate.getDate(&quot;YYYY_MM_dd&quot;)+&quot;.zip&quot;"/>
     <elementParameter field="CHECK" name="MKDIR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="ARCHIVE_FORMAT" value="zip"/>
     <elementParameter field="CLOSED_LIST" name="LEVEL" value="4"/>

@@ -521,6 +521,7 @@
       <relatedItems xmi:id="_e5UbUNMsEea9YeEjJ2FR-g" id="_sBWh4K13Eea1Co-IILr0fg" version="Latest" type="context"/>
       <relatedItems xmi:id="_dpge0NhGEeaArsoEvWy9tA" id="_1HVs4LuXEeavOr74JwDotQ" version="Latest" type="context"/>
       <relatedItems xmi:id="__j3V4ODVEea5-YpRiyr7oQ" id="_nfH0MOC5EeaI9La_LZWX3A" version="Latest" type="job"/>
+      <relatedItems xmi:id="_mkLrYOMpEeay7v4GYN4Y-A" id="_EnyxgODQEea5-YpRiyr7oQ" version="Latest" type="job"/>
     </ItemsRelations>
     <ItemsRelations xmi:id="_wBvU0NMsEea9YeEjJ2FR-g">
       <baseItem xmi:id="_wBvU0dMsEea9YeEjJ2FR-g" id="_8VjnYNKeEeayfNJVt9yZww" version="0.1" type="job"/>
@@ -634,6 +635,7 @@
       <relatedItems xmi:id="_tdbRzODREea5-YpRiyr7oQ" id="Relational" version="Latest" type="routine"/>
       <relatedItems xmi:id="_tdbRzeDREea5-YpRiyr7oQ" id="Entier" version="Latest" type="routine"/>
       <relatedItems xmi:id="_tdbRzuDREea5-YpRiyr7oQ" id="Flottant" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_Pv_scOMqEeay7v4GYN4Y-A" id="_sBWh4K13Eea1Co-IILr0fg" version="Latest" type="context"/>
     </ItemsRelations>
     <migrationTask xmi:id="_fjfIcK12Eea1Co-IILr0fg" id="org.talend.designer.core.ui.preferences.migration.ChangeMysqlVersionForProjectSetting" breaks="5.2.0" version="5.1.3" status="ok"/>
     <migrationTask xmi:id="_fjfIca12Eea1Co-IILr0fg" id="org.talend.designer.core.ui.preferences.migration.ChangeOracleVersionForProjectSetting" breaks="5.2.0" version="5.2.1" status="ok"/>
