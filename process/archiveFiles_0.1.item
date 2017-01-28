@@ -142,7 +142,7 @@
     <elementParameter field="DIRECTORY" name="SOURCE" value="context.dossier_data"/>
     <elementParameter field="FILE" name="SOURCE_FILE" value="&quot;/home/romain/projets/bi/source.csv&quot;" show="false"/>
     <elementParameter field="CHECK" name="SUB_DIRECTROY" value="true"/>
-    <elementParameter field="FILE" name="TARGET" value="context.dossier_archive+TalendDate.getDate(&quot;YYYY_MM_dd&quot;)+&quot;.zip&quot;"/>
+    <elementParameter field="FILE" name="TARGET" value="context.dossier_archive+TalendDate.getDate(&quot;yyyy_MM_dd&quot;)+&quot;.zip&quot;"/>
     <elementParameter field="CHECK" name="MKDIR" value="true"/>
     <elementParameter field="CLOSED_LIST" name="ARCHIVE_FORMAT" value="zip"/>
     <elementParameter field="CLOSED_LIST" name="LEVEL" value="4"/>

@@ -311,9 +311,7 @@
     </metadata>
     <nodeData xsi:type="MapperData">
       <uiProperties shellMaximized="true"/>
-      <varTables sizeState="INTERMEDIATE" name="Var">
-        <mapperTableEntries name="pctTaxe" expression="1-(row1.montantVentes/row1.quantiteVentes)/row1.prixUnitaire" type="id_Float"/>
-      </varTables>
+      <varTables sizeState="INTERMEDIATE" name="Var"/>
       <outputTables sizeState="INTERMEDIATE" name="insert">
         <mapperTableEntries name="pk_commande" expression="" type="id_Integer"/>
         <mapperTableEntries name="no_commande" expression="row1.noCommande " type="id_Integer"/>
